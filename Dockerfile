@@ -3,8 +3,6 @@ MAINTAINER LinuxServer.io <ironicbadger@linuxserver.io
 ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /root
 ENV TERM screen
-ENV http_proxy="http://proxy.cambridge.office.worldpay.com:8080/"
-ENV https_proxy="https://proxy.cambridge.office.worldpay.com:8080/"
 
 
 #Applying stuff
