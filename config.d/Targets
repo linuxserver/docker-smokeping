@@ -1,0 +1,18 @@
+*** Targets ***
+
+probe = FPing
+
+menu = Top
+title = Network Latency Grapher
+remark = Welcome to the SmokePing website of xxx Company. \
+         Here you will learn all about the latency of our network.
+
++ Google
+
+menu =  Google
+title = Google
+
+++ DNS
+menu = DNS
+title = DNS
+host = 8.8.8.8
