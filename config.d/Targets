@@ -21,3 +21,24 @@ host = 8.8.8.8
 menu = DNS2
 title = DNS2
 host = 8.8.4.4
+
++ World
+
+menu =  Worldwide Connectivity
+title = Worldwide Connectivity
+
+++ Internet Sites
+
+menu = Internet Sites
+title = Internet Sites
+
++++ AOL
+menu = AOL HTTP
+title = AOL HTTP
+host = aol.com
+
+
++++ Apple
+menu = Apple HTTP
+title = Apple HTTP
+host = apple.com
