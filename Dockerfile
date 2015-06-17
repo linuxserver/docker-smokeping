@@ -23,6 +23,7 @@ ADD config.d/ /etc/smokeping/config.d/
 ADD init/ /etc/my_init.d/
 ADD services/ /etc/service/
 ADD Targets /tmp/Targets
+ADD config /etc/smokeping/config
 RUN chmod -v +x /etc/service/*/run
 RUN chmod -v +x /etc/my_init.d/*.sh
 RUN mkdir /var/run/smokeping && mkdir /data
