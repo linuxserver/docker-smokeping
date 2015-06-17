@@ -32,5 +32,5 @@ RUN usermod -G users abc
 CMD ["/sbin/my_init"]
 
 # Volumes and Ports
-VOLUME /config
+VOLUME /var/lib/smokeping
 EXPOSE 80
