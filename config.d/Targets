@@ -13,8 +13,8 @@ menu =  Google
 title = Google
 
 ++ DNS1
-menu = DNS2
-title = DNS2
+menu = DNS1
+title = DNS1
 host = 8.8.8.8
 
 ++ DNS2
