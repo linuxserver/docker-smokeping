@@ -2,4 +2,4 @@
 
 . /etc/apache2/envvars
 
-exec /sbin/setuser abc /usr/sbin/apache2 -k start -DNO_DETACH
+exec /usr/sbin/apache2 -k start -DNO_DETACH
