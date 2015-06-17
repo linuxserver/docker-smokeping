@@ -22,6 +22,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 ADD config.d/ /etc/smokeping/config.d/
 ADD init/ /etc/my_init.d/
 ADD services/ /etc/service/
+ADD Targets /tmp/Targets
 RUN chmod -v +x /etc/service/*/run
 RUN chmod -v +x /etc/my_init.d/*.sh
 RUN mkdir /var/run/smokeping && mkdir /data
