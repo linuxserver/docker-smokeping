@@ -7,27 +7,12 @@ title = Network Latency Grapher
 remark = Welcome to the SmokePing website of xxx Company. \
          Here you will learn all about the latency of our network.
 
-+ Google
-
-menu =  Google
-title = Google
-
-++ DNS1
-menu = DNS1
-title = DNS1
-host = 8.8.8.8
-
-++ DNS2
-menu = DNS2
-title = DNS2
-host = 8.8.4.4
-
 + World
 
-menu =  Worldwide Connectivity
+menu =  World
 title = Worldwide Connectivity
 
-++ Internet Sites
+++ InternetSites
 
 menu = Internet Sites
 title = Internet Sites
@@ -42,3 +27,23 @@ host = aol.com
 menu = Apple HTTP
 title = Apple HTTP
 host = apple.com
+
+
+++ DNSProviders
+
+menu = DNS providers
+title = DNS providers
+
++++ Google
+menu = Google DNS
+title = Google DNS
+
+++++ GoogleDNS1
+menu = Google DNS 1
+title = Google DNS 8.8.8.8
+host = 8.8.8.8
+
+++++ GoogleDNS2
+menu = Google DNS 2
+title = Google DNS 8.8.4.4
+host = 8.8.4.4
