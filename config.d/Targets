@@ -12,7 +12,12 @@ remark = Welcome to the SmokePing website of xxx Company. \
 menu =  Google
 title = Google
 
-++ DNS
-menu = DNS
-title = DNS
+++ DNS1
+menu = DNS2
+title = DNS2
 host = 8.8.8.8
+
+++ DNS2
+menu = DNS2
+title = DNS2
+host = 8.8.4.4
