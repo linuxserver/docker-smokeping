@@ -4,7 +4,6 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /root
 ENV TERM screen
 
-
 #Applying stuff
 RUN apt-get update
 RUN apt-get install -y apache2 smokeping
@@ -20,8 +19,8 @@ RUN a2enmod cgid
 #Adding Custom files
 ADD config.d/ /etc/smokeping/config.d/
 #ADD init/ /etc/my_init.d/
-#ADD services/ /etc/service/
-#RUN chmod -v +x /etc/service/*/run
+ADD services/ /etc/service/
+RUN chmod -v +x /etc/service/*/run
 #RUN chmod -v +x /etc/my_init.d/*.sh
 
 #Adduser

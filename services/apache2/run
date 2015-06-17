@@ -1,0 +1,3 @@
+#!/bin/bash
+
+exec /usr/sbin/apache2 -D FOREGROUND
