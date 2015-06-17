@@ -3,8 +3,8 @@ MAINTAINER LinuxServer.io <ironicbadger@linuxserver.io
 ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /root
 ENV TERM screen
-ENV http_proxy="http://proxy.cambridge.office.worldpay.com:8080/"
-ENV https_proxy="https://proxy.cambridge.office.worldpay.com:8080/"
+#ENV http_proxy="http://proxy.cambridge.office.worldpay.com:8080/"
+#ENV https_proxy="https://proxy.cambridge.office.worldpay.com:8080/"
 
 #Applying stuff
 RUN apt-get update
@@ -20,10 +20,10 @@ RUN a2enmod cgid
 
 #Adding Custom files
 ADD config.d/ /etc/smokeping/config.d/
-#ADD init/ /etc/my_init.d/
+ADD init/ /etc/my_init.d/
 ADD services/ /etc/service/
 RUN chmod -v +x /etc/service/*/run
-#RUN chmod -v +x /etc/my_init.d/*.sh
+RUN chmod -v +x /etc/my_init.d/*.sh
 RUN mkdir /var/run/smokeping && mkdir /data
 
 #Adduser
