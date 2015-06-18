@@ -14,7 +14,7 @@ RUN ln -s /etc/smokeping/apache2.conf /etc/apache2/conf-available/apache2.conf
 #Enable Apache modules
 RUN a2enconf apache2
 RUN a2enmod cgid
-#RUN setcap 'cap_net_bind_service=+ep' /usr/sbin/apache2 
+RUN setcap 'cap_net_bind_service=+ep' /usr/sbin/apache2 
 
 #Last line of normal hassle
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
@@ -23,10 +23,10 @@ ADD config.d/ /etc/smokeping/config.d/
 ADD init/ /etc/my_init.d/
 ADD services/ /etc/service/
 ADD Targets /tmp/Targets
-ADD config /etc/smokeping/config_lsio
+ADD config /etc/smokeping/config
 RUN chmod -v +x /etc/service/*/run
 RUN chmod -v +x /etc/my_init.d/*.sh
-RUN mkdir /var/run/smokeping && mkdir /data
+RUN mkdir /var/run/smokeping
 
 #Adduser
 RUN useradd -u 911 -U -s /bin/false abc
