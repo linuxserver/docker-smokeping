@@ -1,8 +1,6 @@
 #!/bin/bash
 
-if [ -f /config/Targets ]; then
-  exit 0
-else
-  cp /tmp/Targets /config/
+if [ ! -f /config/Targets ]; then
+  cp /tmp/Targets /config/Targets
   chown abc:abc /config/Targets
 fi
