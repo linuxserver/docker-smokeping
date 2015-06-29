@@ -40,8 +40,7 @@ Part of what makes our containers work so well is by allowing you to specify you
 
 Full guide coming soon...
 
-Basics are, edit the Targets file to ping the hosts you're interested in to match the format found here. Restart the container, BOOM!
-
+Basics are, edit the Targets file to ping the hosts you're interested in to match the format found here. Wait 10 minutes.
 
 ## Updates
 
