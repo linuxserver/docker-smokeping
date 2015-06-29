@@ -17,22 +17,25 @@ title = Worldwide Connectivity
 menu = Internet Sites
 title = Internet Sites
 
-+++ AOL
-menu = AOL HTTP
-title = AOL HTTP
-host = aol.com
++++ Facebook
+menu = Facebook
+title = Facebook
+host = facebook.com
 
++++ Youtube
+menu = YouTube
+title = YouTube
+host = youtube.com
 
-+++ Apple
-menu = Apple HTTP
-title = Apple HTTP
-host = apple.com
++++ Google search
+menu = google
+title = google
+host = google.com
 
-
-++ DNSProviders
-
-menu = DNS providers
-title = DNS providers
++++ linuxserver.io
+menu = linuxserver.io
+title = ls.io
+host linuxserver.io
 
 ++ Google
 menu = Google DNS
