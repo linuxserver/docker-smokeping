@@ -52,3 +52,7 @@ Basics are, edit the Targets file to ping the hosts you're interested in to matc
 
 * IronicBadger <ironicbadger@linuxserver.io>
 * lonix <lonixx@gmail.com>
+
+**Version**
+
+29.06.2015: This is the first release, it is mostly stable, but may contain minor defects. (thus a beta tag)
