@@ -5,19 +5,15 @@ ENV HOME /root
 ENV TERM screen
 
 #Applying stuff
-RUN apt-get update
-RUN apt-get install -y apache2 smokeping
+RUN apt-get update && \
+apt-get install -y apache2 smokeping && \
+ln -s /etc/smokeping/apache2.conf /etc/apache2/conf-available/apache2.conf && \
+a2enconf apache2 && \
+a2enmod cgid && \
+setcap 'cap_net_bind_service=+ep' /usr/sbin/apache2  && \
+apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-#Link config
-RUN ln -s /etc/smokeping/apache2.conf /etc/apache2/conf-available/apache2.conf
 
-#Enable Apache modules
-RUN a2enconf apache2
-RUN a2enmod cgid
-RUN setcap 'cap_net_bind_service=+ep' /usr/sbin/apache2 
-
-#Last line of normal hassle
-RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 #Adding Custom files
 ADD config.d/ /etc/smokeping/config.d/
 ADD init/ /etc/my_init.d/
