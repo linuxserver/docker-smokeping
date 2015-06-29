@@ -1,5 +1,5 @@
 FROM phusion/baseimage:0.9.16
-MAINTAINER LinuxServer.io <ironicbadger@linuxserver.io
+MAINTAINER LinuxServer.io <ironicbadger@linuxserver.io>
 ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /root
 ENV TERM screen
