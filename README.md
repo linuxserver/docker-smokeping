@@ -22,7 +22,7 @@ Once running the URL will be `http://<host-ip>:8080/cgi-bin/smokeping.cgi`.
 
 **Parameters**
 
-* `-p 8080` - the port for the webUI
+* `-p 80` - the port for the webUI
 * `-v /data` - Storage location for db and application data (graphs etc)
 * `-v /config` - Configure the `Targets` file here
 * `-e PGID` for for GroupID - see below for explanation
