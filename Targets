@@ -27,15 +27,15 @@ menu = YouTube
 title = YouTube
 host = youtube.com
 
-+++ Google search
++++ GoogleSearch
 menu = google
 title = google
 host = google.com
 
-+++ linuxserver.io
++++ linuxserverio
 menu = linuxserver.io
 title = ls.io
-host linuxserver.io
+host = linuxserver.io
 
 ++ Google
 menu = Google DNS
