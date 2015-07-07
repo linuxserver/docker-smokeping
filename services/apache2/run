@@ -1,5 +1,2 @@
 #!/bin/bash
-
-. /etc/apache2/envvars
-
-exec /usr/sbin/apache2 -k start -DNO_DETACH
+exec /usr/sbin/apache2ctl -D FOREGROUND
