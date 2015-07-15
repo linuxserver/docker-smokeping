@@ -22,7 +22,7 @@ Once running the URL will be `http://<host-ip>:8080/cgi-bin/smokeping.cgi`.
 
 **Parameters**
 
-* `-p 8080` - the port for the webUI
+* `-p 80` - the port for the webUI
 * `-v /data` - Storage location for db and application data (graphs etc)
 * `-v /config` - Configure the `Targets` file here
 * `-e PGID` for for GroupID - see below for explanation
@@ -40,8 +40,7 @@ Part of what makes our containers work so well is by allowing you to specify you
 
 Full guide coming soon...
 
-Basics are, edit the Targets file to ping the hosts you're interested in to match the format found here. Restart the container, BOOM!
-
+Basics are, edit the Targets file to ping the hosts you're interested in to match the format found here. Wait 10 minutes.
 
 ## Updates
 
@@ -53,3 +52,7 @@ Basics are, edit the Targets file to ping the hosts you're interested in to matc
 
 * IronicBadger <ironicbadger@linuxserver.io>
 * lonix <lonixx@gmail.com>
+
+**Version**
+
+29.06.2015: This is the first release, it is mostly stable, but may contain minor defects. (thus a beta tag)
