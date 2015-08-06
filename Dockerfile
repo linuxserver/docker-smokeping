@@ -24,10 +24,6 @@ RUN chmod -v +x /etc/service/*/run
 RUN chmod -v +x /etc/my_init.d/*.sh
 RUN mkdir /var/run/smokeping
 
-#Adduser
-RUN useradd -u 911 -U -s /bin/false abc
-RUN usermod -G users abc
-
 # Use baseimage-docker's init system
 CMD ["/sbin/my_init"]
 
