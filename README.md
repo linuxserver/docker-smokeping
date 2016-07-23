@@ -54,5 +54,5 @@ Basics are, edit the Targets file to ping the hosts you're interested in to matc
 * lonix <lonixx@gmail.com>
 
 **Version**
-
-29.06.2015: This is the first release, it is mostly stable, but may contain minor defects. (thus a beta tag)
++**23.07.16:** Fix apt script confusion.
++**29.06.15:** This is the first release, it is mostly stable, but may contain minor defects. (thus a beta tag)
