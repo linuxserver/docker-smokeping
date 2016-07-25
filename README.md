@@ -31,6 +31,7 @@ docker create \
 * `-e PGID` for for GroupID - see below for explanation
 * `-e PUID` for for UserID - see below for explanation
 * `-e TZ` for timezone setting, eg Europe/London
+
 This container is based on alpine linux with s6 overlay, for shell access whilst the container is running do `docker exec -it smokeping /bin/bash`.
 
 ### User / Group Identifiers
@@ -47,6 +48,7 @@ In this instance `PUID=1001` and `PGID=1001`. To find yours use `id user` as bel
 ## Setting up the application 
 
 Once running the URL will be `http://<host-ip>:8080/cgi-bin/smokeping.cgi`.
+
 Basics are, edit the Targets file to ping the hosts you're interested in to match the format found there. 
 Wait 10 minutes.
 
