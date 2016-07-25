@@ -8,15 +8,16 @@ mkdir -p \
 # copy config files
 PREV_DIR=$(pwd)
 
-cd /defaults/smoke-conf
-	for i in `find . -type f`
+cd /defaults/smoke-conf || exit
+shopt -s globstar nullglob
+for file in ./*
  	do
-		if [ ! -f "/config/${i}" ]
+		if [ ! -f "/config/${file}" ]
  		then
-		cp "${i}" "/config/${i}"
+		cp "${file}" "/config/${file}"
  	fi
  	done
-cd "${PREV_DIR}"
+cd "${PREV_DIR}" || exit
 
 # make symlinks
 [[ ! -e /var/www/localhost/smokeping ]] && ln -s \
