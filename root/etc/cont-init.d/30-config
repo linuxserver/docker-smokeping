@@ -6,7 +6,17 @@ mkdir -p \
 	/var/cache/smokeping
 
 # copy config files
-[[ ! -e /config/Targets ]] && cp /defaults/smoke-conf/* /config/
+PREV_DIR=$(pwd)
+
+cd /defaults/smoke-conf
+	for i in `find . -type f`
+ 	do
+		if [ ! -f "/config/${i}" ]
+ 		then
+		cp "${i}" "/config/${i}"
+ 	fi
+ 	done
+cd "${PREV_DIR}"
 
 # make symlinks
 [[ ! -e /var/www/localhost/smokeping ]] && ln -s \
