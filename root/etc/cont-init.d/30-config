@@ -1,0 +1,25 @@
+#!/usr/bin/with-contenv bash
+
+# create folders
+mkdir -p \
+	/run/apache2 \
+	/var/cache/smokeping
+
+# copy config files
+[[ ! -e /config/Targets ]] && cp /defaults/smoke-conf/* /config/
+
+# make symlinks
+[[ ! -e /var/www/localhost/smokeping ]] && ln -s \
+	/usr/share/webapps/smokeping /var/www/localhost/smokeping
+
+[[ ! -e /var/www/localhost/smokeping/cache ]] && ln -s \
+	/var/cache/smokeping /var/www/localhost/smokeping/cache
+
+# permissions
+chown -R abc:abc \
+	/config \
+	/data \
+	/run/apache2 \
+	/usr/share/webapps/smokeping \
+	/var/cache/smokeping \
+	/var/www/localhost/smokeping
