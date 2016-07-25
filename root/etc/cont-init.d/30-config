@@ -1,5 +1,4 @@
 #!/usr/bin/with-contenv bash
-shopt -s globstar nullglob
 
 # create folders
 mkdir -p \
@@ -7,13 +6,16 @@ mkdir -p \
 	/var/cache/smokeping
 
 # copy config files
-for file in /defaults/smoke-conf/*
+
+PREV_DIR=$(pwd)
+
+cd /defaults/smoke-conf || exit
+	for i in $(find . -type f)
  	do
-		if [ ! -f "/config/${file}" ]
- 		then
-		cp "${file}" "/config/"
- 	fi
+		[[ ! -e "/config/${i}" ]] && cp -v "${i}" "/config/${i}"
  	done
+
+cd "${PREV_DIR}" || exit
 
 # make symlinks
 [[ ! -e /var/www/localhost/smokeping ]] && ln -s \
