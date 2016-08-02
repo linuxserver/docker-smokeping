@@ -1,7 +1,7 @@
 FROM linuxserver/baseimage
 MAINTAINER LinuxServer.io <ironicbadger@linuxserver.io>
 # apache environment settings
-ENV APACHE_RUN_USER=abc APACHE_RUN_GROUP=users APACHE_LOG_DIR="/var/log/apache2" APACHE_LOCK_DIR="/var/lock/apache2" APACHE_PID_FILE="/var/run/apache2.pid"
+ENV TZ="UTC" APACHE_RUN_USER=abc APACHE_RUN_GROUP=users APACHE_LOG_DIR="/var/log/apache2" APACHE_LOCK_DIR="/var/lock/apache2" APACHE_PID_FILE="/var/run/apache2.pid"
 
 #Applying stuff
 RUN apt-get update && \
