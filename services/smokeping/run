@@ -1,3 +1,0 @@
-#!/bin/bash
-
-exec /sbin/setuser abc /usr/sbin/smokeping --config="/etc/smokeping/config" --nodaemon

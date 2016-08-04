@@ -1,0 +1,34 @@
+#!/usr/bin/with-contenv bash
+
+# create folders
+mkdir -p \
+	/run/apache2 \
+	/var/cache/smokeping
+
+# copy config files
+
+PREV_DIR=$(pwd)
+
+cd /defaults/smoke-conf || exit
+	for i in $(find . -type f)
+ 	do
+		[[ ! -e "/config/${i}" ]] && cp -v "${i}" "/config/${i}"
+ 	done
+
+cd "${PREV_DIR}" || exit
+
+# make symlinks
+[[ ! -e /var/www/localhost/smokeping ]] && ln -s \
+	/usr/share/webapps/smokeping /var/www/localhost/smokeping
+
+[[ ! -e /var/www/localhost/smokeping/cache ]] && ln -s \
+	/var/cache/smokeping /var/www/localhost/smokeping/cache
+
+# permissions
+chown -R abc:abc \
+	/config \
+	/data \
+	/run/apache2 \
+	/usr/share/webapps/smokeping \
+	/var/cache/smokeping \
+	/var/www/localhost/smokeping

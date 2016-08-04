@@ -1,6 +1,6 @@
 sendmail = /bin/false
-imgcache = /var/cache/smokeping/images
-imgurl   = ../smokeping/images
+imgcache = /var/cache/smokeping
+imgurl   = cache
 datadir  = /data
 piddir  = /var/run/smokeping
 smokemail = /etc/smokeping/smokemail
