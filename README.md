@@ -6,8 +6,15 @@ The [LinuxServer.io](https://linuxserver.io) team brings you another container r
 * [Podcast](https://www.linuxserver.io/index.php/category/podcast/) covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
 # linuxserver/smokeping
+[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/smokeping.svg)][hub]
+[![Docker Stars](https://img.shields.io/docker/stars/linuxserver/smokeping.svg)][hub]
+[![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io/linuxserver-smokeping)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io/job/linuxserver-smokeping/)
+[hub]: https://hub.docker.com/r/linuxserver/smokeping/
 
 Smokeping keeps track of your network latency. For a full example of what this application is capable of visit [UCDavis](http://smokeping.ucdavis.edu/cgi-bin/smokeping.fcgi).
+
+[![smokeping](http://oss.oetiker.ch/smokeping/inc/smokeping-logo.png)][smokeurl]
+[smokeurl]: http://oss.oetiker.ch/smokeping/
 
 ## Usage
 
@@ -58,6 +65,8 @@ Wait 10 minutes.
 
 
 **Version**
+
++ **28.08.16:** Add badges to README.
 + **25.07.16:** Rebase to alpine linux.
 + **23.07.16:** Fix apt script confusion.
 + **29.06.15:** This is the first release, it is mostly stable, but may contain minor defects. (thus a beta tag)
