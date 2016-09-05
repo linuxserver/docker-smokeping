@@ -11,9 +11,7 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 * [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
 # linuxserver/smokeping
-[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/smokeping.svg)][hub]
-[![Docker Stars](https://img.shields.io/docker/stars/linuxserver/smokeping.svg)][hub]
-[![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io/linuxserver-smokeping)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io/job/linuxserver-smokeping/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/smokeping.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/linuxserver/smokeping.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io/linuxserver-smokeping)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io/job/linuxserver-smokeping/)
 [hub]: https://hub.docker.com/r/linuxserver/smokeping/
 
 Smokeping keeps track of your network latency. For a full example of what this application is capable of visit [UCDavis](http://smokeping.ucdavis.edu/cgi-bin/smokeping.fcgi).
