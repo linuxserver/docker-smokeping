@@ -6,6 +6,7 @@ RUN \
  apk add --no-cache \
 	apache2 \
 	apache2-utils \
+	curl \
 	smokeping \
 	ssmtp \
 	sudo
