@@ -33,7 +33,14 @@ docker create \
 ```
 
 
-**Parameters**
+## Parameters
+
+`The parameters are split into two halves, separated by a colon, the left hand side representing the host and the right the container side. 
+For example with a port -p external:internal - what this shows is the port mapping from internal to external of the container.
+So -p 8080:80 would expose port 80 from inside the container to be accessible from the host's IP on port 8080
+http://192.168.x.x:8080 would show you what's running INSIDE the container on port 80.`
+
+
 
 * `-p 80` - the port for the webUI
 * `-v /data` - Storage location for db and application data (graphs etc)
@@ -69,6 +76,7 @@ Wait 10 minutes.
 
 **Version**
 
++ **17.10.16:** Add ttf-dejavu package as per [LT forum](http://lime-technology.com/forum/index.php?topic=43602.msg507875#msg507875).
 + **10.09.16:** Add layer badges to README.
 + **05.09.16:** Add curl package.
 + **28.08.16:** Add badges to README.

@@ -9,7 +9,8 @@ RUN \
 	curl \
 	smokeping \
 	ssmtp \
-	sudo
+	sudo \
+	ttf-dejavu
 
 # give abc sudo access to traceroute
 RUN \
