@@ -9,11 +9,12 @@ mkdir -p \
 
 PREV_DIR=$(pwd)
 
-cd /defaults/smoke-conf || exit
-	for i in $(find . -type f)
+	cd /defaults/smoke-conf || exit
+	shopt -s globstar nullglob
+	for i in *
  	do
-		[[ ! -e "/config/${i}" ]] && cp -v "${i}" "/config/${i}"
- 	done
+	[[ ! -e "/config/${i}" ]] && cp -v "${i}" "/config/${i}"
+	done
 
 cd "${PREV_DIR}" || exit
 
