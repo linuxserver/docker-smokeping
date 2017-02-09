@@ -76,6 +76,7 @@ Wait 10 minutes.
 
 **Version**
 
++ **09.02.17:** Rebase to alpine 3.5.
 + **17.10.16:** Add ttf-dejavu package as per [LT forum](http://lime-technology.com/forum/index.php?topic=43602.msg507875#msg507875).
 + **10.09.16:** Add layer badges to README.
 + **05.09.16:** Add curl package.
