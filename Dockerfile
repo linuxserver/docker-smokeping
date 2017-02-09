@@ -1,4 +1,4 @@
-FROM lsiobase/alpine
+FROM lsiobase/alpine:3.5
 MAINTAINER LinuxServer.io <ironicbadger@linuxserver.io>, sparklyballs
 
 # install packages
