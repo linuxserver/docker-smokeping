@@ -16,6 +16,10 @@ RUN \
 RUN \
  echo "abc ALL=(ALL) NOPASSWD: /usr/bin/traceroute" >> /etc/sudoers.d/traceroute
 
+# fix path to cropper.js
+RUN \
+ sed -i 's/src="\/cropper\//src="cropper\//' /etc/smokeping/basepage.html
+
 # add local files
 COPY root/ /
 
