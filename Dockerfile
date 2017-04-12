@@ -18,7 +18,7 @@ RUN \
 
 # fix path to cropper.js
 RUN \
- sed 's#src="/cropper/#/src="cropper/#' /etc/smokeping/basepage.html
+ sed -i 's#src="/cropper/#/src="cropper/#' /etc/smokeping/basepage.html
 
 # add local files
 COPY root/ /
