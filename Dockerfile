@@ -1,7 +1,12 @@
 FROM lsiobase/alpine:3.5
 MAINTAINER LinuxServer.io <ironicbadger@linuxserver.io>, sparklyballs
 
-# install packages
+# set version label
+ARG BUILD_DATE
+ARG VERSION
+LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
+
+# install packages
 RUN \
  apk add --no-cache \
 	apache2 \
@@ -10,15 +15,13 @@ RUN \
 	smokeping \
 	ssmtp \
 	sudo \
-	ttf-dejavu
+	ttf-dejavu && \
 
-# give abc sudo access to traceroute
-RUN \
- echo "abc ALL=(ALL) NOPASSWD: /usr/bin/traceroute" >> /etc/sudoers.d/traceroute
+# give abc sudo access to traceroute
+ echo "abc ALL=(ALL) NOPASSWD: /usr/bin/traceroute" >> /etc/sudoers.d/traceroute && \
 
 # fix path to cropper.js
-RUN \
- sed 's#src="/cropper/#/src="cropper/#' /etc/smokeping/basepage.html
+ sed -i 's#src="/cropper/#/src="cropper/#' /etc/smokeping/basepage.html
 
 # add local files
 COPY root/ /
