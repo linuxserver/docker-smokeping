@@ -24,7 +24,7 @@ Smokeping keeps track of your network latency. For a full example of what this a
 ```
 docker create \
 	--name smokeping \
-	-p 8080:80 \
+	-p 80:80 \
 	-e PUID=<UID> -e PGID=<GID> \
 	-e TZ=<timezone> \
 	-v <path/to/smokeping/data>:/data \
@@ -64,7 +64,7 @@ In this instance `PUID=1001` and `PGID=1001`. To find yours use `id user` as bel
 
 ## Setting up the application 
 
-Once running the URL will be `http://<host-ip>:8080/smokeping/smokeping.cgi`.
+Once running the URL will be `http://<host-ip>:80/smokeping/smokeping.cgi`.
 
 Basics are, edit the Targets file to ping the hosts you're interested in to match the format found there. 
 Wait 10 minutes.
@@ -76,6 +76,7 @@ Wait 10 minutes.
 
 **Version**
 
++ **07.05.17:** Expose smokeping.conf in /config/site-confs to allow user customisations
 + **12.04.17:** Fix cropper.js path, thanks nibbledeez.
 + **09.02.17:** Rebase to alpine 3.5.
 + **17.10.16:** Add ttf-dejavu package as per [LT forum](http://lime-technology.com/forum/index.php?topic=43602.msg507875#msg507875).
