@@ -76,6 +76,7 @@ Wait 10 minutes.
 
 **Version**
 
++ **28.05.17:** Rebase to alpine 3.6.
 + **07.05.17:** Expose smokeping.conf in /config/site-confs to allow user customisations
 + **12.04.17:** Fix cropper.js path, thanks nibbledeez.
 + **09.02.17:** Rebase to alpine 3.5.
