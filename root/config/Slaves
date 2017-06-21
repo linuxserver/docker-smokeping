@@ -1,5 +1,5 @@
 *** Slaves ***
-secrets=/etc/smokeping/smokeping_secrets
+secrets=/config/slavesecrets.conf
 #+boomer
 #display_name=boomer
 #color=0000ff
@@ -7,4 +7,3 @@ secrets=/etc/smokeping/smokeping_secrets
 #+slave2
 #display_name=another
 #color=00ff00
-
