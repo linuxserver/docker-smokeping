@@ -23,6 +23,22 @@ RUN \
 # fix path to cropper.js
  sed -i 's#src="/cropper/#/src="cropper/#' /etc/smokeping/basepage.html
 
+# create folders
+RUN mkdir -p \
+	/config/site-confs \
+	/run/apache2 \
+	/var/cache/smokeping && \
+
+# permissions
+  chown -R abc:abc \
+    /run/apache2 \
+    /usr/share/webapps/smokeping \
+    /var/cache/smokeping && \
+
+# symlinks
+  ln -s /usr/share/webapps/smokeping /var/www/localhost/smokeping && \
+  ln -s /var/cache/smokeping /var/www/localhost/smokeping/cache
+
 # add local files
 COPY root/ /
 
