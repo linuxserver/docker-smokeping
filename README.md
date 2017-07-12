@@ -13,7 +13,7 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 * [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
 # linuxserver/smokeping
-[![](https://images.microbadger.com/badges/image/linuxserver/smokeping.svg)](http://microbadger.com/images/linuxserver/smokeping "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/smokeping.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/linuxserver/smokeping.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io-hub-built/linuxserver-smokeping)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io-hub-built/job/linuxserver-smokeping/)
+[![](https://images.microbadger.com/badges/version/linuxserver/smokeping.svg)](https://microbadger.com/images/linuxserver/smokeping "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/linuxserver/smokeping.svg)](https://microbadger.com/images/linuxserver/smokeping "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/smokeping.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/linuxserver/smokeping.svg)][hub][![Build Status](https://ci.linuxserver.io/buildStatus/icon?job=Docker-Builders/x86-64/x86-64-smokeping)](https://ci.linuxserver.io/job/Docker-Builders/job/x86-64/job/x86-64-smokeping/)
 
 Smokeping keeps track of your network latency. For a full example of what this application is capable of visit [UCDavis](http://smokeping.ucdavis.edu/cgi-bin/smokeping.fcgi).
 
@@ -71,11 +71,19 @@ Wait 10 minutes.
 
 ## Info
 
-* To monitor the logs of the container in realtime `docker logs -f smokeping`.
+To monitor the logs of the container in realtime `docker logs -f smokeping`.
 
+* container version number 
 
-**Version**
+`docker inspect -f '{{ index .Config.Labels "build_version" }}' smokeping`
 
+* image version number
+
+`docker inspect -f '{{ index .Config.Labels "build_version" }}' linuxserver/smokeping`
+
+## Versions
+
++ **12.07.17:** Add inspect commands to README, move to jenkins build and push.
 + **28.05.17:** Rebase to alpine 3.6.
 + **07.05.17:** Expose smokeping.conf in /config/site-confs to allow user customisations
 + **12.04.17:** Fix cropper.js path, thanks nibbledeez.
