@@ -33,6 +33,15 @@ docker create \
 ```
 
 
+You can choose between ,using tags, to switch to the unraid version (disabled ipv6).
+
+Add one of the tags,  if required,  to the linuxserver/kodi-headless line of the run/create command in the following format, linuxserver/smokeping:unraid
+
+#### Tags
++ **unraid** : for hosts with ipv6 not enabled in the kernel, eg unraid versions up to and prior to 6.3x.
+
+## Important - `DO NOT USE :unraid branch with ipv6 enabled hosts as it will fail` 
+
 ## Parameters
 
 `The parameters are split into two halves, separated by a colon, the left hand side representing the host and the right the container side. 
@@ -83,6 +92,7 @@ To monitor the logs of the container in realtime `docker logs -f smokeping`.
 
 ## Versions
 
++ **24.07.17:** Add :unraid tag for hosts without ipv6.
 + **12.07.17:** Add inspect commands to README, move to jenkins build and push.
 + **28.05.17:** Rebase to alpine 3.6.
 + **07.05.17:** Expose smokeping.conf in /config/site-confs to allow user customisations
