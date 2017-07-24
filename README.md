@@ -40,7 +40,7 @@ Add one of the tags,  if required,  to the linuxserver/kodi-headless line of the
 #### Tags
 + **unraid** : for hosts with ipv6 not enabled in the kernel, eg unraid versions up to and prior to 6.3x.
 
-## Important - `DO NOT USE :unraid branch with ipv6 enabled hosts as it will fail` 
+# Important - DO NOT USE :unraid branch with ipv6 enabled hosts as it will fail
 
 ## Parameters
 
