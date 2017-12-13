@@ -1,5 +1,4 @@
 FROM lsiobase/alpine:3.7
-MAINTAINER LinuxServer.io <ironicbadger@linuxserver.io>, sparklyballs
 
 # set version label
 ARG BUILD_DATE
