@@ -20,14 +20,20 @@ PREV_DIR=$(pwd)
 cd "${PREV_DIR}" || exit
 
 # make symlinks
-[[ ! -e /var/www/localhost/smokeping ]] && ln -s \
-	/usr/share/webapps/smokeping /var/www/localhost/smokeping
+[[ ! -L /var/www/localhost/smokeping ]] && \
+	ln -sf /usr/share/webapps/smokeping /var/www/localhost/smokeping
 
-[[ ! -e /var/www/localhost/smokeping/cache ]] && ln -s \
-	/var/cache/smokeping /var/www/localhost/smokeping/cache
+[[ ! -L /var/www/localhost/smokeping/cache ]] && \
+	ln -sf	/var/cache/smokeping /var/www/localhost/smokeping/cache
 
 [[ ! -e /config/site-confs/smokeping.conf ]] && \
 	cp /defaults/smokeping.conf /config/site-confs/smokeping.conf
+
+[[ ! -e /config/httpd.conf ]] && \
+	cp /defaults/httpd.conf /config/httpd.conf
+
+[[ ! -L /etc/apache2/httpd.conf ]] && \
+	ln -sf /config/httpd.conf /etc/apache2/httpd.conf
 
 # permissions
 chown -R abc:abc \
