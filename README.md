@@ -92,6 +92,7 @@ To monitor the logs of the container in realtime `docker logs -f smokeping`.
 
 ## Versions
 
++ **13.12.17:** Expose httpd_conf to /config.
 + **13.12.17:** Rebase to alpine 3.7.
 + **24.07.17:** Add :unraid tag for hosts without ipv6.
 + **12.07.17:** Add inspect commands to README, move to jenkins build and push.
