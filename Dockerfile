@@ -15,6 +15,7 @@ RUN \
 	apache2 \
 	apache2-ctl \
 	apache2-utils \
+	bc \
 	curl \
 	smokeping \
 	ssmtp \
