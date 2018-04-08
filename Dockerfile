@@ -29,6 +29,9 @@ RUN \
 
 # add local files
 COPY root/ /
+RUN \
+  echo "**** make tcpping executable ****" && \
+  chmod +x /usr/bin/tcpping
 
 # ports and volumes
 EXPOSE 80
