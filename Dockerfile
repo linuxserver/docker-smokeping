@@ -1,13 +1,13 @@
 FROM lsiobase/alpine:3.7
 
-# copy tcpping script
-COPY tcpping /defaults/
-
 # set version label
 ARG BUILD_DATE
 ARG VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="ironicbadger,sparklyballs"
+
+# copy tcpping script
+COPY tcpping /defaults/
 
 RUN \
  echo "**** install packages ****" && \
