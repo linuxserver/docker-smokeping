@@ -16,9 +16,12 @@ RUN \
 	smokeping \
 	ssmtp \
 	sudo \
+	tcptraceroute \
 	ttf-dejavu && \
  echo "**** give abc sudo access to traceroute ****" && \
  echo "abc ALL=(ALL) NOPASSWD: /usr/bin/traceroute" >> /etc/sudoers.d/traceroute && \
+ echo "**** give abc sudo access to tcptraceroute ****" && \
+ echo "abc ALL=(ALL) NOPASSWD: /usr/bin/tcptraceroute" >> /etc/sudoers.d/tcptraceroute && \
  echo "**** fix path to cropper.js ****" && \
  sed -i 's#src="/cropper/#/src="cropper/#' /etc/smokeping/basepage.html && \
  echo "**** remove default apache conf ****" && \
