@@ -1,4 +1,4 @@
-sendmail = /bin/false
+sendmail = /usr/bin/ssmtp
 imgcache = /var/cache/smokeping
 imgurl   = cache
 datadir  = /data

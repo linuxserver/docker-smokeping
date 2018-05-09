@@ -24,6 +24,8 @@ RUN \
 	sudo \
 	tcptraceroute \
 	ttf-dejavu && \
+ rm /etc/ssmtp/ssmtp.conf && \
+ ln -s /config/ssmtp.conf /etc/ssmtp/ssmtp.conf && \
  echo "**** give abc sudo access to traceroute & tcptraceroute ****" && \
  echo \
  "abc ALL=(ALL) NOPASSWD: /usr/bin/traceroute" >> \
