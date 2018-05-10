@@ -16,6 +16,7 @@ RUN \
 	apache2-ctl \
 	apache2-utils \
 	bc \
+	bind-tools \
 	curl \
 	smokeping \
 	ssmtp \
