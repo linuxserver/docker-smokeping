@@ -35,7 +35,7 @@ docker create \
 
 You can choose between ,using tags, to switch to the unraid version (disabled ipv6).
 
-Add one of the tags,  if required,  to the linuxserver/kodi-headless line of the run/create command in the following format, linuxserver/smokeping:unraid
+Add one of the tags,  if required,  to the linuxserver/smokeping line of the run/create command in the following format, linuxserver/smokeping:unraid
 
 #### Tags
 + **unraid** : for hosts with ipv6 not enabled in the kernel, eg unraid versions up to and prior to 6.3x.
