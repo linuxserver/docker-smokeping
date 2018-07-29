@@ -13,7 +13,7 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 * [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
 # linuxserver/smokeping
-[![](https://images.microbadger.com/badges/version/linuxserver/smokeping.svg)](https://microbadger.com/images/linuxserver/smokeping "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/linuxserver/smokeping.svg)](https://microbadger.com/images/linuxserver/smokeping "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/smokeping.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/linuxserver/smokeping.svg)][hub][![Build Status](https://ci.linuxserver.io/buildStatus/icon?job=docker-smokeping/master)](https://ci.linuxserver.io/job/docker-smokeping/job/master/)[![CI Status](https://lsio-ci.ams3.digitaloceanspaces.com/linuxserver/smokeping/latest/badge.svg)](https://lsio-ci.ams3.digitaloceanspaces.com/linuxserver/smokeping/latest/index.html)
+[![](https://images.microbadger.com/badges/version/linuxserver/smokeping.svg)](https://microbadger.com/images/linuxserver/smokeping "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/linuxserver/smokeping.svg)](https://microbadger.com/images/linuxserver/smokeping "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/smokeping.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/linuxserver/smokeping.svg)][hub][![Build Status](https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-smokeping/job/master/badge/icon)](https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-smokeping/job/master/)[![CI Status](https://lsio-ci.ams3.digitaloceanspaces.com/linuxserver/smokeping/latest/badge.svg)](https://lsio-ci.ams3.digitaloceanspaces.com/linuxserver/smokeping/latest/index.html)
 
 Smokeping keeps track of your network latency. For a full example of what this application is capable of visit [UCDavis](http://smokeping.ucdavis.edu/cgi-bin/smokeping.fcgi).
 
@@ -92,6 +92,7 @@ To monitor the logs of the container in realtime `docker logs -f smokeping`.
 
 ## Versions
 
++ **29.07.18:** Adding Architecture manifests and in repo build logic
 + **09.04.18:** Add bc package.
 + **08.04.18:** Add tccping script and tcptraceroute package (thanks rcarmo).
 + **13.12.17:** Expose httpd_conf to /config.
