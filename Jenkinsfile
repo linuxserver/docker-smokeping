@@ -366,7 +366,7 @@ pipeline {
       steps {
         sh "docker pull ironicbadger/doc-builder:latest"
         sh "docker run --rm -e CONTAINER_NAME=${CONTAINER_NAME} -v ${PWD}/readme:/ansible/readme ironicbadger/doc-builder:latest"
-        sh "git add readme/${CONTAINER_NAME}/"
+        sh "git add ${PWD}/readme/${CONTAINER_NAME}/"
         sh "git commit -m 'README rebuilt by Jenkins'"
         sh "git push"
       }
