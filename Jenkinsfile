@@ -7,7 +7,7 @@ pipeline {
     BUILD_VERSION_ARG = 'SMOKEPING_VERSION'
     LS_USER = 'ironicbadger'
     LS_REPO = 'docker-smokeping'
-    DOCKERHUB_IMAGE = 'ironicbadger/smokeping-doctest'
+    DOCKERHUB_IMAGE = 'linuxserver/smokeping-doctest'
     DEV_DOCKERHUB_IMAGE = 'ironicbadger/smokeping'
     PR_DOCKERHUB_IMAGE = 'ironicbadger/smokeping'
     BUILDS_DISCORD = credentials('build_webhook_url')
