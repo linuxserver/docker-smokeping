@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    label 'X86-64-MULTI'
+    label 'Jenkins-DO'
   }
   // Configuraiton for the variables used for this specific repo
   environment {
