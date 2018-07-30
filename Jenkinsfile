@@ -361,6 +361,15 @@ pipeline {
               curl -H "Authorization: token ${GITHUB_TOKEN}" -X POST https://api.github.com/repos/${LS_USER}/${LS_REPO}/releases -d @releasebody.json.done'''
       }
     }
+    // programatically build README
+    stage('build-README') {
+      steps {
+        sh "docker run --rm -e NAME=${CONTAINER_NAME} -v ${PWD}/readme:/ansible/readme ironicbadger/doc-builder:latest"
+        sh "git add readme/${CONTAINER_NAME}/"
+        sh "git commit -m 'README rebuilt by Jenkins'"
+        sh "git push"
+      }
+    }
     // Use helper container to push the current README in master to the DockerHub Repo
     stage('Sync-README') {
       when {
@@ -530,15 +539,6 @@ pipeline {
           env.CODE_URL = 'https://github.com/' + env.LS_USER + '/' + env.LS_REPO + '/pull/' + env.PULL_REQUEST
           env.DOCKERHUB_LINK = 'https://hub.docker.com/r/' + env.PR_DOCKERHUB_IMAGE + '/tags/'
         }
-      }
-    }
-    // programatically build README
-    stage('build-README') {
-      steps {
-        sh "docker run --rm -e NAME=${CONTAINER_NAME} -v ${PWD}/readme:/ansible/readme config-manager:latest"
-        sh "git add readme/${CONTAINER_NAME}/"
-        sh "git commit -m 'README rebuilt by Jenkins'"
-        sh "git push"
       }
     }
   }
