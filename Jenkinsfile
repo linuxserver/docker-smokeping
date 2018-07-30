@@ -7,6 +7,7 @@ pipeline {
     BUILD_VERSION_ARG = 'SMOKEPING_VERSION'
     LS_USER = 'ironicbadger'
     LS_REPO = 'docker-smokeping'
+    CONTAINER_NAME = 'smokeping'
     DOCKERHUB_IMAGE = 'linuxserver/smokeping-doctest'
     DEV_DOCKERHUB_IMAGE = 'ironicbadger/smokeping'
     PR_DOCKERHUB_IMAGE = 'ironicbadger/smokeping'
@@ -530,6 +531,13 @@ pipeline {
           env.DOCKERHUB_LINK = 'https://hub.docker.com/r/' + env.PR_DOCKERHUB_IMAGE + '/tags/'
         }
       }
+    }
+    // programatically build README
+    stage('build-README') {
+      sh "docker run --rm -e NAME=${CONTAINER_NAME} -v ${PWD}/readme:/ansible/readme config-manager:latest"
+      sh "git add readme/${CONTAINER_NAME}/"
+      sh "git commit -m 'README rebuilt by Jenkins'"
+      sh "git push"
     }
   }
   /* ######################
