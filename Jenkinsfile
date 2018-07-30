@@ -534,10 +534,12 @@ pipeline {
     }
     // programatically build README
     stage('build-README') {
-      sh "docker run --rm -e NAME=${CONTAINER_NAME} -v ${PWD}/readme:/ansible/readme config-manager:latest"
-      sh "git add readme/${CONTAINER_NAME}/"
-      sh "git commit -m 'README rebuilt by Jenkins'"
-      sh "git push"
+      steps {
+        sh "docker run --rm -e NAME=${CONTAINER_NAME} -v ${PWD}/readme:/ansible/readme config-manager:latest"
+        sh "git add readme/${CONTAINER_NAME}/"
+        sh "git commit -m 'README rebuilt by Jenkins'"
+        sh "git push"
+      }
     }
   }
   /* ######################
