@@ -1,15 +1,15 @@
 pipeline {
   agent {
-    label 'Jenkins-DO'
+    label 'X86-64-MULTI'
   }
   // Configuraiton for the variables used for this specific repo
   environment {
     BUILD_VERSION_ARG = 'SMOKEPING_VERSION'
-    LS_USER = 'linuxserver'
+    LS_USER = 'ironicbadger'
     LS_REPO = 'docker-smokeping'
-    DOCKERHUB_IMAGE = 'linuxserver/smokeping'
-    DEV_DOCKERHUB_IMAGE = 'lsiodev/smokeping'
-    PR_DOCKERHUB_IMAGE = 'lspipepr/smokeping'
+    DOCKERHUB_IMAGE = 'ironicbadger/smokeping'
+    DEV_DOCKERHUB_IMAGE = 'ironicbadger/smokeping'
+    PR_DOCKERHUB_IMAGE = 'ironicbadger/smokeping'
     BUILDS_DISCORD = credentials('build_webhook_url')
     GITHUB_TOKEN = credentials('498b4638-2d02-4ce5-832d-8a57d01d97ab')
     DIST_IMAGE = 'alpine'
