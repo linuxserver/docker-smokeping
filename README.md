@@ -91,13 +91,12 @@ In this instance `PUID=1001` and `PGID=1001`, to find yours use `id user` as bel
 ```
 
 &nbsp;
+## Application Setup
 
-## Reverse Proxy Snippet
-
-This snippet has been tested with Linuxserver.io's [Let's Encrypt reverse proxy](https://github.com/linuxserver/docker-letsencrypt) container.
 - Once running the URL will be `http://<host-ip>/smokeping/smokeping.cgi`.
 - Basics are, edit the `Targets` file to ping the hosts you're interested in to match the format found there. 
 - Wait 10 minutes.
+
 
 
 ## Support Info
