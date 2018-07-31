@@ -8,7 +8,7 @@ pipeline {
     LS_USER = 'linuxserver'
     LS_REPO = 'docker-smokeping'
     CONTAINER_NAME = 'smokeping'
-    DOCKERHUB_IMAGE = 'linuxserver/smokeping-doctest'
+    DOCKERHUB_IMAGE = 'linuxserver/smokeping'
     DEV_DOCKERHUB_IMAGE = 'lsiodev/smokeping'
     PR_DOCKERHUB_IMAGE = 'lspipepr/smokeping'
     BUILDS_DISCORD = credentials('build_webhook_url')
