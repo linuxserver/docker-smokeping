@@ -397,9 +397,9 @@ pipeline {
         stage('Sync-README') {
           when {
             branch "master"
-            expression {
-              env.LS_RELEASE != env.EXT_RELEASE + '-pkg-' + env.PACKAGE_TAG + '-ls' + env.LS_TAG_NUMBER
-            }
+            //expression {
+            //  env.LS_RELEASE != env.EXT_RELEASE + '-pkg-' + env.PACKAGE_TAG + '-ls' + env.LS_TAG_NUMBER
+            //}
           }
           steps {
             withCredentials([
