@@ -1,0 +1,53 @@
+---
+
+# project information
+project_name: smokeping
+project_url: "https://oss.oetiker.ch/smokeping/"
+project_logo: "https://camo.githubusercontent.com/e0694ef783e3fd1d74e6776b28822ced01c7cc17/687474703a2f2f6f73732e6f6574696b65722e63682f736d6f6b6570696e672f696e632f736d6f6b6570696e672d6c6f676f2e706e67"
+project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) keeps track of your network latency. For a full example of what this application is capable of visit [UCDavis](http://smokeping.ucdavis.edu/cgi-bin/smokeping.fcgi)."
+project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
+
+# container parameters
+param_container_name: "{{ project_name }}"
+param_usage_include_net: false
+param_net: "host"
+param_usage_include_env: false
+param_env_vars: []
+param_usage_include_vols: true
+param_volumes:
+  - { vol_path: "/config", vol_host_path: "</path/to/smokeping/config>", desc: "Configure the `Targets` file here" }
+  - { vol_path: "/data", vol_host_path: "</path/to/{{ project_name }}/data>", desc: "Storage location for db and application data (graphs etc)" }
+param_usage_include_ports: true
+param_ports:
+  - { external_port: "80", internal_port: "80", port_desc: "Allows HTTP access to the internal webserver." }
+
+# application setup block
+app_setup_block_enabled: false
+app_setup_block: |
+  - Once running the URL will be `http://<host-ip>/smokeping/smokeping.cgi`.
+  - Basics are, edit the `Targets` file to ping the hosts you're interested in to match the format found there. 
+  - Wait 10 minutes.
+
+app_setup_nginx_reverse_proxy_snippet_enabled: false
+app_setup_nginx_reverse_proxy_block: ""
+
+
+# changelog
+changelogs:
+  - { date: "09.04.18:", desc: "Add bc package." }
+  - { date: "08.04.18:", desc: "Add tccping script and tcptraceroute package (thanks rcarmo)." }
+  - { date: "13.12.17:", desc: "Expose httpd_conf to /config." }
+  - { date: "13.12.17:", desc: "Rebase to alpine 3.7." }
+  - { date: "24.07.17:", desc: "Add :unraid tag for hosts without ipv6." }
+  - { date: "12.07.17:", desc: "Add inspect commands to README, move to jenkins build and push." }
+  - { date: "28.05.17:", desc: "Rebase to alpine 3.6." }
+  - { date: "07.05.17:", desc: "Expose smokeping.conf in /config/site-confs to allow user customisations" }
+  - { date: "12.04.17:", desc: "Fix cropper.js path, thanks nibbledeez." }
+  - { date: "09.02.17:", desc: "Rebase to alpine 3.5." }
+  - { date: "17.10.16:", desc: "Add ttf-dejavu package as per [LT forum](http://lime-technology.com/forum/index.php?topic=43602.msg507875#msg507875)." }
+  - { date: "10.09.16:", desc: "Add layer badges to README." }
+  - { date: "05.09.16:", desc: "Add curl package." }
+  - { date: "28.08.16:", desc: "Add badges to README." }
+  - { date: "25.07.16:", desc: "Rebase to alpine linux." }
+  - { date: "23.07.16:", desc: "Fix apt script confusion." }
+  - { date: "29.06.15:", desc: "This is the first release, it is mostly stable, but may contain minor defects. (thus a beta tag)" }
