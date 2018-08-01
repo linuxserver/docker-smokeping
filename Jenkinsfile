@@ -75,19 +75,22 @@ pipeline {
                        fi''',
             returnStdout: true).trim()
         }
+        // script{
+        //   env.ONLYREADME = sh(
+        //     script: '''#! /bin/bash
+        //                filecount=$(curl -s https://api.github.com/repos/${LS_USER}/${LS_REPO}/commits/${COMMIT_SHA} | jq '. | .files | length')
+        //                filename=$(curl -s https://api.github.com/repos/${LS_USER}/${LS_REPO}/commits/${COMMIT_SHA} | jq -r '. | .files[0].filename')
+        //                if [ "$filecount" == 1 ]; then
+        //                  if [ "$filename" == 'README.md' ]; then
+        //                    echo "true"
+        //                    exit 0
+        //                  fi
+        //                fi
+        //                echo "false"''',
+        //     returnStdout: true).trim()
+        // }
         script{
-          env.ONLYREADME = sh(
-            script: '''#! /bin/bash
-                       filecount=$(curl -s https://api.github.com/repos/${LS_USER}/${LS_REPO}/commits/${COMMIT_SHA} | jq '. | .files | length')
-                       filename=$(curl -s https://api.github.com/repos/${LS_USER}/${LS_REPO}/commits/${COMMIT_SHA} | jq -r '. | .files[0].filename')
-                       if [ "$filecount" == 1 ]; then
-                         if [ "$filename" == 'README.md' ]; then
-                           echo "true"
-                           exit 0
-                         fi
-                       fi
-                       echo "false"''',
-            returnStdout: true).trim()
+          env.ONLYREADME = true
         }
       }
     }
