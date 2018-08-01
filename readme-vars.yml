@@ -7,6 +7,12 @@ project_logo: "https://camo.githubusercontent.com/e0694ef783e3fd1d74e6776b28822c
 project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) keeps track of your network latency. For a full example of what this application is capable of visit [UCDavis](http://smokeping.ucdavis.edu/cgi-bin/smokeping.fcgi)."
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
 
+# supported architectures
+available_architectures:
+  - { arch: "{{ arch_x86-64 }}", tag: "tbc"}
+  - { arch: "{{ arch_arm64 }}", tag: "tbc"}
+  - { arch: "{{ arch_armhf }}", tag: "tbc"}
+
 # container parameters
 param_container_name: "{{ project_name }}"
 param_usage_include_vols: true
