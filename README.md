@@ -14,6 +14,12 @@ Find us at:
 * [Blog](https://blog.linuxserver.io) - all the things you can do with our containers including How-To guides, opinions and much more!
 * [Podcast](https://podcast.linuxserver.io) - on hiatus. Coming back soon (late 2018).
 
+# PSA: Changes are happening
+
+Linuxserver are in the midst of switching to a new CI platform which will enable us to build and release multiple architectures under a single repo. To this end, existing images for `arm64` and `armhf` builds are being deprecated. They are replaced by a manifest file in each container which automatically pulls the correct image for your architecture. You'll also be able to pull based on a specific architecture tag.
+
+TLDR: Multi-arch support is changing from multiple repos to one repo per container image.
+
 # [linuxserver/smokeping](https://github.com/linuxserver/docker-smokeping)
 [![](https://images.microbadger.com/badges/version/linuxserver/smokeping.svg)](https://microbadger.com/images/linuxserversmokeping "Get your own version badge on microbadger.com")
 [![](https://images.microbadger.com/badges/image/linuxserver/smokeping.svg)](https://microbadger.com/images/linuxserver/smokeping "Get your own version badge on microbadger.com")
