@@ -380,8 +380,8 @@ pipeline {
         ]) {
           sh '''#! /bin/bash
                 TEMPDIR=$(mktemp -d)
-                docker pull ironicbadger/doc-builder:latest
-                docker run --rm -e CONTAINER_NAME=${CONTAINER_NAME} -v ${TEMPDIR}:/ansible/readme ironicbadger/doc-builder:latest
+                docker pull linuxserver/doc-builder:latest
+                docker run --rm -e CONTAINER_NAME=${CONTAINER_NAME} -v ${TEMPDIR}:/ansible/readme linuxserver/doc-builder:latest
                 if [ "$(md5sum ${TEMPDIR}/${CONTAINER_NAME}/README.md | awk '{ print $1 }')" != "$(md5sum README.md | awk '{ print $1 }')" ]; then
                   git clone https://github.com/${LS_USER}/${LS_REPO}.git ${TEMPDIR}/${LS_REPO}
                   cp ${TEMPDIR}/${CONTAINER_NAME}/README.md ${TEMPDIR}/${LS_REPO}/
