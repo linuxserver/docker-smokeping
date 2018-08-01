@@ -1,4 +1,4 @@
-[![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)[https://linuxserver.io]
+[![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)](https://linuxserver.io)
 
 The [LinuxServer.io](https://linuxserver.io) team brings you another container release featuring :-
 
@@ -91,6 +91,12 @@ In this instance `PUID=1001` and `PGID=1001`, to find yours use `id user` as bel
 ```
 
 &nbsp;
+## Application Setup
+
+- Once running the URL will be `http://<host-ip>/smokeping/smokeping.cgi`.
+- Basics are, edit the `Targets` file to ping the hosts you're interested in to match the format found there. 
+- Wait 10 minutes.
+
 
 
 ## Support Info
