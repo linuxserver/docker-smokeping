@@ -1,4 +1,4 @@
-[![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)[https://linuxserver.io)]
+[![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)[https://linuxserver.io]
 
 The [LinuxServer.io](https://linuxserver.io) team brings you another container release featuring :-
 
