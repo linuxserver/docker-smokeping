@@ -16,7 +16,7 @@ Find us at:
 
 # PSA: Changes are happening
 
-Linuxserver are in the midst of switching to a new CI platform which will enable us to build and release multiple architectures under a single repo. To this end, existing images for `arm64` and `armhf` builds are being deprecated. They are replaced by a manifest file in each container which automatically pulls the correct image for you architecture. You'll also be able to pull based on a specific architecture tag.
+Linuxserver are in the midst of switching to a new CI platform which will enable us to build and release multiple architectures under a single repo. To this end, existing images for `arm64` and `armhf` builds are being deprecated. They are replaced by a manifest file in each container which automatically pulls the correct image for your architecture. You'll also be able to pull based on a specific architecture tag.
 
 TLDR: Multi-arch support is changing from multiple repos to one repo per container image.
 
