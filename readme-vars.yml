@@ -9,10 +9,6 @@ project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_
 
 # container parameters
 param_container_name: "{{ project_name }}"
-param_usage_include_net: false
-param_net: "host"
-param_usage_include_env: false
-param_env_vars: []
 param_usage_include_vols: true
 param_volumes:
   - { vol_path: "/config", vol_host_path: "</path/to/smokeping/config>", desc: "Configure the `Targets` file here" }
@@ -22,15 +18,11 @@ param_ports:
   - { external_port: "80", internal_port: "80", port_desc: "Allows HTTP access to the internal webserver." }
 
 # application setup block
-app_setup_block_enabled: false
+app_setup_block_enabled: true
 app_setup_block: |
   - Once running the URL will be `http://<host-ip>/smokeping/smokeping.cgi`.
   - Basics are, edit the `Targets` file to ping the hosts you're interested in to match the format found there. 
   - Wait 10 minutes.
-
-app_setup_nginx_reverse_proxy_snippet_enabled: false
-app_setup_nginx_reverse_proxy_block: ""
-
 
 # changelog
 changelogs:
