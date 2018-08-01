@@ -9,7 +9,7 @@ project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_
 
 # supported architectures
 available_architectures:
-  - { arch: "{{ arch_x86-64 }}", tag: "tbc"}
+  - { arch: "{{ arch_x86_64 }}", tag: "tbc"}
   - { arch: "{{ arch_arm64 }}", tag: "tbc"}
   - { arch: "{{ arch_armhf }}", tag: "tbc"}
 
