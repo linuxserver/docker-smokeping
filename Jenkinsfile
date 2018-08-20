@@ -97,12 +97,12 @@ pipeline {
        ######################## */
     // If this is an os release set release type to none to indicate no external release
     stage("Set ENV os"){
-      steps{
-        script{
-          env.EXT_RELEASE = env.PACKAGE_TAG
-          env.RELEASE_LINK = 'none'
-        }
-      }
+     steps{
+       script{
+         env.EXT_RELEASE = env.PACKAGE_TAG
+         env.RELEASE_LINK = 'none'
+       }
+     }
     }
     // If this is a master build use live docker endpoints
     stage("Set ENV live build"){
@@ -130,7 +130,6 @@ pipeline {
       when {
         not {branch "master"}
         environment name: 'CHANGE_ID', value: ''
-        environment name: 'MULTIARCH', value: 'false'
       }
       steps {
         script{
@@ -149,7 +148,6 @@ pipeline {
     stage("Set ENV PR build"){
       when {
         not {environment name: 'CHANGE_ID', value: ''}
-        environment name: 'MULTIARCH', value: 'false'
       }
       steps {
         script{
@@ -162,6 +160,58 @@ pipeline {
           env.META_TAG = env.EXT_RELEASE + '-pkg-' + env.PACKAGE_TAG + '-pr-' + env.PULL_REQUEST
           env.CODE_URL = 'https://github.com/' + env.LS_USER + '/' + env.LS_REPO + '/pull/' + env.PULL_REQUEST
           env.DOCKERHUB_LINK = 'https://hub.docker.com/r/' + env.PR_DOCKERHUB_IMAGE + '/tags/'
+        }
+      }
+    }
+    // Use helper container to render a readme from the template if needed
+    stage('Update-README') {
+      when {
+        branch "master"
+        environment name: 'CHANGE_ID', value: ''
+        expression {
+          env.CONTAINER_NAME != null
+        }
+      }
+      steps {
+        sh '''#! /bin/bash
+              TEMPDIR=$(mktemp -d)
+              docker pull linuxserver/doc-builder:latest
+              docker run --rm -e CONTAINER_NAME=${CONTAINER_NAME} -v ${TEMPDIR}:/ansible/readme linuxserver/doc-builder:latest
+              if [ "$(md5sum ${TEMPDIR}/${CONTAINER_NAME}/README.md | awk '{ print $1 }')" != "$(md5sum README.md | awk '{ print $1 }')" ]; then
+                git clone https://github.com/${LS_USER}/${LS_REPO}.git ${TEMPDIR}/${LS_REPO}
+                cp ${TEMPDIR}/${CONTAINER_NAME}/README.md ${TEMPDIR}/${LS_REPO}/
+                cd ${TEMPDIR}/${LS_REPO}/
+                git --git-dir ${TEMPDIR}/${LS_REPO}/.git add README.md
+                git --git-dir ${TEMPDIR}/${LS_REPO}/.git commit -m 'Bot Updating README from template'
+                git --git-dir ${TEMPDIR}/${LS_REPO}/.git push https://LinuxServer-CI:${GITHUB_TOKEN}@github.com/${LS_USER}/${LS_REPO}.git --all
+                echo "true" > /tmp/${COMMIT_SHA}-${BUILD_NUMBER}
+              else
+                echo "false" > /tmp/${COMMIT_SHA}-${BUILD_NUMBER}
+              fi
+              rm -Rf ${TEMPDIR}'''
+        script{
+          env.README_UPDATED = sh(
+            script: '''cat /tmp/${COMMIT_SHA}-${BUILD_NUMBER}''',
+            returnStdout: true).trim()
+        }
+      }
+    }
+    // Exit the build if the Readme was just updated
+    stage('README-exit') {
+      when {
+        branch "master"
+        environment name: 'CHANGE_ID', value: ''
+        environment name: 'README_UPDATED', value: 'true'
+        expression {
+          env.CONTAINER_NAME != null
+        }
+      }
+      steps {
+        script{
+          env.CI_URL = 'README_UPDATE'
+          env.RELEASE_LINK = 'README_UPDATE'
+          currentBuild.rawBuild.result = Result.ABORTED
+          throw new hudson.AbortException('ABORTED_README')
         }
       }
     }
@@ -183,7 +233,7 @@ pipeline {
        when {
          environment name: 'MULTIARCH', value: 'true'
        }
-       stages {
+       parallel {
          stage('Build X86') {
            steps {
              sh "docker build --no-cache -t ${IMAGE}:amd64-${META_TAG} \
@@ -207,7 +257,7 @@ pipeline {
                sh '''#! /bin/bash
                   echo $DOCKERPASS | docker login -u $DOCKERUSER --password-stdin
                   '''
-               sh "wget https://lsio-ci.ams3.digitaloceanspaces.com/qemu-arm-static"
+               sh "curl https://lsio-ci.ams3.digitaloceanspaces.com/qemu-arm-static -o qemu-arm-static"
                sh "chmod +x qemu-*"
                sh "docker build --no-cache -f Dockerfile.armhf -t ${IMAGE}:arm32v6-${META_TAG} \
                             --build-arg ${BUILD_VERSION_ARG}=${EXT_RELEASE} --build-arg VERSION=\"${META_TAG}\" --build-arg BUILD_DATE=${GITHUB_DATE} ."
@@ -233,7 +283,7 @@ pipeline {
                sh '''#! /bin/bash
                   echo $DOCKERPASS | docker login -u $DOCKERUSER --password-stdin
                   '''
-               sh "wget https://lsio-ci.ams3.digitaloceanspaces.com/qemu-aarch64-static"
+               sh "curl https://lsio-ci.ams3.digitaloceanspaces.com/qemu-aarch64-static -o qemu-aarch64-static"
                sh "chmod +x qemu-*"
                sh "docker build --no-cache -f Dockerfile.aarch64 -t ${IMAGE}:arm64v8-${META_TAG} \
                             --build-arg ${BUILD_VERSION_ARG}=${EXT_RELEASE} --build-arg VERSION=\"${META_TAG}\" --build-arg BUILD_DATE=${GITHUB_DATE} ."
@@ -276,7 +326,7 @@ pipeline {
                 -e BASE=\"${DIST_IMAGE}\" \
                 -e SECRET_KEY=\"${DO_SECRET}\" \
                 -e ACCESS_KEY=\"${DO_KEY}\" \
-                -e DOCKER_ENV=\"${CI_DOCKERENV}\" \
+                -e DOCKER_ENV=\"DB_HOST=${TEST_MYSQL_HOST}|DB_DATABASE=bookstack|DB_USERNAME=root|DB_PASSWORD=${TEST_MYSQL_PASSWORD}\" \
                 -e WEB_SCREENSHOT=\"${CI_WEB}\" \
                 -e WEB_AUTH=\"${CI_AUTH}\" \
                 -e WEB_PATH=\"${CI_WEBPATH}\" \
@@ -392,13 +442,9 @@ pipeline {
               curl -H "Authorization: token ${GITHUB_TOKEN}" -X POST https://api.github.com/repos/${LS_USER}/${LS_REPO}/releases -d @releasebody.json.done'''
       }
     }
-    // Use helper containers to Render push the current README in master to the DockerHub Repo
+    // Use helper container to sync the current README on master to the dockerhub endpoint
     stage('Sync-README') {
       when {
-        branch "master"
-        expression {
-          env.LS_RELEASE != env.EXT_RELEASE + '-pkg-' + env.PACKAGE_TAG + '-ls' + env.LS_TAG_NUMBER
-        }
         environment name: 'CHANGE_ID', value: ''
       }
       steps {
@@ -411,18 +457,6 @@ pipeline {
           ]
         ]) {
           sh '''#! /bin/bash
-                TEMPDIR=$(mktemp -d)
-                docker pull linuxserver/doc-builder:latest
-                docker run --rm -e CONTAINER_NAME=${CONTAINER_NAME} -v ${TEMPDIR}:/ansible/readme linuxserver/doc-builder:latest
-                if [ "$(md5sum ${TEMPDIR}/${CONTAINER_NAME}/README.md | awk '{ print $1 }')" != "$(md5sum README.md | awk '{ print $1 }')" ]; then
-                  git clone https://github.com/${LS_USER}/${LS_REPO}.git ${TEMPDIR}/${LS_REPO}
-                  cp ${TEMPDIR}/${CONTAINER_NAME}/README.md ${TEMPDIR}/${LS_REPO}/
-                  cd ${TEMPDIR}/${LS_REPO}/
-                  git --git-dir ${TEMPDIR}/${LS_REPO}/.git add README.md
-                  git --git-dir ${TEMPDIR}/${LS_REPO}/.git commit -m 'Bot Updating README from template'
-                  git --git-dir ${TEMPDIR}/${LS_REPO}/.git push https://LinuxServer-CI:${GITHUB_TOKEN}@github.com/${LS_USER}/${LS_REPO}.git --all
-                fi
-                rm -Rf ${TEMPDIR}
                 docker pull lsiodev/readme-sync
                 docker run --rm=true \
                   -e DOCKERHUB_USERNAME=$DOCKERUSER \
