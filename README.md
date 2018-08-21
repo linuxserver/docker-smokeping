@@ -21,7 +21,7 @@ From August 2018 onwards, Linuxserver are in the midst of switching to a new CI 
 TLDR: Multi-arch support is changing from multiple repos to one repo per container image.
 
 # [linuxserver/smokeping](https://github.com/linuxserver/docker-smokeping)
-[![](https://images.microbadger.com/badges/version/linuxserver/smokeping.svg)](https://microbadger.com/images/linuxserversmokeping "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/linuxserver/smokeping.svg)](https://microbadger.com/images/linuxserver/smokeping "Get your own version badge on microbadger.com")
 [![](https://images.microbadger.com/badges/image/linuxserver/smokeping.svg)](https://microbadger.com/images/linuxserver/smokeping "Get your own version badge on microbadger.com")
 ![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/smokeping.svg)
 ![Docker Stars](https://img.shields.io/docker/stars/linuxserver/smokeping.svg)
