@@ -22,12 +22,15 @@ param_volumes:
 param_usage_include_ports: true
 param_ports:
   - { external_port: "80", internal_port: "80", port_desc: "Allows HTTP access to the internal webserver." }
+param_usage_include_env: true
+param_env_vars:
+  - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London"}
 
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
   - Once running the URL will be `http://<host-ip>/smokeping/smokeping.cgi`.
-  - Basics are, edit the `Targets` file to ping the hosts you're interested in to match the format found there. 
+  - Basics are, edit the `Targets` file to ping the hosts you're interested in to match the format found there.
   - Wait 10 minutes.
 
 # changelog
