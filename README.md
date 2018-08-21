@@ -53,6 +53,7 @@ docker create \
   --name=smokeping \
   -e PUID=1001 \
   -e PGID=1001 \
+  -e TZ=Europe/London \
   -p 80:80 \
   -v </path/to/smokeping/config>:/config \
   -v </path/to/smokeping/data>:/data \
@@ -74,6 +75,7 @@ services:
     environment:
       - PUID=1001
       - PGID=1001
+      - TZ=Europe/London
     volumes:
       - </path/to/smokeping/config>:/config
       - </path/to/smokeping/data>:/data
@@ -92,6 +94,7 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-p 80` | Allows HTTP access to the internal webserver. |
 | `-e PUID=1001` | for UserID - see below for explanation |
 | `-e PGID=1001` | for GroupID - see below for explanation |
+| `-e TZ=Europe/London` | Specify a timezone to use EG Europe/London |
 | `-v /config` | Configure the `Targets` file here |
 | `-v /data` | Storage location for db and application data (graphs etc) |
 
@@ -112,7 +115,7 @@ In this instance `PUID=1001` and `PGID=1001`, to find yours use `id user` as bel
 ## Application Setup
 
 - Once running the URL will be `http://<host-ip>/smokeping/smokeping.cgi`.
-- Basics are, edit the `Targets` file to ping the hosts you're interested in to match the format found there. 
+- Basics are, edit the `Targets` file to ping the hosts you're interested in to match the format found there.
 - Wait 10 minutes.
 
 
