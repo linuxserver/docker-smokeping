@@ -131,6 +131,7 @@ In this instance `PUID=1001` and `PGID=1001`, to find yours use `id user` as bel
 
 ## Versions
 
+* **28.04.18:** - Rebase to alpine 3.8.
 * **09.04.18:** - Add bc package.
 * **08.04.18:** - Add tccping script and tcptraceroute package (thanks rcarmo).
 * **13.12.17:** - Expose httpd_conf to /config.
