@@ -35,6 +35,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "28.04.18:", desc: "Rebase to alpine 3.8." }
   - { date: "09.04.18:", desc: "Add bc package." }
   - { date: "08.04.18:", desc: "Add tccping script and tcptraceroute package (thanks rcarmo)." }
   - { date: "13.12.17:", desc: "Expose httpd_conf to /config." }
