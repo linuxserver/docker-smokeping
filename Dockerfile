@@ -19,6 +19,7 @@ RUN \
 	bc \
 	bind-tools \
 	curl \
+	python \
 	smokeping \
 	ssmtp \
 	sudo \
