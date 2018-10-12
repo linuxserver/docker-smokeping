@@ -31,7 +31,7 @@ pipeline {
     CI_WEB='true'
     CI_PORT='80'
     CI_SSL='false'
-    CI_DELAY='20'
+    CI_DELAY='120'
     CI_DOCKERENV='TZ=US/Pacific'
     CI_AUTH='user:password'
     CI_WEBPATH='/smokeping/smokeping.cgi'
