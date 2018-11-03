@@ -9,7 +9,7 @@ The [LinuxServer.io](https://linuxserver.io) team brings you another container r
  * regular security updates
 
 Find us at:
-* [Discord](https://discord.gg/YWrKVTn) - realtime support / chat with the community and the team.
+* [![Discord](https://img.shields.io/discord/354974912613449730.svg?style=for-the-badge)](https://discord.gg/YWrKVTn) - [Discord](https://discord.gg/YWrKVTn) - realtime support / chat with the community and the team.
 * [IRC](https://irc.linuxserver.io) - on freenode at `#linuxserver.io`. Our primary support channel is Discord.
 * [Blog](https://blog.linuxserver.io) - all the things you can do with our containers including How-To guides, opinions and much more!
 * [Podcast](https://anchor.fm/linuxserverio) - on hiatus. Coming back soon (late 2018).
