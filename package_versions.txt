@@ -43,8 +43,8 @@ bind-libs bind-libs-9.12.2_p1-r0
 bind-tools bind-tools-9.12.2_p1-r0
 nghttp2-libs nghttp2-libs-1.32.0-r0
 libssh2 libssh2-1.8.0-r3
-libcurl libcurl-7.61.1-r0
-curl curl-7.61.1-r0
+libcurl libcurl-7.61.1-r1
+curl curl-7.61.1-r1
 libbz2 libbz2-1.0.6-r6
 perl perl-5.26.2-r1
 fping fping-4.0-r0
@@ -74,7 +74,7 @@ glib glib-2.56.1-r0
 libxft libxft-2.3.2-r2
 graphite2 graphite2-1.3.11-r1
 harfbuzz harfbuzz-1.7.6-r1
-pango pango-1.40.14-r0
+pango pango-1.40.14-r1
 librrd librrd-1.7.0-r0
 rrdtool rrdtool-1.7.0-r0
 perl-rrd perl-rrd-1.7.0-r0
