@@ -29,12 +29,13 @@ param_env_vars:
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
-  - Once running the URL will be `http://<host-ip>/smokeping/smokeping.cgi`.
+  - Once running the URL will be `http://<host-ip>/`.
   - Basics are, edit the `Targets` file to ping the hosts you're interested in to match the format found there.
   - Wait 10 minutes.
 
 # changelog
 changelogs:
+  - { date: "14.11.18:", desc: "Allow access without /smokeping in URL." }
   - { date: "28.04.18:", desc: "Rebase to alpine 3.8." }
   - { date: "09.04.18:", desc: "Add bc package." }
   - { date: "08.04.18:", desc: "Add tccping script and tcptraceroute package (thanks rcarmo)." }
