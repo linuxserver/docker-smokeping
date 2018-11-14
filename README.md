@@ -116,7 +116,7 @@ In this instance `PUID=1001` and `PGID=1001`, to find yours use `id user` as bel
 &nbsp;
 ## Application Setup
 
-- Once running the URL will be `http://<host-ip>/smokeping/smokeping.cgi`.
+- Once running the URL will be `http://<host-ip>/`.
 - Basics are, edit the `Targets` file to ping the hosts you're interested in to match the format found there.
 - Wait 10 minutes.
 
@@ -133,6 +133,7 @@ In this instance `PUID=1001` and `PGID=1001`, to find yours use `id user` as bel
 
 ## Versions
 
+* **14.11.18:** - Allow access without /smokeping in URL.
 * **28.04.18:** - Rebase to alpine 3.8.
 * **09.04.18:** - Add bc package.
 * **08.04.18:** - Add tccping script and tcptraceroute package (thanks rcarmo).
