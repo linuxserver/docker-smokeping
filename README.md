@@ -58,7 +58,7 @@ docker create \
   -p 80:80 \
   -v </path/to/smokeping/config>:/config \
   -v </path/to/smokeping/data>:/data \
-  --restart unless-stopped
+  --restart unless-stopped \
   linuxserver/smokeping
 ```
 
