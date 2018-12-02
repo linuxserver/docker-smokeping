@@ -39,8 +39,8 @@ bc bc-1.07.1-r0
 libgcc libgcc-6.4.0-r9
 json-c json-c-0.13.1-r0
 libxml2 libxml2-2.9.8-r1
-bind-libs bind-libs-9.12.2_p1-r0
-bind-tools bind-tools-9.12.2_p1-r0
+bind-libs bind-libs-9.12.3-r0
+bind-tools bind-tools-9.12.3-r0
 nghttp2-libs nghttp2-libs-1.32.0-r0
 libssh2 libssh2-1.8.0-r3
 libcurl libcurl-7.61.1-r1
