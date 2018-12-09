@@ -1,11 +1,11 @@
 musl musl-1.1.19-r10
-busybox busybox-1.28.4-r1
+busybox busybox-1.28.4-r2
 alpine-baselayout alpine-baselayout-3.1.0-r0
 alpine-keys alpine-keys-2.1-r1
 libressl2.7-libcrypto libressl2.7-libcrypto-2.7.4-r0
 libressl2.7-libssl libressl2.7-libssl-2.7.4-r0
 libressl2.7-libtls libressl2.7-libtls-2.7.4-r0
-ssl_client ssl_client-1.28.4-r1
+ssl_client ssl_client-1.28.4-r2
 zlib zlib-1.2.11-r1
 apk-tools apk-tools-2.10.1-r0
 scanelf scanelf-1.2.3-r0
@@ -46,7 +46,7 @@ libssh2 libssh2-1.8.0-r3
 libcurl libcurl-7.61.1-r1
 curl curl-7.61.1-r1
 libbz2 libbz2-1.0.6-r6
-perl perl-5.26.2-r1
+perl perl-5.26.3-r0
 fping fping-4.0-r0
 encodings encodings-1.0.4-r1
 font-alias font-alias-1.0.3-r1
