@@ -39,9 +39,9 @@ The architectures supported by this image are:
 
 | Architecture | Tag |
 | :----: | --- |
-| x86-64 | tbc |
-| arm64 | tbc |
-| armhf | tbc |
+| x86-64 | amd64-latest |
+| arm64 | arm64v8-latest |
+| armhf | arm32v6-latest |
 
 ## Usage
 
