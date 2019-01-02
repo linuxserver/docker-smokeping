@@ -36,7 +36,8 @@ RUN \
  echo "**** install tcping script ****" && \
  install -m755 -D /defaults/tcpping /usr/bin/ && \
  echo "**** remove default apache conf ****" && \
- rm -f /etc/apache2/httpd.conf
+ rm -f /etc/apache2/httpd.conf && \
+ mkdir -p /var/run/smokeping
 
 # add local files
 COPY root/ /
