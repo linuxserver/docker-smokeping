@@ -28,7 +28,7 @@ tzdata tzdata-2018f-r0
 libuuid libuuid-2.32-r0
 apr apr-1.6.3-r1
 expat expat-2.2.5-r0
-apr-util apr-util-1.6.1-r2
+apr-util apr-util-1.6.1-r3
 pcre pcre-8.42-r0
 apache2 apache2-2.4.35-r0
 gzip gzip-1.9-r0
