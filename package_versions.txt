@@ -30,11 +30,11 @@ apr apr-1.6.3-r1
 expat expat-2.2.5-r0
 apr-util apr-util-1.6.1-r3
 pcre pcre-8.42-r0
-apache2 apache2-2.4.35-r0
+apache2 apache2-2.4.38-r2
 gzip gzip-1.9-r0
 lynx lynx-2.8.8_p2-r7
-apache2-ctl apache2-ctl-2.4.35-r0
-apache2-utils apache2-utils-2.4.35-r0
+apache2-ctl apache2-ctl-2.4.38-r2
+apache2-utils apache2-utils-2.4.38-r2
 bc bc-1.07.1-r0
 libgcc libgcc-6.4.0-r9
 json-c json-c-0.13.1-r0
