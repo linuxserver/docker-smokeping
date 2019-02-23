@@ -35,6 +35,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "22.02.19:", desc: "Rebasing to alpine 3.9." }
   - { date: "14.11.18:", desc: "Allow access without /smokeping in URL." }
   - { date: "28.04.18:", desc: "Rebase to alpine 3.8." }
   - { date: "09.04.18:", desc: "Add bc package." }
