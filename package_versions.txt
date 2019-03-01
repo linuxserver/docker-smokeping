@@ -44,13 +44,13 @@ keyutils-libs keyutils-libs-1.6-r0
 libverto libverto-0.3.0-r1
 krb5-libs krb5-libs-1.15.5-r0
 json-c json-c-0.13.1-r0
-libxml2 libxml2-2.9.9-r0
+libxml2 libxml2-2.9.9-r1
 bind-libs bind-libs-9.12.3-r0
 bind-tools bind-tools-9.12.3-r0
 nghttp2-libs nghttp2-libs-1.35.1-r0
 libssh2 libssh2-1.8.0-r4
-libcurl libcurl-7.63.0-r0
-curl curl-7.63.0-r0
+libcurl libcurl-7.64.0-r1
+curl curl-7.64.0-r1
 fping fping-4.1-r0
 libbz2 libbz2-1.0.6-r6
 perl perl-5.26.3-r0
