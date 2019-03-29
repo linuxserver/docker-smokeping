@@ -51,7 +51,7 @@ libnet-1.1.6-r2
 libpcap-1.9.0-r1
 libpng-1.6.35-r0
 librrd-1.7.0-r0
-libssh2-1.8.1-r0
+libssh2-1.8.2-r0
 libssl1.1-1.1.1b-r1
 libtls-standalone-2.7.4-r6
 libuuid-2.33-r0
