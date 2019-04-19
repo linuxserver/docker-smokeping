@@ -8,8 +8,8 @@ apr-1.6.5-r0
 apr-util-1.6.1-r5
 bash-4.4.19-r1
 bc-1.07.1-r0
-bind-libs-9.12.3_p4-r0
-bind-tools-9.12.3_p4-r0
+bind-libs-9.12.3_p4-r1
+bind-tools-9.12.3_p4-r1
 busybox-1.29.3-r10
 ca-certificates-20190108-r0
 ca-certificates-cacert-20190108-r0
@@ -133,7 +133,7 @@ ssmtp-2.64-r14
 sudo-1.8.25_p1-r2
 tcptraceroute-1.5b7-r1
 ttf-dejavu-2.37-r1
-tzdata-2018i-r0
+tzdata-2019a-r0
 xz-5.2.4-r0
 xz-libs-5.2.4-r0
 zlib-1.2.11-r1
