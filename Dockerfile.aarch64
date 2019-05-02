@@ -19,6 +19,7 @@ RUN \
 	bc \
 	bind-tools \
 	curl \
+	openssh-client \
 	smokeping \
 	ssmtp \
 	sudo \
