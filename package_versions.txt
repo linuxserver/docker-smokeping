@@ -129,7 +129,7 @@ pixman-0.34.0-r6
 readline-7.0.003-r1
 rrdtool-1.7.0-r0
 scanelf-1.2.3-r0
-shadow-4.5-r1
+shadow-4.5-r2
 smokeping-2.7.3-r3
 ssl_client-1.29.3-r10
 ssmtp-2.64-r14
