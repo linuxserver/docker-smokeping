@@ -15,7 +15,7 @@ ca-certificates-20190108-r0
 ca-certificates-cacert-20190108-r0
 cairo-1.16.0-r1
 coreutils-8.30-r0
-curl-7.64.0-r1
+curl-7.64.0-r2
 encodings-1.0.4-r1
 expat-2.2.6-r0
 font-alias-1.0.3-r1
@@ -40,7 +40,7 @@ libbz2-1.0.6-r6
 libc-utils-0.7.1-r0
 libcom_err-1.44.5-r0
 libcrypto1.1-1.1.1b-r1
-libcurl-7.64.0-r1
+libcurl-7.64.0-r2
 libedit-20181209.3.1-r0
 libffi-3.2.1-r6
 libfontenc-1.1.3-r3
