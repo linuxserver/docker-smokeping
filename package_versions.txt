@@ -17,7 +17,7 @@ cairo-1.16.0-r1
 coreutils-8.30-r0
 curl-7.64.0-r2
 encodings-1.0.4-r1
-expat-2.2.6-r0
+expat-2.2.7-r0
 font-alias-1.0.3-r1
 font-sony-misc-1.0.3-r1
 fontconfig-2.13.1-r0
@@ -36,7 +36,7 @@ libacl-2.2.52-r5
 libattr-2.4.47-r7
 libblkid-2.33-r0
 libbsd-0.8.6-r2
-libbz2-1.0.6-r6
+libbz2-1.0.6-r7
 libc-utils-0.7.1-r0
 libcom_err-1.44.5-r0
 libcrypto1.1-1.1.1b-r1
