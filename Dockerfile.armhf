@@ -16,6 +16,7 @@ RUN \
 	apache2 \
 	apache2-ctl \
 	apache2-utils \
+	apache-mod-fcgid \
 	bc \
 	bind-tools \
 	curl \
