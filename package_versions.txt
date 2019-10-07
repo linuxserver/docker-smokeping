@@ -15,9 +15,9 @@ ca-certificates-20190108-r0
 ca-certificates-cacert-20190108-r0
 cairo-1.16.0-r2
 coreutils-8.31-r0
-curl-7.65.1-r0
+curl-7.66.0-r0
 encodings-1.0.4-r1
-expat-2.2.7-r0
+expat-2.2.8-r0
 font-alias-1.0.3-r1
 font-sony-misc-1.0.3-r1
 fontconfig-2.13.1-r0
@@ -40,8 +40,8 @@ libbsd-0.9.1-r0
 libbz2-1.0.6-r7
 libc-utils-0.7.1-r0
 libcom_err-1.45.2-r0
-libcrypto1.1-1.1.1c-r0
-libcurl-7.65.1-r0
+libcrypto1.1-1.1.1d-r0
+libcurl-7.66.0-r0
 libedit-20190324.3.1-r0
 libevent-2.1.10-r0
 libffi-3.2.1-r6
@@ -51,10 +51,10 @@ libidn-1.35-r0
 libintl-0.19.8.1-r4
 libmount-2.33.2-r0
 libnet-1.1.6-r2
-libpcap-1.9.0-r1
+libpcap-1.9.1-r0
 libpng-1.6.37-r1
 librrd-1.7.2-r0
-libssl1.1-1.1.1c-r0
+libssl1.1-1.1.1d-r0
 libstdc++-8.3.0-r0
 libtls-standalone-2.9.1-r0
 libuuid-2.33.2-r0
