@@ -39,7 +39,7 @@ libblkid-2.33.2-r0
 libbsd-0.9.1-r0
 libbz2-1.0.6-r7
 libc-utils-0.7.1-r0
-libcom_err-1.45.2-r0
+libcom_err-1.45.2-r1
 libcrypto1.1-1.1.1d-r0
 libcurl-7.66.0-r0
 libedit-20190324.3.1-r0
@@ -76,8 +76,8 @@ ncurses-libs-6.1_p20190518-r0
 ncurses-terminfo-6.1_p20190518-r0
 ncurses-terminfo-base-6.1_p20190518-r0
 nghttp2-libs-1.39.2-r0
-openssh-client-8.0_p1-r0
-openssh-keygen-8.0_p1-r0
+openssh-client-8.1_p1-r0
+openssh-keygen-8.1_p1-r0
 pango-1.42.4-r2
 pcre-8.43-r0
 perl-5.28.2-r1
@@ -139,7 +139,7 @@ ssmtp-2.64-r14
 sudo-1.8.27-r0
 tcptraceroute-1.5b7-r1
 ttf-dejavu-2.37-r1
-tzdata-2019b-r0
+tzdata-2019c-r0
 xz-5.2.4-r0
 xz-libs-5.2.4-r0
 zlib-1.2.11-r1
