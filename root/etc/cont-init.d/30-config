@@ -35,8 +35,8 @@ cd "${PREV_DIR}" || exit
 [[ ! -L /etc/apache2/httpd.conf ]] && \
 	ln -sf /config/httpd.conf /etc/apache2/httpd.conf
 
-[[ ! -e /config/smtp.conf ]] && \
-	cp /config/smtp.conf /etc/ssmtp/ssmtp.conf
+[[ -e /config/ssmtp.conf ]] && \
+	cp /config/ssmtp.conf /etc/ssmtp/ssmtp.conf
 
 # permissions
 chown -R abc:abc \
