@@ -136,7 +136,7 @@ shadow-4.7-r1
 smokeping-2.7.3-r3
 ssl_client-1.31.1-r9
 ssmtp-2.64-r14
-sudo-1.8.29-r0
+sudo-1.8.29-r1
 tcptraceroute-1.5b7-r1
 ttf-dejavu-2.37-r1
 tzdata-2019c-r0
