@@ -52,8 +52,8 @@ libmount-2.34-r1
 libnet-1.1.6-r3
 libpcap-1.9.1-r0
 libpng-1.6.37-r1
-libprotobuf-3.11.2-r0
-libprotoc-3.11.2-r0
+libprotobuf-3.11.2-r1
+libprotoc-3.11.2-r1
 librrd-1.7.2-r3
 libssl1.1-1.1.1d-r3
 libstdc++-9.2.0-r3
