@@ -19,6 +19,7 @@ curl-7.67.0-r0
 encodings-1.0.5-r0
 expat-2.2.9-r1
 font-alias-1.0.3-r1
+font-noto-cjk-0_git20181130-r1
 font-sony-misc-1.0.3-r1
 fontconfig-2.13.1-r2
 fping-4.2-r0
