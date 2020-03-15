@@ -1,5 +1,12 @@
 [![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)](https://linuxserver.io)
 
+[![Blog](https://img.shields.io/static/v1.svg?style=flat-square&color=E68523&label=linuxserver.io&message=Blog)](https://blog.linuxserver.io "all the things you can do with our containers including How-To guides, opinions and much more!")
+[![Discord](https://img.shields.io/discord/354974912613449730.svg?style=flat-square&color=E68523&label=Discord&logo=discord&logoColor=FFFFFF)](https://discord.gg/YWrKVTn "realtime support / chat with the community and the team.")
+[![Discourse](https://img.shields.io/discourse/https/discourse.linuxserver.io/topics.svg?style=flat-square&color=E68523&logo=discourse&logoColor=FFFFFF)](https://discourse.linuxserver.io "post on our community forum.")
+[![Fleet](https://img.shields.io/static/v1.svg?style=flat-square&color=E68523&label=linuxserver.io&message=Fleet)](https://fleet.linuxserver.io "an online web interface which displays all of our maintained images.")
+[![GitHub](https://img.shields.io/static/v1.svg?style=flat-square&color=E68523&label=linuxserver.io&message=GitHub&logo=github&logoColor=FFFFFF)](https://github.com/linuxserver "view the source for all of our repositories.")
+[![Open Collective](https://img.shields.io/opencollective/all/linuxserver.svg?style=flat-square&color=E68523&label=Supporters&logo=open%20collective&logoColor=FFFFFF)](https://opencollective.com/linuxserver "please consider helping us by either donating or contributing to our budget")
+
 The [LinuxServer.io](https://linuxserver.io) team brings you another container release featuring :-
 
  * regular and timely application updates
@@ -9,17 +16,24 @@ The [LinuxServer.io](https://linuxserver.io) team brings you another container r
  * regular security updates
 
 Find us at:
-* [Discord](https://discord.gg/YWrKVTn) - realtime support / chat with the community and the team.
-* [IRC](https://irc.linuxserver.io) - on freenode at `#linuxserver.io`. Our primary support channel is Discord.
 * [Blog](https://blog.linuxserver.io) - all the things you can do with our containers including How-To guides, opinions and much more!
+* [Discord](https://discord.gg/YWrKVTn) - realtime support / chat with the community and the team.
+* [Discourse](https://discourse.linuxserver.io) - post on our community forum.
+* [Fleet](https://fleet.linuxserver.io) - an online web interface which displays all of our maintained images.
+* [GitHub](https://github.com/linuxserver) - view the source for all of our repositories.
+* [Open Collective](https://opencollective.com/linuxserver) - please consider helping us by either donating or contributing to our budget
 
 # [linuxserver/smokeping](https://github.com/linuxserver/docker-smokeping)
-[![](https://img.shields.io/discord/354974912613449730.svg?logo=discord&label=LSIO%20Discord&style=flat-square)](https://discord.gg/YWrKVTn)
-[![](https://images.microbadger.com/badges/version/linuxserver/smokeping.svg)](https://microbadger.com/images/linuxserver/smokeping "Get your own version badge on microbadger.com")
-[![](https://images.microbadger.com/badges/image/linuxserver/smokeping.svg)](https://microbadger.com/images/linuxserver/smokeping "Get your own version badge on microbadger.com")
-![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/smokeping.svg)
-![Docker Stars](https://img.shields.io/docker/stars/linuxserver/smokeping.svg)
-[![Build Status](https://ci.linuxserver.io/buildStatus/icon?job=Docker-Pipeline-Builders/docker-smokeping/master)](https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-smokeping/job/master/)
+
+[![GitHub Stars](https://img.shields.io/github/stars/linuxserver/docker-smokeping.svg?style=flat-square&color=E68523&logo=github&logoColor=FFFFFF)](https://github.com/linuxserver/docker-smokeping)
+[![GitHub Release](https://img.shields.io/github/release/linuxserver/docker-smokeping.svg?style=flat-square&color=E68523&logo=github&logoColor=FFFFFF)](https://github.com/linuxserver/docker-smokeping/releases)
+[![GitHub Package Repository](https://img.shields.io/static/v1.svg?style=flat-square&color=E68523&label=linuxserver.io&message=GitHub%20Package&logo=github&logoColor=FFFFFF)](https://github.com/linuxserver/docker-smokeping/packages)
+[![GitLab Container Registry](https://img.shields.io/static/v1.svg?style=flat-square&color=E68523&label=linuxserver.io&message=GitLab%20Registry&logo=gitlab&logoColor=FFFFFF)](https://gitlab.com/Linuxserver.io/docker-smokeping/container_registry)
+[![Quay.io](https://img.shields.io/static/v1.svg?style=flat-square&color=E68523&label=linuxserver.io&message=Quay.io)](https://quay.io/repository/linuxserver.io/smokeping)
+[![MicroBadger Layers](https://img.shields.io/microbadger/layers/linuxserver/smokeping.svg?style=flat-square&color=E68523)](https://microbadger.com/images/linuxserver/smokeping "Get your own version badge on microbadger.com")
+[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/smokeping.svg?style=flat-square&color=E68523&label=pulls&logo=docker&logoColor=FFFFFF)](https://hub.docker.com/r/linuxserver/smokeping)
+[![Docker Stars](https://img.shields.io/docker/stars/linuxserver/smokeping.svg?style=flat-square&color=E68523&label=stars&logo=docker&logoColor=FFFFFF)](https://hub.docker.com/r/linuxserver/smokeping)
+[![Build Status](https://ci.linuxserver.io/view/all/job/Docker-Pipeline-Builders/job/docker-smokeping/job/master/badge/icon?style=flat-square)](https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-smokeping/job/master/)
 [![](https://lsio-ci.ams3.digitaloceanspaces.com/linuxserver/smokeping/latest/badge.svg)](https://lsio-ci.ams3.digitaloceanspaces.com/linuxserver/smokeping/latest/index.html)
 
 [Smokeping](https://oss.oetiker.ch/smokeping/) keeps track of your network latency. For a full example of what this application is capable of visit [UCDavis](http://smokeping.ucdavis.edu/cgi-bin/smokeping.fcgi).
@@ -28,7 +42,7 @@ Find us at:
 
 ## Supported Architectures
 
-Our images support multiple architectures such as `x86-64`, `arm64` and `armhf`. We utilise the docker manifest for multi-platform awareness. More information is available from docker [here](https://github.com/docker/distribution/blob/master/docs/spec/manifest-v2-2.md#manifest-list) and our announcement [here](https://blog.linuxserver.io/2019/02/21/the-lsio-pipeline-project/). 
+Our images support multiple architectures such as `x86-64`, `arm64` and `armhf`. We utilise the docker manifest for multi-platform awareness. More information is available from docker [here](https://github.com/docker/distribution/blob/master/docs/spec/manifest-v2-2.md#manifest-list) and our announcement [here](https://blog.linuxserver.io/2019/02/21/the-lsio-pipeline-project/).
 
 Simply pulling `linuxserver/smokeping` should retrieve the correct image for your arch, but you can also pull specific arch images via tags.
 
@@ -97,6 +111,18 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-v /config` | Configure the `Targets` file here |
 | `-v /data` | Storage location for db and application data (graphs etc) |
 
+## Environment variables from files (Docker secrets)
+
+You can set any environment variable from a file by using a special prepend `FILE__`. 
+
+As an example:
+
+```
+-e FILE__PASSWORD=/run/secrets/mysecretpassword
+```
+
+Will set the environment variable `PASSWORD` based on the contents of the `/run/secrets/mysecretpassword` file.
+
 ## User / Group Identifiers
 
 When using volumes (`-v` flags) permissions issues can arise between the host OS and the container, we avoid this issue by allowing you to specify the user `PUID` and group `PGID`.
@@ -124,17 +150,17 @@ In this instance `PUID=1000` and `PGID=1000`, to find yours use `id user` as bel
 
 * Shell access whilst the container is running: `docker exec -it smokeping /bin/bash`
 * To monitor the logs of the container in realtime: `docker logs -f smokeping`
-* container version number 
+* container version number
   * `docker inspect -f '{{ index .Config.Labels "build_version" }}' smokeping`
 * image version number
   * `docker inspect -f '{{ index .Config.Labels "build_version" }}' linuxserver/smokeping`
 
 ## Updating Info
 
-Most of our images are static, versioned, and require an image update and container recreation to update the app inside. With some exceptions (ie. nextcloud, plex), we do not recommend or support updating apps inside the container. Please consult the [Application Setup](#application-setup) section above to see if it is recommended for the image.  
-  
-Below are the instructions for updating containers:  
-  
+Most of our images are static, versioned, and require an image update and container recreation to update the app inside. With some exceptions (ie. nextcloud, plex), we do not recommend or support updating apps inside the container. Please consult the [Application Setup](#application-setup) section above to see if it is recommended for the image.
+
+Below are the instructions for updating containers:
+
 ### Via Docker Run/Create
 * Update the image: `docker pull linuxserver/smokeping`
 * Stop the running container: `docker stop smokeping`
@@ -165,7 +191,7 @@ Below are the instructions for updating containers:
 
 ## Building locally
 
-If you want to make local modifications to these images for development purposes or just to customize the logic: 
+If you want to make local modifications to these images for development purposes or just to customize the logic:
 ```
 git clone https://github.com/linuxserver/docker-smokeping.git
 cd docker-smokeping
@@ -184,6 +210,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **19.12.19:** - Rebasing to alpine 3.11.
 * **28.06.19:** - Rebasing to alpine 3.10.
 * **23.03.19:** - Switching to new Base images, shift to arm32v7 tag.
 * **22.02.19:** - Rebasing to alpine 3.9.
