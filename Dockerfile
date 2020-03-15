@@ -19,12 +19,12 @@ RUN \
 	bc \
 	bind-tools \
 	curl \
+	font-noto-cjk \
 	openssh-client \
 	smokeping \
 	ssmtp \
 	sudo \
 	tcptraceroute \
-	font-noto-cjk \
 	ttf-dejavu && \
  echo "**** give setuid access to traceroute & tcptraceroute ****" && \
  chmod a+s /usr/bin/traceroute && \
