@@ -75,8 +75,8 @@ lynx-2.8.8_p2-r1
 mkfontscale-1.2.1-r1
 musl-1.1.24-r2
 musl-utils-1.1.24-r2
-ncurses-libs-6.1_p20200118-r2
-ncurses-terminfo-base-6.1_p20200118-r2
+ncurses-libs-6.1_p20200118-r3
+ncurses-terminfo-base-6.1_p20200118-r3
 nghttp2-libs-1.40.0-r0
 openssh-client-8.1_p1-r0
 openssh-keygen-8.1_p1-r0
