@@ -42,7 +42,7 @@ libbsd-0.10.0-r0
 libbz2-1.0.8-r1
 libc-utils-0.7.2-r0
 libcom_err-1.45.5-r0
-libcrypto1.1-1.1.1d-r3
+libcrypto1.1-1.1.1g-r0
 libcurl-7.67.0-r0
 libedit-20191211.3.1-r0
 libffi-3.2.1-r6
@@ -57,7 +57,7 @@ libpng-1.6.37-r1
 libprotobuf-3.11.2-r1
 libprotoc-3.11.2-r1
 librrd-1.7.2-r3
-libssl1.1-1.1.1d-r3
+libssl1.1-1.1.1g-r0
 libstdc++-9.2.0-r4
 libtls-standalone-2.9.1-r0
 libuuid-2.34-r1
