@@ -75,8 +75,8 @@ lynx-2.8.8_p2-r1
 mkfontscale-1.2.1-r1
 musl-1.1.24-r2
 musl-utils-1.1.24-r2
-ncurses-libs-6.1_p20200118-r3
-ncurses-terminfo-base-6.1_p20200118-r3
+ncurses-libs-6.1_p20200118-r4
+ncurses-terminfo-base-6.1_p20200118-r4
 nghttp2-libs-1.40.0-r0
 openssh-client-8.1_p1-r0
 openssh-keygen-8.1_p1-r0
@@ -140,7 +140,7 @@ ssmtp-2.64-r14
 sudo-1.8.31-r0
 tcptraceroute-1.5b7-r1
 ttf-dejavu-2.37-r1
-tzdata-2019c-r0
+tzdata-2020a-r0
 xz-5.2.4-r0
 xz-libs-5.2.4-r0
 zlib-1.2.11-r3
