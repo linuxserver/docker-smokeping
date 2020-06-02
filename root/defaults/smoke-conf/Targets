@@ -90,7 +90,7 @@ host = www.uea.ac.uk
 + USA
 
 menu = North America
-title =North American Connectivity
+title = North American Connectivity
 
 ++ MIT
 
@@ -108,19 +108,25 @@ host = www.indiana.edu
 
 menu = U. C. Berkeley
 title = U. C. Berkeley Webserver
-host = www.berkley.edu
+host = www.berkeley.edu
 
 ++ UCSD
 
 menu = U. C. San Diego
 title = U. C. San Diego Webserver
-host = www.ucsd.edu
+host = ucsd.edu
 
-++ Sun
+++ UMN
 
-menu = Sun Microsystems
-title = Sun Microsystems Webserver
-host = www.oracle.com/us/sun
+menu =  University of Minnesota
+title = University of Minnesota
+host = twin-cities.umn.edu
+
+++ OSUOSL
+
+menu = Oregon State University Open Source Lab
+title = Oregon State University Open Source Lab
+host = osuosl.org
 
 + DNS
 menu = DNS
@@ -155,3 +161,18 @@ host = 1.1.1.1
 menu = Cloudflare DNS 2
 title = Cloudflare DNS 1.0.0.1
 host = 1.0.0.1
+
+++ L3-1
+menu = Level3 DNS 1
+title = Level3 DNS 4.2.2.1
+host = 4.2.2.1
+
+++ L3-2
+menu = Level3 DNS 2
+title = Level3 DNS 4.2.2.2
+host = 4.2.2.2
+
+++ Quad9
+menu = Quad9
+title = Quad9 DNS 9.9.9.9
+host = 9.9.9.9
