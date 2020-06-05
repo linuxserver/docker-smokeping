@@ -12,8 +12,8 @@ bc-1.07.1-r1
 bind-libs-9.14.12-r0
 bind-tools-9.14.12-r0
 busybox-1.31.1-r9
-ca-certificates-20191127-r1
-ca-certificates-cacert-20191127-r1
+ca-certificates-20191127-r2
+ca-certificates-cacert-20191127-r2
 cairo-1.16.0-r2
 coreutils-8.31-r0
 curl-7.67.0-r0
