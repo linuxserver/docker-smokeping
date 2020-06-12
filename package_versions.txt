@@ -78,7 +78,7 @@ musl-1.1.24-r2
 musl-utils-1.1.24-r2
 ncurses-libs-6.1_p20200118-r4
 ncurses-terminfo-base-6.1_p20200118-r4
-nghttp2-libs-1.40.0-r0
+nghttp2-libs-1.40.0-r1
 openssh-client-8.1_p1-r0
 openssh-keygen-8.1_p1-r0
 pango-1.44.7-r0
