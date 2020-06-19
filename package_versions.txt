@@ -83,7 +83,7 @@ openssh-client-8.1_p1-r0
 openssh-keygen-8.1_p1-r0
 pango-1.44.7-r0
 pcre-8.43-r0
-perl-5.30.1-r0
+perl-5.30.3-r0
 perl-capture-tiny-0.48-r0
 perl-cgi-4.44-r0
 perl-cgi-fast-2.15-r0
