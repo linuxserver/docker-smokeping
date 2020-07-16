@@ -131,6 +131,7 @@ host = osuosl.org
 + DNS
 menu = DNS
 title = DNS
+probe = DNS
 
 ++ GoogleDNS1
 menu = Google DNS 1
