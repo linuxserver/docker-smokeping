@@ -138,7 +138,7 @@ readline-8.0.4-r0
 rrdtool-1.7.2-r3
 scanelf-1.2.6-r0
 shadow-4.8.1-r0
-smokeping-2.7.3-r3
+smokeping-2.7.3-r4
 ssl_client-1.31.1-r19
 ssmtp-2.64-r14
 sudo-1.9.0-r0
