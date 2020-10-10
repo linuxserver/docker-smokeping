@@ -8,4 +8,4 @@ binary = /usr/sbin/fping
 binary = /usr/bin/dig
 lookup = google.com
 pings = 5
-step = 180
+step = 300
