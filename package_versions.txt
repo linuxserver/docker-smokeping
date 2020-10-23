@@ -25,7 +25,7 @@ font-noto-cjk-0_git20181130-r1
 font-sony-misc-1.0.3-r1
 fontconfig-2.13.1-r2
 fping-4.2-r0
-freetype-2.10.2-r0
+freetype-2.10.4-r0
 fribidi-1.0.9-r0
 fstrm-0.6.0-r1
 glib-2.64.6-r0
