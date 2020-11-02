@@ -145,7 +145,7 @@ ssmtp-2.64-r14
 sudo-1.9.0-r0
 tcptraceroute-1.5b7-r2
 ttf-dejavu-2.37-r1
-tzdata-2020a-r0
+tzdata-2020c-r0
 xz-5.2.5-r0
 xz-libs-5.2.5-r0
 zlib-1.2.11-r3
