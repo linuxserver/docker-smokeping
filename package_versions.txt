@@ -17,7 +17,7 @@ ca-certificates-20191127-r4
 ca-certificates-bundle-20191127-r4
 cairo-1.16.0-r2
 coreutils-8.32-r0
-curl-7.69.1-r1
+curl-7.69.1-r3
 encodings-1.0.5-r0
 expat-2.2.9-r1
 font-alias-1.0.3-r1
@@ -44,7 +44,7 @@ libbz2-1.0.8-r1
 libc-utils-0.7.2-r3
 libcom_err-1.45.6-r0
 libcrypto1.1-1.1.1g-r0
-libcurl-7.69.1-r1
+libcurl-7.69.1-r3
 libedit-20191231.3.1-r0
 libffi-3.3-r2
 libfontenc-1.1.4-r0
