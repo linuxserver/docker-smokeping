@@ -28,7 +28,7 @@ fping-5.0-r0
 freetype-2.10.4-r1
 fribidi-1.0.10-r0
 fstrm-0.6.0-r1
-glib-2.66.7-r0
+glib-2.66.7-r1
 graphite2-1.3.14-r0
 gzip-1.10-r1
 harfbuzz-2.7.4-r1
