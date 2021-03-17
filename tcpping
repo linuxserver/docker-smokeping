@@ -63,7 +63,7 @@ _testsite() {
 	[ "${d}" = "yes" ] && nowd=`date`
 	ttr=`tcptraceroute -f ${ttl} -m ${ttl} -q ${q} -w ${w} $* 2>/dev/null`
 	host=`echo "${ttr}" | awk '{print $2 " " $3}'`
-	rtt=`echo "${ttr}" | sed 's/.*] //' | awk '{print $1}'`
+        rtt=`echo "${ttr}" | sed 's/.*[])] //' | awk '{print $1}'`
 	not=`echo "${rtt}" | tr -d ".0123456789"`
 	[ "${d}" = "yes" ] && echo "$nowd"
 	if [ "${c}" = "yes" ]; then
