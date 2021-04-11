@@ -4,7 +4,7 @@ apache-mod-fcgid-2.3.9-r2
 apache2-2.4.46-r3
 apache2-ctl-2.4.46-r3
 apache2-utils-2.4.46-r3
-apk-tools-2.12.1-r0
+apk-tools-2.12.4-r2
 apr-1.7.0-r0
 apr-util-1.6.1-r7
 bash-5.1.0-r0
@@ -12,7 +12,7 @@ bc-1.07.1-r1
 bind-libs-9.16.11-r0
 bind-tools-9.16.11-r0
 brotli-libs-1.0.9-r3
-busybox-1.32.1-r3
+busybox-1.32.1-r5
 ca-certificates-20191127-r5
 ca-certificates-bundle-20191127-r5
 cairo-1.16.0-r2
@@ -144,7 +144,7 @@ scanelf-1.2.8-r0
 shadow-4.8.1-r0
 skalibs-2.10.0.0-r0
 smokeping-2.7.3-r5
-ssl_client-1.32.1-r3
+ssl_client-1.32.1-r5
 ssmtp-2.64-r14
 sudo-1.9.5p2-r0
 tcptraceroute-1.5b7-r3
