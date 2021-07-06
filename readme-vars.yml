@@ -35,6 +35,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "29.03.21:", desc: "Dockerfile: Install curl before we call it" }
   - { date: "23.01.21:", desc: "Rebasing to alpine 3.13." }
   - { date: "01.06.20:", desc: "Rebasing to alpine 3.12." }
   - { date: "19.12.19:", desc: "Rebasing to alpine 3.11." }
