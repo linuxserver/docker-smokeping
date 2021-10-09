@@ -1,4 +1,10 @@
 #!/usr/bin/with-contenv bash
 
-exec s6-setuidgid abc  /usr/bin/smokeping --config="/etc/smokeping/config" --nodaemon
-
+if [ -a /config/MasterUrl ] && [ -a /config/SlaveSecret ]; then
+    chmod 600 /config/SlaveSecret
+    chmod 600 /config/MasterUrl
+    masterurl=$(cat /config/MasterUrl)
+    exec s6-setuidgid abc  /usr/bin/smokeping --master-url=$masterurl --cache-dir=/tmp --shared-secret=/config/SlaveSecret --nosleep --nodaemon
+else
+    exec s6-setuidgid abc  /usr/bin/smokeping --config="/etc/smokeping/config" --nodaemon
+fi

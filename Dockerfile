@@ -26,6 +26,7 @@ RUN \
 	curl \
 	font-noto-cjk \
 	openssh-client \
+	perl-lwp-protocol-https \
 	smokeping==${SMOKEPING_VERSION} \
 	ssmtp \
 	sudo \
