@@ -1,9 +1,9 @@
 alpine-baselayout-3.2.0-r8
 alpine-keys-2.2-r0
 apache-mod-fcgid-2.3.9-r2
-apache2-2.4.49-r0
-apache2-ctl-2.4.49-r0
-apache2-utils-2.4.49-r0
+apache2-2.4.51-r0
+apache2-ctl-2.4.51-r0
+apache2-utils-2.4.51-r0
 apk-tools-2.12.7-r0
 apr-1.7.0-r0
 apr-util-1.6.1-r7
@@ -82,8 +82,8 @@ musl-utils-1.2.2-r1
 ncurses-libs-6.2_p20210109-r0
 ncurses-terminfo-base-6.2_p20210109-r0
 nghttp2-libs-1.42.0-r1
-openssh-client-8.4_p1-r3
-openssh-keygen-8.4_p1-r3
+openssh-client-8.4_p1-r4
+openssh-keygen-8.4_p1-r4
 pango-1.48.2-r0
 pcre-8.44-r0
 perl-5.32.0-r0
@@ -149,7 +149,7 @@ ssmtp-2.64-r14
 sudo-1.9.5p2-r0
 tcptraceroute-1.5b7-r3
 ttf-dejavu-2.37-r1
-tzdata-2021b-r0
+tzdata-2021c-r0
 utmps-0.1.0.0-r0
 xz-5.2.5-r0
 xz-libs-5.2.5-r0
