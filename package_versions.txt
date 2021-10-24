@@ -1,5 +1,5 @@
 alpine-baselayout-3.2.0-r8
-alpine-keys-2.2-r0
+alpine-keys-2.4-r0
 apache-mod-fcgid-2.3.9-r2
 apache2-2.4.51-r0
 apache2-ctl-2.4.51-r0
@@ -149,7 +149,7 @@ ssmtp-2.64-r14
 sudo-1.9.5p2-r0
 tcptraceroute-1.5b7-r3
 ttf-dejavu-2.37-r1
-tzdata-2021c-r0
+tzdata-2021d-r0
 utmps-0.1.0.0-r0
 xz-5.2.5-r0
 xz-libs-5.2.5-r0
