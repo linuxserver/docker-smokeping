@@ -46,5 +46,8 @@ RUN \
 COPY root/ /
 
 # ports and volumes
-EXPOSE 80
+ARG PORT=80
+ENV PORT=${PORT}
+EXPOSE ${PORT}
+
 VOLUME /config /data
