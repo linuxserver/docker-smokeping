@@ -9,8 +9,8 @@ apr-1.7.0-r0
 apr-util-1.6.1-r7
 bash-5.1.0-r0
 bc-1.07.1-r1
-bind-libs-9.16.20-r1
-bind-tools-9.16.20-r1
+bind-libs-9.16.25-r0
+bind-tools-9.16.25-r0
 brotli-libs-1.0.9-r3
 busybox-1.32.1-r7
 ca-certificates-20211220-r0
@@ -39,7 +39,7 @@ krb5-libs-1.18.4-r0
 less-563-r0
 libacl-2.2.53-r0
 libattr-2.4.48-r0
-libblkid-2.36.1-r1
+libblkid-2.37.3-r0
 libbsd-0.10.0-r0
 libbz2-1.0.8-r1
 libc-utils-0.7.2-r3
@@ -52,7 +52,7 @@ libfontenc-1.1.4-r0
 libgcc-10.2.1_pre1-r3
 libidn-1.35-r0
 libintl-0.20.2-r2
-libmount-2.36.1-r1
+libmount-2.37.3-r0
 libnet-1.2-r0
 libpcap-1.10.0-r0
 libpng-1.6.37-r1
@@ -63,7 +63,7 @@ librrd-1.7.2-r4
 libssl1.1-1.1.1l-r0
 libstdc++-10.2.1_pre1-r3
 libtls-standalone-2.9.1-r1
-libuuid-2.36.1-r1
+libuuid-2.37.3-r0
 libuv-1.40.0-r0
 libverto-0.3.1-r1
 libx11-1.7.1-r0
