@@ -15,7 +15,7 @@ brotli-libs-1.0.9-r3
 busybox-1.32.1-r8
 ca-certificates-20211220-r0
 ca-certificates-bundle-20211220-r0
-cairo-1.16.0-r2
+cairo-1.16.0-r3
 coreutils-8.32-r2
 curl-7.79.1-r1
 encodings-1.0.5-r0
@@ -25,7 +25,7 @@ font-noto-cjk-0_git20181130-r1
 font-sony-misc-1.0.3-r1
 fontconfig-2.13.1-r3
 fping-5.0-r0
-freetype-2.10.4-r2
+freetype-2.10.4-r3
 fribidi-1.0.10-r0
 fstrm-0.6.0-r1
 glib-2.66.8-r0
@@ -44,7 +44,7 @@ libbsd-0.10.0-r0
 libbz2-1.0.8-r1
 libc-utils-0.7.2-r3
 libcom_err-1.45.7-r0
-libcrypto1.1-1.1.1n-r0
+libcrypto1.1-1.1.1o-r0
 libcurl-7.79.1-r1
 libedit-20191231.3.1-r1
 libffi-3.3-r2
@@ -60,7 +60,7 @@ libproc-3.3.16-r0
 libprotobuf-3.13.0-r2
 libprotoc-3.13.0-r2
 librrd-1.7.2-r4
-libssl1.1-1.1.1n-r0
+libssl1.1-1.1.1o-r0
 libstdc++-10.2.1_pre1-r3
 libtls-standalone-2.9.1-r1
 libuuid-2.37.4-r0
@@ -153,4 +153,4 @@ tzdata-2022a-r0
 utmps-0.1.0.0-r0
 xz-5.2.5-r1
 xz-libs-5.2.5-r1
-zlib-1.2.12-r0
+zlib-1.2.12-r1
