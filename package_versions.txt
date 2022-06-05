@@ -5,7 +5,7 @@ apache2-2.4.53-r0
 apache2-ctl-2.4.53-r0
 apache2-utils-2.4.53-r0
 apk-tools-2.12.7-r0
-apr-1.7.0-r0
+apr-1.7.0-r1
 apr-util-1.6.1-r7
 bash-5.1.16-r0
 bc-1.07.1-r1
