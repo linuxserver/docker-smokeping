@@ -1,9 +1,9 @@
 alpine-baselayout-3.2.0-r8
 alpine-keys-2.4-r0
 apache-mod-fcgid-2.3.9-r2
-apache2-2.4.53-r0
-apache2-ctl-2.4.53-r0
-apache2-utils-2.4.53-r0
+apache2-2.4.54-r0
+apache2-ctl-2.4.54-r0
+apache2-utils-2.4.54-r0
 apk-tools-2.12.7-r0
 apr-1.7.0-r1
 apr-util-1.6.1-r7
