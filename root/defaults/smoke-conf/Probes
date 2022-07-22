@@ -1,11 +1,9 @@
 *** Probes ***
 
 + FPing
-
 binary = /usr/sbin/fping
 
 + FPing6
-
 binary = /usr/sbin/fping
 protocol = 6
 
@@ -14,3 +12,10 @@ binary = /usr/bin/dig
 lookup = google.com
 pings = 5
 step = 300
+
++ TCPPing
+binary = /usr/bin/tcpping
+forks = 10
+offset = random
+pings = 5
+port = 80
