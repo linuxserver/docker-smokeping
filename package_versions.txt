@@ -12,7 +12,7 @@ bc-1.07.1-r1
 bind-libs-9.16.27-r0
 bind-tools-9.16.27-r0
 brotli-libs-1.0.9-r3
-busybox-1.32.1-r8
+busybox-1.32.1-r9
 ca-certificates-20211220-r0
 ca-certificates-bundle-20211220-r0
 cairo-1.16.0-r4
@@ -79,8 +79,8 @@ lynx-2.8.9_p1-r1
 mkfontscale-1.2.1-r1
 musl-1.2.2-r1
 musl-utils-1.2.2-r1
-ncurses-libs-6.2_p20210109-r0
-ncurses-terminfo-base-6.2_p20210109-r0
+ncurses-libs-6.2_p20210109-r1
+ncurses-terminfo-base-6.2_p20210109-r1
 nghttp2-libs-1.42.0-r1
 openssh-client-8.4_p1-r4
 openssh-keygen-8.4_p1-r4
@@ -144,7 +144,7 @@ scanelf-1.2.8-r0
 shadow-4.8.1-r0
 skalibs-2.10.0.0-r0
 smokeping-2.7.3-r5
-ssl_client-1.32.1-r8
+ssl_client-1.32.1-r9
 ssmtp-2.64-r14
 sudo-1.9.5p2-r0
 tcptraceroute-1.5b7-r3
