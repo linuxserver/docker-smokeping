@@ -26,7 +26,7 @@ pipeline {
     PR_DOCKERHUB_IMAGE = 'lspipepr/smokeping'
     DIST_IMAGE = 'alpine'
     DIST_TAG = '3.13'
-    DIST_REPO = 'http://nl.alpinelinux.org/alpine/v3.13/main/'
+    DIST_REPO = 'http://dl-cdn.alpinelinux.org/alpine/v3.13/main/'
     DIST_REPO_PACKAGES = 'smokeping'
     MULTIARCH='true'
     CI='true'
