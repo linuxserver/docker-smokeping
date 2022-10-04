@@ -37,7 +37,7 @@ RUN \
  chmod a+s /usr/bin/tcptraceroute && \
  echo "**** fix path to cropper.js ****" && \
  sed -i 's#src="/cropper/#/src="cropper/#' /etc/smokeping/basepage.html && \
- echo "**** install tcping script ****" && \
+ echo "**** install tcpping script ****" && \
  install -m755 -D /defaults/tcpping /usr/bin/ && \
  echo "**** remove default apache conf ****" && \
  rm -f /etc/apache2/httpd.conf
