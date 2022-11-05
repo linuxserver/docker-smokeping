@@ -134,7 +134,7 @@ perl-text-soundex-3.05-r4
 perl-try-tiny-0.30-r2
 perl-uri-5.05-r0
 perl-www-robotrules-6.02-r3
-pixman-0.40.0-r2
+pixman-0.40.0-r3
 procps-3.3.16-r0
 protobuf-c-1.3.3-r4
 readline-8.1.0-r0
@@ -146,7 +146,7 @@ skalibs-2.10.0.0-r0
 smokeping-2.7.3-r5
 ssl_client-1.32.1-r9
 ssmtp-2.64-r14
-sudo-1.9.5p2-r0
+sudo-1.9.12-r1
 tcptraceroute-1.5b7-r3
 ttf-dejavu-2.37-r1
 tzdata-2022c-r0
