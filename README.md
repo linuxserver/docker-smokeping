@@ -60,7 +60,7 @@ The architectures supported by this image are:
 
 ## Application Setup
 
-- Once running the URL will be `http://<host-ip>/`.
+- Once running the URL will be `http://<host-ip>/smokeping/smokeping.cgi`. For example a full URL might look like `https://smokeping.yourdomain.com/smokeping/smokeping.cgi`.
 - Basics are, edit the `Targets` file to ping the hosts you're interested in to match the format found there.
 - Wait 10 minutes.
 
