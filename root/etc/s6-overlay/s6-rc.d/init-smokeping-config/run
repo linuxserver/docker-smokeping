@@ -1,0 +1,41 @@
+#!/usr/bin/with-contenv bash
+
+# create folders
+mkdir -p \
+    /data \
+    /var/cache/smokeping
+
+# copy config files
+
+PREV_DIR=$(pwd)
+
+cd /defaults/smoke-conf || exit
+shopt -s globstar nullglob
+for i in *
+do
+    [[ ! -e "/config/${i}" ]] && cp -v "${i}" "/config/${i}"
+done
+
+cd "${PREV_DIR}" || exit
+
+# make symlinks
+if [[ -e /config/ssmtp.conf ]]; then
+    cp /config/ssmtp.conf /etc/ssmtp/ssmtp.conf
+fi
+
+if [[ ! -L /usr/share/webapps/smokeping/cache ]]; then
+    ln -sf	/var/cache/smokeping /usr/share/webapps/smokeping/cache
+fi
+
+if [[ ! -f /usr/bin/tcpping ]]; then
+    install -m755 -D /defaults/tcpping /usr/bin/
+fi
+
+# permissions
+chmod 777 /var/cache/fontconfig/
+
+chown -R abc:abc \
+    /config \
+    /data \
+    /usr/share/webapps/smokeping \
+    /var/cache/smokeping

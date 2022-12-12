@@ -1,0 +1,4 @@
+#!/usr/bin/with-contenv bash
+
+exec 2>&1 \
+    /usr/bin/spawn-fcgi -n -s /run/fcgiwrap.sock -u abc -- /usr/bin/fcgiwrap
