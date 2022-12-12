@@ -14,7 +14,7 @@ shopt -s globstar nullglob
 for i in *
 do
     if [[ ! -e "/config/${i}" ]]; then
-        cp -v "${i}" "/config/${i}"
+        cp "${i}" "/config/${i}"
     fi
 done
 
