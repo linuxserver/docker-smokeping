@@ -36,7 +36,7 @@ fi
 # permissions
 chmod 777 /var/cache/fontconfig/
 
-chown -R abc:abc \
+lsiown -R abc:abc \
     /config \
     /data \
     /usr/share/webapps/smokeping \
