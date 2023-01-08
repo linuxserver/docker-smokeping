@@ -42,7 +42,7 @@ krb5-conf-1.0-r2
 krb5-libs-1.20.1-r0
 libacl-2.3.1-r1
 libattr-2.5.1-r2
-libblkid-2.38.1-r0
+libblkid-2.38.1-r1
 libbsd-0.11.7-r0
 libbz2-1.0.8-r4
 libc-utils-0.7.2-r3
@@ -55,14 +55,14 @@ libffi-3.4.4-r0
 libfontenc-1.1.6-r0
 libintl-0.21.1-r1
 libmd-1.0.4-r0
-libmount-2.38.1-r0
+libmount-2.38.1-r1
 libnet-1.2-r1
 libpcap-1.10.1-r1
 libpng-1.6.38-r0
 libproc-3.3.17-r2
 librrd-1.7.2-r6
 libssl3-3.0.7-r0
-libuuid-2.38.1-r0
+libuuid-2.38.1-r1
 libuv-1.44.2-r0
 libverto-0.3.2-r1
 libx11-1.8.3-r0
@@ -87,7 +87,7 @@ oniguruma-6.9.8-r0
 openssh-client-common-9.1_p1-r1
 openssh-client-default-9.1_p1-r1
 openssh-keygen-9.1_p1-r1
-openssl-3.0.7-r0
+openssl-3.0.7-r2
 pango-1.50.12-r0
 pcre-8.45-r2
 pcre2-10.42-r0
