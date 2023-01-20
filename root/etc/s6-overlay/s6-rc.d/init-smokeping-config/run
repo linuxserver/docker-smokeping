@@ -1,4 +1,5 @@
 #!/usr/bin/with-contenv bash
+# shellcheck shell=bash
 
 # create folders
 mkdir -p \
@@ -11,8 +12,7 @@ PREV_DIR=$(pwd)
 
 cd /defaults/smoke-conf || exit
 shopt -s globstar nullglob
-for i in *
-do
+for i in *; do
     if [[ ! -e "/config/${i}" ]]; then
         cp "${i}" "/config/${i}"
     fi
@@ -26,7 +26,7 @@ if [[ -e /config/ssmtp.conf ]]; then
 fi
 
 if [[ ! -L /usr/share/webapps/smokeping/cache ]]; then
-    ln -sf	/var/cache/smokeping /usr/share/webapps/smokeping/cache
+    ln -sf /var/cache/smokeping /usr/share/webapps/smokeping/cache
 fi
 
 if [[ ! -f /usr/bin/tcpping ]]; then
