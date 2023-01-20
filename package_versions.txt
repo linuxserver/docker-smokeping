@@ -2,7 +2,7 @@ alpine-baselayout-3.4.0-r0
 alpine-baselayout-data-3.4.0-r0
 alpine-keys-2.4-r1
 alpine-release-3.17.1-r0
-apache2-utils-2.4.54-r1
+apache2-utils-2.4.55-r0
 apk-tools-2.12.10-r1
 apr-1.7.0-r2
 apr-util-1.6.1-r14
@@ -18,7 +18,7 @@ ca-certificates-20220614-r4
 ca-certificates-bundle-20220614-r4
 cairo-1.17.6-r3
 coreutils-9.1-r0
-curl-7.87.0-r0
+curl-7.87.0-r1
 encodings-1.0.6-r0
 fcgi-2.4.2-r2
 fcgiwrap-1.1.0-r6
@@ -31,8 +31,8 @@ fping-5.1-r1
 freetype-2.12.1-r0
 fribidi-1.0.12-r0
 fstrm-0.6.1-r1
-git-2.38.2-r0
-git-perl-2.38.2-r0
+git-2.38.3-r1
+git-perl-2.38.3-r1
 glib-2.74.4-r0
 graphite2-1.3.14-r2
 harfbuzz-5.3.1-r1
@@ -48,7 +48,7 @@ libbz2-1.0.8-r4
 libc-utils-0.7.2-r3
 libcom_err-1.46.5-r4
 libcrypto3-3.0.7-r2
-libcurl-7.87.0-r0
+libcurl-7.87.0-r1
 libedit-20221030.3.1-r0
 libexpat-2.5.0-r0
 libffi-3.4.4-r0
@@ -110,7 +110,7 @@ perl-encode-locale-1.05-r3
 perl-error-0.17029-r1
 perl-fcgi-0.82-r1
 perl-file-listing-6.15-r0
-perl-git-2.38.2-r0
+perl-git-2.38.3-r1
 perl-html-parser-3.80-r0
 perl-html-tagset-3.20-r3
 perl-http-cookies-6.10-r0
@@ -165,7 +165,7 @@ smokeping-2.7.3-r9
 spawn-fcgi-1.6.4-r5
 ssl_client-1.35.0-r29
 ssmtp-2.64-r18
-sudo-1.9.12_p1-r1
+sudo-1.9.12_p2-r0
 tcptraceroute-1.5b7-r4
 tzdata-2022f-r1
 utmps-libs-0.1.2.0-r1
