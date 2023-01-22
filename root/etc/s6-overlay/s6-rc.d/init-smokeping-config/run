@@ -15,7 +15,9 @@ PREV_DIR=$(pwd)
 cd /defaults/smoke-conf || exit
 shopt -s globstar nullglob
 for i in *; do
-    [[ ! -e "/config/${i}" ]] && cp -v "${i}" "/config/${i}"
+    if [[ ! -e "/config/${i}" ]]; then
+        cp -v "${i}" "/config/${i}"
+    fi
 done
 
 cd "${PREV_DIR}" || exit
