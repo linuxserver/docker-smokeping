@@ -17,8 +17,8 @@ available_architectures:
 param_container_name: "{{ project_name }}"
 param_usage_include_vols: true
 param_volumes:
-  - { vol_path: "/config", vol_host_path: "</path/to/smokeping/config>", desc: "Configure the `Targets` file here" }
-  - { vol_path: "/data", vol_host_path: "</path/to/{{ project_name }}/data>", desc: "Storage location for db and application data (graphs etc)" }
+  - { vol_path: "/config", vol_host_path: "/path/to/smokeping/config", desc: "Configure the `Targets` file here" }
+  - { vol_path: "/data", vol_host_path: "/path/to/{{ project_name }}/data", desc: "Storage location for db and application data (graphs etc)" }
 param_usage_include_ports: true
 param_ports:
   - { external_port: "80", internal_port: "80", port_desc: "Allows HTTP access to the internal webserver." }
@@ -35,6 +35,8 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "22.01.23:", desc: "Revert to using Apache due to latency issues with nginx and fcgiwrap." }
+  - { date: "12.12.22:", desc: "Rebase to Alpine 3.17, migrate to s6v3, switch to nginx and fcgiwrap." }
   - { date: "29.03.21:", desc: "Dockerfile: Install curl before we call it" }
   - { date: "23.01.21:", desc: "Rebasing to alpine 3.13." }
   - { date: "01.06.20:", desc: "Rebasing to alpine 3.12." }

@@ -1,0 +1,61 @@
+#!/usr/bin/with-contenv bash
+# shellcheck shell=bash
+
+# create folders
+mkdir -p \
+    /config/site-confs \
+    /run/apache2 \
+    /var/cache/smokeping \
+    /data
+
+# copy config files
+
+PREV_DIR=$(pwd)
+
+cd /defaults/smoke-conf || exit
+shopt -s globstar nullglob
+for i in *; do
+    [[ ! -e "/config/${i}" ]] && cp -v "${i}" "/config/${i}"
+done
+
+cd "${PREV_DIR}" || exit
+
+# make symlinks
+if [[ ! -L /var/www/localhost/smokeping ]]; then
+    ln -sf /usr/share/webapps/smokeping /var/www/localhost/smokeping
+fi
+
+if [[ ! -L /var/www/localhost/smokeping/cache ]]; then
+    ln -sf	/var/cache/smokeping /var/www/localhost/smokeping/cache
+fi
+
+if [[ ! -e /config/site-confs/smokeping.conf ]]; then
+    cp /defaults/smokeping.conf /config/site-confs/smokeping.conf
+fi
+
+if [[ ! -e /config/httpd.conf ]]; then
+    cp /defaults/httpd.conf /config/httpd.conf
+fi
+
+if [[ ! -L /etc/apache2/httpd.conf ]]; then
+    ln -sf /config/httpd.conf /etc/apache2/httpd.conf
+fi
+
+if [[ -e /config/ssmtp.conf ]]; then
+    cp /config/ssmtp.conf /etc/ssmtp/ssmtp.conf
+fi
+
+if [[ ! -f /usr/bin/tcpping ]]; then
+    install -m755 -D /defaults/tcpping /usr/bin/
+fi
+
+# permissions
+chmod 777 /var/cache/fontconfig/
+
+lsiown -R abc:abc \
+    /config \
+    /data \
+    /run/apache2 \
+    /usr/share/webapps/smokeping \
+    /var/cache/smokeping \
+    /var/www/localhost/smokeping
