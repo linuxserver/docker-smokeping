@@ -3,8 +3,10 @@
 
 # create folders
 mkdir -p \
-    /data \
-    /var/cache/smokeping
+    /config/site-confs \
+    /run/apache2 \
+    /var/cache/smokeping \
+    /data
 
 # copy config files
 
@@ -14,19 +16,35 @@ cd /defaults/smoke-conf || exit
 shopt -s globstar nullglob
 for i in *; do
     if [[ ! -e "/config/${i}" ]]; then
-        cp "${i}" "/config/${i}"
+        cp -v "${i}" "/config/${i}"
     fi
 done
 
 cd "${PREV_DIR}" || exit
 
 # make symlinks
-if [[ -e /config/ssmtp.conf ]]; then
-    cp /config/ssmtp.conf /etc/ssmtp/ssmtp.conf
+if [[ ! -L /var/www/localhost/smokeping ]]; then
+    ln -sf /usr/share/webapps/smokeping /var/www/localhost/smokeping
 fi
 
-if [[ ! -L /usr/share/webapps/smokeping/cache ]]; then
-    ln -sf /var/cache/smokeping /usr/share/webapps/smokeping/cache
+if [[ ! -L /var/www/localhost/smokeping/cache ]]; then
+    ln -sf	/var/cache/smokeping /var/www/localhost/smokeping/cache
+fi
+
+if [[ ! -e /config/site-confs/smokeping.conf ]]; then
+    cp /defaults/smokeping.conf /config/site-confs/smokeping.conf
+fi
+
+if [[ ! -e /config/httpd.conf ]]; then
+    cp /defaults/httpd.conf /config/httpd.conf
+fi
+
+if [[ ! -L /etc/apache2/httpd.conf ]]; then
+    ln -sf /config/httpd.conf /etc/apache2/httpd.conf
+fi
+
+if [[ -e /config/ssmtp.conf ]]; then
+    cp /config/ssmtp.conf /etc/ssmtp/ssmtp.conf
 fi
 
 if [[ ! -f /usr/bin/tcpping ]]; then
@@ -39,5 +57,7 @@ chmod 777 /var/cache/fontconfig/
 lsiown -R abc:abc \
     /config \
     /data \
+    /run/apache2 \
     /usr/share/webapps/smokeping \
-    /var/cache/smokeping
+    /var/cache/smokeping \
+    /var/www/localhost/smokeping

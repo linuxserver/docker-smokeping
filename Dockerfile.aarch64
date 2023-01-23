@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ghcr.io/linuxserver/baseimage-alpine-nginx:arm64v8-3.17
+FROM ghcr.io/linuxserver/baseimage-alpine:arm64v8-3.17
 
 # set version label
 ARG BUILD_DATE
@@ -16,25 +16,27 @@ RUN \
     && awk '/^P:smokeping$/,/V:/' /tmp/APKINDEX | sed -n 2p | sed 's/^V://'); \
   fi && \
   apk add --no-cache \
+    apache2 \
+    apache2-ctl \
+    apache2-utils \
+    apache-mod-fcgid \
     bc \
     bind-tools \
     font-noto-cjk \
     openssh-client \
-    fcgiwrap \
     smokeping==${SMOKEPING_VERSION} \
-    spawn-fcgi \
     ssmtp \
     sudo \
-    tcptraceroute \
-    ttf-dejavu && \
+    tcptraceroute && \
   echo "**** give setuid access to traceroute & tcptraceroute ****" && \
   chmod a+s /usr/bin/traceroute && \
   chmod a+s /usr/bin/tcptraceroute && \
   echo "**** fix path to cropper.js ****" && \
   sed -i 's#src="/cropper/#/src="cropper/#' /etc/smokeping/basepage.html && \
-  echo "**** cleanup ****" && \
+  echo "**** remove default apache conf ****" && \
   rm -rf \
-    /tmp/*
+    /tmp/* \
+    /etc/apache2/httpd.conf
 
 # add local files
 COPY root/ /
