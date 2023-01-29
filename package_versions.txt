@@ -11,8 +11,8 @@ apr-1.7.0-r2
 apr-util-1.6.1-r14
 bash-5.2.15-r0
 bc-1.07.1-r2
-bind-libs-9.18.10-r0
-bind-tools-9.18.10-r0
+bind-libs-9.18.11-r0
+bind-tools-9.18.11-r0
 brotli-libs-1.0.9-r9
 busybox-1.35.0-r29
 busybox-binsh-1.35.0-r29
@@ -65,7 +65,7 @@ libssl3-3.0.7-r2
 libuuid-2.38.1-r1
 libuv-1.44.2-r0
 libverto-0.3.2-r1
-libx11-1.8.3-r0
+libx11-1.8.3-r1
 libxau-1.0.10-r0
 libxcb-1.15-r0
 libxdmcp-1.1.4-r0
