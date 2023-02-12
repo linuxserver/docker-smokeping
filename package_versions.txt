@@ -39,7 +39,7 @@ jq-1.6-r2
 keyutils-libs-1.6.3-r1
 krb5-conf-1.0-r2
 krb5-libs-1.20.1-r0
-less-608-r0
+less-608-r1
 libacl-2.3.1-r1
 libattr-2.5.1-r2
 libblkid-2.38.1-r1
