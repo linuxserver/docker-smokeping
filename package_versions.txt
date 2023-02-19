@@ -1,7 +1,7 @@
 alpine-baselayout-3.4.0-r0
 alpine-baselayout-data-3.4.0-r0
 alpine-keys-2.4-r1
-alpine-release-3.17.1-r0
+alpine-release-3.17.2-r0
 apache-mod-fcgid-2.3.9-r4
 apache2-2.4.55-r0
 apache2-ctl-2.4.55-r0
@@ -47,7 +47,7 @@ libbsd-0.11.7-r0
 libbz2-1.0.8-r4
 libc-utils-0.7.2-r3
 libcom_err-1.46.5-r4
-libcrypto3-3.0.7-r2
+libcrypto3-3.0.8-r0
 libcurl-7.87.0-r1
 libedit-20221030.3.1-r0
 libexpat-2.5.0-r0
@@ -61,7 +61,7 @@ libpcap-1.10.1-r1
 libpng-1.6.38-r0
 libproc-3.3.17-r2
 librrd-1.7.2-r6
-libssl3-3.0.7-r2
+libssl3-3.0.8-r0
 libuuid-2.38.1-r1
 libuv-1.44.2-r0
 libverto-0.3.2-r1
