@@ -4,9 +4,9 @@ alpine-baselayout-data  3.4.0-r0          apk
 alpine-keys             2.4-r1            apk     
 alpine-release          3.17.2-r0         apk     
 apache-mod-fcgid        2.3.9-r4          apk     
-apache2                 2.4.55-r0         apk     
-apache2-ctl             2.4.55-r0         apk     
-apache2-utils           2.4.55-r0         apk     
+apache2                 2.4.56-r0         apk     
+apache2-ctl             2.4.56-r0         apk     
+apache2-utils           2.4.56-r0         apk     
 apk-tools               2.12.10-r1        apk     
 apr                     1.7.2-r0          apk     
 apr-util                1.6.3-r0          apk     
@@ -37,7 +37,7 @@ glib                    2.74.6-r0         apk
 graphite2               1.3.14-r2         apk     
 gzip                    1.12-r0           apk     
 harfbuzz                5.3.1-r1          apk     
-httpd                   2.4.55            binary  
+httpd                   2.4.56            binary  
 jq                      1.6-r2            apk     
 keyutils-libs           1.6.3-r1          apk     
 krb5-conf               1.0-r2            apk     
@@ -49,7 +49,7 @@ libblkid                2.38.1-r1         apk
 libbsd                  0.11.7-r0         apk     
 libbz2                  1.0.8-r4          apk     
 libc-utils              0.7.2-r3          apk     
-libcom_err              1.46.5-r4         apk     
+libcom_err              1.46.6-r0         apk     
 libcrypto3              3.0.8-r0          apk     
 libcurl                 7.88.1-r0         apk     
 libedit                 20221030.3.1-r0   apk     
