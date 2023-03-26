@@ -22,7 +22,7 @@ ca-certificates         20220614-r4       apk
 ca-certificates-bundle  20220614-r4       apk     
 cairo                   1.17.6-r3         apk     
 coreutils               9.1-r0            apk     
-curl                    7.88.1-r0         apk     
+curl                    7.88.1-r1         apk     
 encodings               1.0.6-r0          apk     
 font-alias              1.0.4-r0          apk     
 font-dejavu             2.37-r3           apk     
@@ -51,7 +51,7 @@ libbz2                  1.0.8-r4          apk
 libc-utils              0.7.2-r3          apk     
 libcom_err              1.46.6-r0         apk     
 libcrypto3              3.0.8-r0          apk     
-libcurl                 7.88.1-r0         apk     
+libcurl                 7.88.1-r1         apk     
 libedit                 20221030.3.1-r0   apk     
 libexpat                2.5.0-r0          apk     
 libffi                  3.4.4-r0          apk     
