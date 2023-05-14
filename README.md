@@ -227,6 +227,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **11.05.23:** - Add perl-lwp-protocol-https for master/slave support over https.
 * **22.01.23:** - Revert to using Apache due to latency issues with nginx and fcgiwrap.
 * **12.12.22:** - Rebase to Alpine 3.17, migrate to s6v3, switch to nginx and fcgiwrap.
 * **29.03.21:** - Dockerfile: Install curl before we call it
