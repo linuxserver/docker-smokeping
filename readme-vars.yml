@@ -35,6 +35,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "18.05.23:", desc: "Rebase to Alpine 3.18, update Smokeping to 2.8.2" }
   - { date: "11.05.23:", desc: "Add perl-lwp-protocol-https for master/slave support over https." }
   - { date: "22.01.23:", desc: "Revert to using Apache due to latency issues with nginx and fcgiwrap." }
   - { date: "12.12.22:", desc: "Rebase to Alpine 3.17, migrate to s6v3, switch to nginx and fcgiwrap." }
