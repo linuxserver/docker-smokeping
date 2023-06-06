@@ -34,6 +34,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "16.05.23:", desc: "Add perl-authen-radius for Radius support." }
   - { date: "16.05.23:", desc: "Rebase to Alpine 3.18. Deprecate armhf." }
   - { date: "11.05.23:", desc: "Add perl-lwp-protocol-https for master/slave support over https." }
   - { date: "22.01.23:", desc: "Revert to using Apache due to latency issues with nginx and fcgiwrap." }
