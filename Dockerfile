@@ -24,6 +24,7 @@ RUN \
     bind-tools \
     font-noto-cjk \
     openssh-client \
+    perl-authen-radius \
     perl-lwp-protocol-https \
     smokeping==${SMOKEPING_VERSION} \
     ssmtp \
