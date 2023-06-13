@@ -45,7 +45,7 @@ krb5-libs                1.20.1-r1         apk
 less                     633-r0            apk     
 libacl                   2.3.1-r3          apk     
 libattr                  2.5.1-r4          apk     
-libblkid                 2.38.1-r7         apk     
+libblkid                 2.38.1-r8         apk     
 libbsd                   0.11.7-r1         apk     
 libbz2                   1.0.8-r5          apk     
 libc-utils               0.7.2-r5          apk     
@@ -59,7 +59,7 @@ libfontenc               1.1.7-r2          apk
 libidn2                  2.3.4-r1          apk     
 libintl                  0.21.1-r7         apk     
 libmd                    1.0.4-r2          apk     
-libmount                 2.38.1-r7         apk     
+libmount                 2.38.1-r8         apk     
 libncursesw              6.4_p20230506-r0  apk     
 libnet                   1.2-r2            apk     
 libpcap                  1.10.4-r1         apk     
@@ -68,7 +68,7 @@ libproc2                 4.0.3-r1          apk
 librrd                   1.8.0-r2          apk     
 libssl3                  3.1.1-r1          apk     
 libunistring             1.1-r1            apk     
-libuuid                  2.38.1-r7         apk     
+libuuid                  2.38.1-r8         apk     
 libuv                    1.44.2-r2         apk     
 libverto                 0.3.2-r2          apk     
 libx11                   1.8.4-r3          apk     
