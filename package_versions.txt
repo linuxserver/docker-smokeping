@@ -2,7 +2,7 @@ NAME                     VERSION           TYPE
 alpine-baselayout        3.4.3-r1          apk     
 alpine-baselayout-data   3.4.3-r1          apk     
 alpine-keys              2.4-r1            apk     
-alpine-release           3.18.0-r0         apk     
+alpine-release           3.18.2-r0         apk     
 apache-mod-fcgid         2.3.9-r5          apk     
 apache2                  2.4.57-r2         apk     
 apache2-ctl              2.4.57-r2         apk     
@@ -71,7 +71,7 @@ libunistring             1.1-r1            apk
 libuuid                  2.38.1-r8         apk     
 libuv                    1.44.2-r2         apk     
 libverto                 0.3.2-r2          apk     
-libx11                   1.8.4-r3          apk     
+libx11                   1.8.4-r4          apk     
 libxau                   1.0.11-r2         apk     
 libxcb                   1.15-r1           apk     
 libxdmcp                 1.1.4-r2          apk     
@@ -142,7 +142,7 @@ protobuf-c               1.4.1-r2          apk
 readline                 8.2.1-r1          apk     
 rrdtool                  1.8.0-r2          apk     
 scanelf                  1.3.7-r1          apk     
-shadow                   4.13-r2           apk     
+shadow                   4.13-r4           apk     
 skalibs                  2.13.1.1-r1       apk     
 smokeping                2.8.2-r2          apk     
 ssl_client               1.36.1-r0         apk     
