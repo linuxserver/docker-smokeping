@@ -50,7 +50,7 @@ libbsd                   0.11.7-r1         apk
 libbz2                   1.0.8-r5          apk     
 libc-utils               0.7.2-r5          apk     
 libcom_err               1.47.0-r2         apk     
-libcrypto3               3.1.1-r1          apk     
+libcrypto3               3.1.1-r2          apk     
 libcurl                  8.1.2-r0          apk     
 libedit                  20221030.3.1-r1   apk     
 libexpat                 2.5.0-r1          apk     
@@ -66,7 +66,7 @@ libpcap                  1.10.4-r1         apk
 libpng                   1.6.39-r3         apk     
 libproc2                 4.0.3-r1          apk     
 librrd                   1.8.0-r2          apk     
-libssl3                  3.1.1-r1          apk     
+libssl3                  3.1.1-r2          apk     
 libunistring             1.1-r1            apk     
 libuuid                  2.38.1-r8         apk     
 libuv                    1.44.2-r2         apk     
