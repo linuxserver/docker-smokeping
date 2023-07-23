@@ -15,6 +15,10 @@ RUN \
     SMOKEPING_VERSION=$(curl -sL "http://dl-cdn.alpinelinux.org/alpine/v3.18/main/x86_64/APKINDEX.tar.gz" | tar -xz -C /tmp \
     && awk '/^P:smokeping$/,/V:/' /tmp/APKINDEX | sed -n 2p | sed 's/^V://'); \
   fi && \
+  apk add --no-cache --virtual=build-dependencies \
+    build-base \
+    perl-app-cpanminus \
+    perl-dev && \
   apk add --no-cache \
     apache2 \
     apache2-ctl \
@@ -30,12 +34,16 @@ RUN \
     ssmtp \
     sudo \
     tcptraceroute && \
+  echo "**** Build perl TacacsPlus module ****" && \
+  cpanm Authen::TacacsPlus && \
   echo "**** give setuid access to traceroute & tcptraceroute ****" && \
   chmod a+s /usr/bin/traceroute && \
   chmod a+s /usr/bin/tcptraceroute && \
   echo "**** fix path to cropper.js ****" && \
   sed -i 's#src="/cropper/#/src="cropper/#' /etc/smokeping/basepage.html && \
-  echo "**** remove default apache conf ****" && \
+  echo "**** Cleanup ****" && \
+  apk del --purge \
+    build-dependencies && \
   rm -rf \
     /tmp/* \
     /etc/apache2/httpd.conf
