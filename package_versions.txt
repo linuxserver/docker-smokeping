@@ -62,7 +62,7 @@ libncursesw              6.4_p20230506-r0  apk
 libnet                   1.2-r2            apk   
 libpcap                  1.10.4-r1         apk   
 libpng                   1.6.39-r3         apk   
-libproc2                 4.0.3-r1          apk   
+libproc2                 4.0.4-r0          apk   
 librrd                   1.8.0-r2          apk   
 libssl3                  3.1.2-r0          apk   
 libunistring             1.1-r1            apk   
@@ -135,7 +135,7 @@ perl-try-tiny            0.31-r1           apk
 perl-uri                 5.19-r0           apk   
 perl-www-robotrules      6.02-r3           apk   
 pixman                   0.42.2-r1         apk   
-procps-ng                4.0.3-r1          apk   
+procps-ng                4.0.4-r0          apk   
 protobuf-c               1.4.1-r2          apk   
 readline                 8.2.1-r1          apk   
 rrdtool                  1.8.0-r2          apk   
