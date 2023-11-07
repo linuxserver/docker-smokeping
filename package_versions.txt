@@ -69,7 +69,7 @@ libunistring             1.1-r1            apk
 libuuid                  2.38.1-r8         apk   
 libuv                    1.44.2-r2         apk   
 libverto                 0.3.2-r2          apk   
-libx11                   1.8.4-r4          apk   
+libx11                   1.8.7-r0          apk   
 libxau                   1.0.11-r2         apk   
 libxcb                   1.15-r1           apk   
 libxdmcp                 1.1.4-r2          apk   
