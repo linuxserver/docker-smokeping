@@ -28,9 +28,11 @@ param_env_vars:
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
-  * Once running the URL will be `http://<host-ip>/smokeping/smokeping.cgi`. For example a full URL might look like `https://smokeping.yourdomain.com/smokeping/smokeping.cgi`.
-  * Basics are, edit the `Targets` file to ping the hosts you're interested in to match the format found there.
+  * Once running, the URL will be `http://<host-ip>/smokeping/smokeping.cgi`. For example, a full URL might look like `https://smokeping.yourdomain.com/smokeping/smokeping.cgi`.
+  * Basic setup: edit the `Targets` file to ping the hosts you're interested in to match the format found there.
   * Wait 10 minutes.
+  * To reload the configuration without restarting the container, run `docker exec $CID s6-svc -h /run/service/svc-smokeping`, where `$CID` is the container ID (e.g., `smokeping`).
+  * To restart the container, run `docker restart $CID`.
 
 # changelog
 changelogs:
