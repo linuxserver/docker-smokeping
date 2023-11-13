@@ -59,9 +59,11 @@ The architectures supported by this image are:
 
 ## Application Setup
 
-* Once running the URL will be `http://<host-ip>/smokeping/smokeping.cgi`. For example a full URL might look like `https://smokeping.yourdomain.com/smokeping/smokeping.cgi`.
-* Basics are, edit the `Targets` file to ping the hosts you're interested in to match the format found there.
+* Once running, the URL will be `http://<host-ip>/smokeping/smokeping.cgi`. For example, a full URL might look like `https://smokeping.yourdomain.com/smokeping/smokeping.cgi`.
+* Basic setup: edit the `Targets` file to ping the hosts you're interested in to match the format found there.
 * Wait 10 minutes.
+* To reload the configuration without restarting the container, run `docker exec smokeping pkill -f -HUP '/usr/bin/perl /usr/s?bin/smokeping(_cgi)?'`, where `smokeping` is the container ID.
+* To restart the container, run `docker restart smokeping`, where `smokeping` is the container ID.
 
 ## Usage
 
