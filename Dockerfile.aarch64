@@ -7,7 +7,7 @@ ARG BUILD_DATE
 ARG VERSION
 ARG SMOKEPING_VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
-LABEL maintainer="ironicbadger,sparklyballs"
+LABEL maintainer="notdriz"
 
 RUN \
   echo "**** install packages ****" && \
@@ -27,9 +27,11 @@ RUN \
     bc \
     bind-tools \
     font-noto-cjk \
+    irtt \
     openssh-client \
     perl-authen-radius \
     perl-lwp-protocol-https \
+    perl-path-tiny \
     smokeping==${SMOKEPING_VERSION} \
     ssmtp \
     sudo \
