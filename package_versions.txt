@@ -96,7 +96,7 @@ openssh-client-default   9.3_p2-r0                             apk
 openssh-keygen           9.3_p2-r0                             apk        
 pango                    1.50.14-r1                            apk        
 pcre2                    10.42-r1                              apk        
-perl                     5.36.1-r2                             apk        
+perl                     5.36.2-r0                             apk        
 perl-authen-radius       0.32-r1                               apk        
 perl-cgi                 4.57-r0                               apk        
 perl-cgi-fast            2.16-r0                               apk        
