@@ -36,6 +36,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "29.11.23:", desc: "Bump tcpping to 1.8." }
   - { date: "21.11.23:", desc: "Add support for IRTT Probes." }
   - { date: "23.07.23:", desc: "Add Authen::TacacsPlus for Tacacs+ support." }
   - { date: "16.05.23:", desc: "Add perl-authen-radius for Radius support." }
