@@ -294,6 +294,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **29.11.23:** - Bump tcpping to 1.8.
 * **21.11.23:** - Add support for IRTT Probes.
 * **23.07.23:** - Add Authen::TacacsPlus for Tacacs+ support.
 * **16.05.23:** - Add perl-authen-radius for Radius support.
