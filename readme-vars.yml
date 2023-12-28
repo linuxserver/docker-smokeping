@@ -16,7 +16,7 @@ available_architectures:
 param_container_name: "{{ project_name }}"
 param_usage_include_vols: true
 param_volumes:
-  - { vol_path: "/config", vol_host_path: "/path/to/smokeping/config", desc: "Configure the `Targets` file here" }
+  - { vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "Persistent config files" }
   - { vol_path: "/data", vol_host_path: "/path/to/smokeping/data", desc: "Storage location for db and application data (graphs etc)" }
 param_usage_include_ports: true
 param_ports:
@@ -36,6 +36,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "23.12.23:", desc: "Rebase to Alpine 3.19."}
   - { date: "29.11.23:", desc: "Bump tcpping to 1.8." }
   - { date: "21.11.23:", desc: "Add support for IRTT Probes." }
   - { date: "23.07.23:", desc: "Add Authen::TacacsPlus for Tacacs+ support." }

@@ -115,7 +115,7 @@ Containers are configured using parameters passed at runtime (such as those abov
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
 | `-e TZ=Etc/UTC` | specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List). |
-| `-v /config` | Configure the `Targets` file here |
+| `-v /config` | Persistent config files |
 | `-v /data` | Storage location for db and application data (graphs etc) |
 
 ## Environment variables from files (Docker secrets)
@@ -294,6 +294,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **23.12.23:** - Rebase to Alpine 3.19.
 * **29.11.23:** - Bump tcpping to 1.8.
 * **21.11.23:** - Add support for IRTT Probes.
 * **23.07.23:** - Add Authen::TacacsPlus for Tacacs+ support.
