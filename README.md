@@ -64,6 +64,7 @@ The architectures supported by this image are:
 * Wait 10 minutes.
 * To reload the configuration without restarting the container, run `docker exec smokeping pkill -f -HUP '/usr/bin/perl /usr/s?bin/smokeping(_cgi)?'`, where `smokeping` is the container ID.
 * To restart the container, run `docker restart smokeping`, where `smokeping` is the container ID.
+* Note that the default `Targets` file includes items that may or may not work. These are simply to provide examples of configuration.
 
 ## Usage
 
