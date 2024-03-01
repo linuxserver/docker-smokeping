@@ -24,6 +24,11 @@ param_ports:
 param_usage_include_env: true
 param_env_vars:
   - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London"}
+opt_param_usage_include_env: true
+opt_param_env_vars:
+  - { env_var: "MASTER_URL", env_value: "http://{{master}}:8008/smokeping/", desc: "Specify the master url to connect to. Used when in slave mode."}
+  - { env_var: "SHARED_SECRET", env_value: "password", desc: "Specify the master shared secret for this host. Used when in slave mode."}
+  - { env_var: "CACHE_DIR", env_value: "/tmp", desc: "Specify the cache directory for this host. Used when in slave mode."}
 
 # application setup block
 app_setup_block_enabled: true
