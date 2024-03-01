@@ -43,6 +43,14 @@ if [[ ! -L /etc/apache2/httpd.conf ]]; then
     ln -sf /config/httpd.conf /etc/apache2/httpd.conf
 fi
 
+if [[ ! -e /config/smokeping_secrets ]]; then
+    cp /defaults/smokeping_secrets /config/smokeping_secrets
+fi
+
+if [[ ! -L /etc/smokeping/smokeping_secrets ]]; then
+    ln -sf /config/smokeping_secrets /etc/smokeping/smokeping_secrets
+fi
+
 if [[ -e /config/ssmtp.conf ]]; then
     cp /config/ssmtp.conf /etc/ssmtp/ssmtp.conf
 fi
