@@ -61,7 +61,7 @@ libcom_err               1.47.0-r5                             apk
 libcrypto3               3.1.4-r5                              apk          
 libcurl                  8.5.0-r0                              apk          
 libedit                  20230828.3.1-r3                       apk          
-libexpat                 2.6.0-r0                              apk          
+libexpat                 2.6.2-r0                              apk          
 libffi                   3.4.4-r3                              apk          
 libfontenc               1.1.7-r4                              apk          
 libidn2                  2.3.4-r4                              apk          
@@ -131,7 +131,7 @@ perl-ldap                0.68-r2                               apk
 perl-libwww              6.72-r0                               apk          
 perl-lwp-mediatypes      6.04-r3                               apk          
 perl-lwp-protocol-https  6.11-r0                               apk          
-perl-mozilla-ca          20230821-r0                           apk          
+perl-mozilla-ca          20240313-r0                           apk          
 perl-net-dns             1.41-r0                               apk          
 perl-net-http            6.23-r1                               apk          
 perl-net-ip              1.26-r6                               apk          
