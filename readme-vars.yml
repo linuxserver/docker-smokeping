@@ -24,6 +24,11 @@ param_ports:
 param_usage_include_env: true
 param_env_vars:
   - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London"}
+opt_param_usage_include_env: true
+opt_param_env_vars:
+  - { env_var: "MASTER_URL", env_value: "http://<master-host-ip>:80/smokeping/", desc: "Specify the master url to connect to. Used when in slave mode."}
+  - { env_var: "SHARED_SECRET", env_value: "password", desc: "Specify the master shared secret for this host. Used when in slave mode."}
+  - { env_var: "CACHE_DIR", env_value: "/tmp", desc: "Specify the cache directory for this host. Used when in slave mode."}
 
 # application setup block
 app_setup_block_enabled: true
@@ -34,9 +39,11 @@ app_setup_block: |
   * To reload the configuration without restarting the container, run `docker exec smokeping pkill -f -HUP '/usr/bin/perl /usr/s?bin/smokeping(_cgi)?'`, where `smokeping` is the container ID.
   * To restart the container, run `docker restart smokeping`, where `smokeping` is the container ID.
   * Note that the default `Targets` file includes items that may or may not work. These are simply to provide examples of configuration.
+  * Slave setup: modify the `Targets`, `Slaves`, and `smokeping_secrets` files on the master host, per [the documentation](https://manpages.ubuntu.com/manpages/trusty/en/man7/smokeping_master_slave.7.html).
 
 # changelog
 changelogs:
+  - { date: "22.03.24:", desc: "Adding ability to run as a slave."}
   - { date: "23.12.23:", desc: "Rebase to Alpine 3.19."}
   - { date: "29.11.23:", desc: "Bump tcpping to 1.8." }
   - { date: "21.11.23:", desc: "Add support for IRTT Probes." }
