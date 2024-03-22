@@ -43,6 +43,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "22.03.24:", desc: "Adding ability to run as a slave."}
   - { date: "23.12.23:", desc: "Rebase to Alpine 3.19."}
   - { date: "29.11.23:", desc: "Bump tcpping to 1.8." }
   - { date: "21.11.23:", desc: "Add support for IRTT Probes." }
