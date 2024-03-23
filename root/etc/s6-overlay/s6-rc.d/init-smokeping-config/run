@@ -61,6 +61,7 @@ fi
 
 # permissions
 chmod 777 /var/cache/fontconfig/
+chmod o-rwx /config/smokeping_secrets
 
 lsiown -R abc:abc \
     /config \
