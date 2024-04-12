@@ -38,6 +38,8 @@ RUN \
     tcptraceroute && \
   echo "**** Build perl TacacsPlus module ****" && \
   cpanm Authen::TacacsPlus && \
+  echo "**** Build perl InfluxDB HTTP module ****" && \
+  cpanm InfluxDB::HTTP && \
   echo "**** give setuid access to traceroute & tcptraceroute ****" && \
   chmod a+s /usr/bin/traceroute && \
   chmod a+s /usr/bin/tcptraceroute && \
