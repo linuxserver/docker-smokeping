@@ -289,6 +289,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **12.04.24:** - Added perl InfluxDB HTTP module for InfluxDB HTTP support.
 * **22.03.24:** - Adding ability to run as a slave.
 * **23.12.23:** - Rebase to Alpine 3.19.
 * **29.11.23:** - Bump tcpping to 1.8.
