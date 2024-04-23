@@ -7,7 +7,7 @@ apache-mod-fcgid         2.3.9-r5                              apk
 apache2                  2.4.59-r0                             apk          
 apache2-ctl              2.4.59-r0                             apk          
 apache2-utils            2.4.59-r0                             apk          
-apk-tools                2.14.3-r1                             apk          
+apk-tools                2.14.4-r0                             apk          
 apr                      1.7.4-r0                              apk          
 apr-util                 1.6.3-r1                              apk          
 bash                     5.2.21-r0                             apk          
@@ -27,6 +27,7 @@ coreutils-fmt            9.4-r2                                apk
 coreutils-sha512sum      9.4-r2                                apk          
 curl                     8.5.0-r0                              apk          
 encodings                1.0.7-r1                              apk          
+findutils                4.9.0-r5                              apk          
 font-alias               1.0.5-r0                              apk          
 font-dejavu              2.37-r5                               apk          
 font-noto-cjk            0_git20220127-r1                      apk          
@@ -50,7 +51,7 @@ json-c                   0.17-r0                               apk
 keyutils-libs            1.6.3-r3                              apk          
 krb5-conf                1.0-r2                                apk          
 krb5-libs                1.21.2-r0                             apk          
-less                     643-r1                                apk          
+less                     643-r2                                apk          
 libacl                   2.3.1-r4                              apk          
 libattr                  2.5.1-r5                              apk          
 libblkid                 2.39.3-r0                             apk          
