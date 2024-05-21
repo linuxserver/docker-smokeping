@@ -29,10 +29,9 @@ coreutils-sha512sum      9.4-r2                                apk
 curl                     8.5.0-r0                              apk          
 encodings                1.0.7-r1                              apk          
 findutils                4.9.0-r5                              apk          
-font-alias               1.0.5-r0                              apk          
+font-cantarell           0.303.1-r2                            apk          
 font-dejavu              2.37-r5                               apk          
 font-noto-cjk            0_git20220127-r1                      apk          
-font-sony-misc           1.0.4-r1                              apk          
 fontconfig               2.14.2-r4                             apk          
 fping                    5.1-r5                                apk          
 freetype                 2.13.2-r0                             apk          
@@ -75,7 +74,7 @@ libnet                   1.3-r0                                apk
 libpcap                  1.10.4-r1                             apk          
 libpng                   1.6.40-r0                             apk          
 libproc2                 4.0.4-r0                              apk          
-librrd                   1.8.0-r5                              apk          
+librrd                   1.8.0-r6                              apk          
 libssl3                  3.1.4-r6                              apk          
 libunistring             1.1-r2                                apk          
 libuuid                  2.39.3-r0                             apk          
@@ -87,7 +86,7 @@ libxcb                   1.16-r0                               apk
 libxdmcp                 1.1.4-r3                              apk          
 libxext                  1.3.5-r3                              apk          
 libxft                   2.3.8-r2                              apk          
-libxml2                  2.11.7-r0                             apk          
+libxml2                  2.11.8-r0                             apk          
 libxrender               0.9.11-r4                             apk          
 linux-pam                1.5.3-r7                              apk          
 lynx                     2.8.9_p1-r9                           apk          
@@ -142,7 +141,7 @@ perl-net-snmp            6.0.1-r8                              apk
 perl-net-ssleay          1.92-r5                               apk          
 perl-net-telnet          3.05-r1                               apk          
 perl-path-tiny           0.144-r1                              apk          
-perl-rrd                 1.8.0-r5                              apk          
+perl-rrd                 1.8.0-r6                              apk          
 perl-snmp-session        1.16-r1                               apk          
 perl-text-soundex        3.05-r9                               apk          
 perl-try-tiny            0.31-r2                               apk          
@@ -152,7 +151,7 @@ pixman                   0.42.2-r2                             apk
 procps-ng                4.0.4-r0                              apk          
 protobuf-c               1.4.1-r7                              apk          
 readline                 8.2.1-r2                              apk          
-rrdtool                  1.8.0-r5                              apk          
+rrdtool                  1.8.0-r6                              apk          
 scanelf                  1.3.7-r2                              apk          
 shadow                   4.14.2-r0                             apk          
 skalibs                  2.14.0.1-r0                           apk          
