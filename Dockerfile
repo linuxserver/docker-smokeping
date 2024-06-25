@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ghcr.io/linuxserver/baseimage-alpine:3.19
+FROM ghcr.io/linuxserver/baseimage-alpine:3.20
 
 # set version label
 ARG BUILD_DATE
@@ -12,7 +12,7 @@ LABEL maintainer="notdriz"
 RUN \
   echo "**** install packages ****" && \
   if [ -z ${SMOKEPING_VERSION+x} ]; then \
-    SMOKEPING_VERSION=$(curl -sL "http://dl-cdn.alpinelinux.org/alpine/v3.19/main/x86_64/APKINDEX.tar.gz" | tar -xz -C /tmp \
+    SMOKEPING_VERSION=$(curl -sL "http://dl-cdn.alpinelinux.org/alpine/v3.20/main/x86_64/APKINDEX.tar.gz" | tar -xz -C /tmp \
     && awk '/^P:smokeping$/,/V:/' /tmp/APKINDEX | sed -n 2p | sed 's/^V://'); \
   fi && \
   apk add --no-cache --virtual=build-dependencies \
@@ -45,6 +45,7 @@ RUN \
   chmod a+s /usr/bin/tcptraceroute && \
   echo "**** fix path to cropper.js ****" && \
   sed -i 's#src="/cropper/#/src="cropper/#' /etc/smokeping/basepage.html && \
+  printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
   echo "**** Cleanup ****" && \
   apk del --purge \
     build-dependencies && \

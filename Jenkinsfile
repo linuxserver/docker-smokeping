@@ -25,8 +25,8 @@ pipeline {
     DEV_DOCKERHUB_IMAGE = 'lsiodev/smokeping'
     PR_DOCKERHUB_IMAGE = 'lspipepr/smokeping'
     DIST_IMAGE = 'alpine'
-    DIST_TAG = '3.19'
-    DIST_REPO = 'http://dl-cdn.alpinelinux.org/alpine/v3.19/main/'
+    DIST_TAG = '3.20'
+    DIST_REPO = 'http://dl-cdn.alpinelinux.org/alpine/v3.20/main/'
     DIST_REPO_PACKAGES = 'smokeping'
     MULTIARCH='true'
     CI='true'
@@ -34,8 +34,8 @@ pipeline {
     CI_PORT='80'
     CI_SSL='false'
     CI_DELAY='120'
-    CI_DOCKERENV='TZ=US/Pacific'
-    CI_AUTH='user:password'
+    CI_DOCKERENV=''
+    CI_AUTH=''
     CI_WEBPATH='/smokeping/smokeping.cgi'
   }
   stages {

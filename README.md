@@ -41,7 +41,7 @@ Find us at:
 
 [Smokeping](https://oss.oetiker.ch/smokeping/) keeps track of your network latency. For a full example of what this application is capable of visit [UCDavis](http://smokeping.ucdavis.edu/cgi-bin/smokeping.fcgi).
 
-[![smokeping](https://camo.githubusercontent.com/e0694ef783e3fd1d74e6776b28822ced01c7cc17/687474703a2f2f6f73732e6f6574696b65722e63682f736d6f6b6570696e672f696e632f736d6f6b6570696e672d6c6f676f2e706e67)](https://oss.oetiker.ch/smokeping/)
+[![smokeping](https://github.com/linuxserver/docker-templates/raw/master/linuxserver.io/img/smokeping-logo.png)](https://oss.oetiker.ch/smokeping/)
 
 ## Supported Architectures
 
@@ -289,6 +289,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **25.06.24:** - Rebase to Alpine 3.20.
 * **12.04.24:** - Added perl InfluxDB HTTP module for InfluxDB HTTP support.
 * **22.03.24:** - Adding ability to run as a slave.
 * **23.12.23:** - Rebase to Alpine 3.19.
