@@ -2,7 +2,7 @@ NAME                     VERSION                               TYPE
 alpine-baselayout        3.4.3-r2                              apk          
 alpine-baselayout-data   3.4.3-r2                              apk          
 alpine-keys              2.4-r1                                apk          
-alpine-release           3.19.1-r0                             apk          
+alpine-release           3.19.2-r0                             apk          
 apache-mod-fcgid         2.3.9-r5                              apk          
 apache2                  2.4.59-r0                             apk          
 apache2-ctl              2.4.59-r0                             apk          
