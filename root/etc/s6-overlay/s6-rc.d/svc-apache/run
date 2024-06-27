@@ -1,6 +1,10 @@
 #!/usr/bin/with-contenv bash
 # shellcheck shell=bash
 
+if [[ -f "/config/httpd.conf" ]]; then
+    PORT=$(grep -e "^Listen" /config/httpd.conf | awk -F ' ' '{print $2}')
+fi
+
 exec \
-    s6-notifyoncheck -d -n 300 -w 1000 -c "nc -z localhost 80" \
+    s6-notifyoncheck -d -n 300 -w 1000 -c "nc -z localhost ${PORT:-80}" \
         /usr/sbin/apachectl -D FOREGROUND
