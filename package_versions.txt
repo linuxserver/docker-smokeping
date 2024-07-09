@@ -4,9 +4,9 @@ alpine-baselayout-data   3.6.5-r0                              apk
 alpine-keys              2.4-r1                                apk          
 alpine-release           3.20.1-r0                             apk          
 apache-mod-fcgid         2.3.9-r5                              apk          
-apache2                  2.4.60-r0                             apk          
-apache2-ctl              2.4.60-r0                             apk          
-apache2-utils            2.4.60-r0                             apk          
+apache2                  2.4.61-r0                             apk          
+apache2-ctl              2.4.61-r0                             apk          
+apache2-utils            2.4.61-r0                             apk          
 apk-tools                2.14.4-r0                             apk          
 apr                      1.7.4-r0                              apk          
 apr-util                 1.6.3-r1                              apk          
@@ -45,7 +45,7 @@ golang.org/x/sys         v0.0.0-20210514084401-e8d321eab015    go-module
 graphite2                1.3.14-r6                             apk          
 gzip                     1.13-r0                               apk          
 harfbuzz                 8.5.0-r0                              apk          
-irtt                     0.9.1-r25                             apk          
+irtt                     0.9.1-r26                             apk          
 jq                       1.7.1-r0                              apk          
 json-c                   0.17-r0                               apk          
 keyutils-libs            1.6.3-r3                              apk          
@@ -158,7 +158,7 @@ skalibs                  2.14.1.1-r0                           apk
 smokeping                2.8.2-r3                              apk          
 ssl_client               1.36.1-r29                            apk          
 ssmtp                    2.64-r22                              apk          
-stdlib                   go1.22.4                              go-module    
+stdlib                   go1.22.5                              go-module    
 sudo                     1.9.15_p5-r0                          apk          
 tcptraceroute            1.5_beta7-r4                          apk          
 tzdata                   2024a-r1                              apk          
