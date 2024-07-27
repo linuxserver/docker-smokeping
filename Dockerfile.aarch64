@@ -39,7 +39,7 @@ RUN \
     tcptraceroute && \
   echo "**** Build perl TacacsPlus module ****" && \
   cpanm Authen::TacacsPlus && \
-  echo "**** Build perl InfluxDB HTTP module ****" && \
+  echo "**** Build perl InfluxDB modules ****" && \
   cpanm InfluxDB::HTTP && \
   cpanm Method::Signatures --force && \
   cpanm Object::Result && \
