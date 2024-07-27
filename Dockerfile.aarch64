@@ -30,6 +30,7 @@ RUN \
     irtt \
     openssh-client \
     perl-authen-radius \
+    perl-json-maybexs \
     perl-lwp-protocol-https \
     perl-path-tiny \
     smokeping==${SMOKEPING_VERSION} \
@@ -38,8 +39,11 @@ RUN \
     tcptraceroute && \
   echo "**** Build perl TacacsPlus module ****" && \
   cpanm Authen::TacacsPlus && \
-  echo "**** Build perl InfluxDB HTTP module ****" && \
+  echo "**** Build perl InfluxDB modules ****" && \
   cpanm InfluxDB::HTTP && \
+  cpanm Method::Signatures --force && \
+  cpanm Object::Result && \
+  cpanm InfluxDB::LineProtocol && \
   echo "**** give setuid access to traceroute & tcptraceroute ****" && \
   chmod a+s /usr/bin/traceroute && \
   chmod a+s /usr/bin/tcptraceroute && \

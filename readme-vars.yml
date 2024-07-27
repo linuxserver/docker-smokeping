@@ -40,6 +40,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "27.07.24:", desc: "Add additional dependency packages for InfluxDB."}
   - { date: "25.06.24:", desc: "Rebase to Alpine 3.20."}
   - { date: "12.04.24:", desc: "Added perl InfluxDB HTTP module for InfluxDB HTTP support."}
   - { date: "22.03.24:", desc: "Adding ability to run as a slave."}
