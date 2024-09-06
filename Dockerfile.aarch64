@@ -55,6 +55,7 @@ RUN \
     build-dependencies && \
   rm -rf \
     /tmp/* \
+    /root/.cpanm \
     /etc/apache2/httpd.conf
 
 # add local files
