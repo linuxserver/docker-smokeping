@@ -6,27 +6,24 @@ project_url: "https://oss.oetiker.ch/smokeping/"
 project_logo: "https://github.com/linuxserver/docker-templates/raw/master/linuxserver.io/img/smokeping-logo.png"
 project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) keeps track of your network latency. For a full example of what this application is capable of visit [UCDavis](http://smokeping.ucdavis.edu/cgi-bin/smokeping.fcgi)."
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
-
 # supported architectures
 available_architectures:
-  - { arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
-  - { arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
-
+  - {arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
+  - {arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
 # container parameters
 param_container_name: "{{ project_name }}"
 param_usage_include_vols: true
 param_volumes:
-  - { vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "Persistent config files" }
-  - { vol_path: "/data", vol_host_path: "/path/to/smokeping/data", desc: "Storage location for db and application data (graphs etc)" }
+  - {vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "Persistent config files"}
+  - {vol_path: "/data", vol_host_path: "/path/to/smokeping/data", desc: "Storage location for db and application data (graphs etc)"}
 param_usage_include_ports: true
 param_ports:
-  - { external_port: "80", internal_port: "80", port_desc: "Allows HTTP access to the internal webserver." }
+  - {external_port: "80", internal_port: "80", port_desc: "Allows HTTP access to the internal webserver."}
 opt_param_usage_include_env: true
 opt_param_env_vars:
-  - { env_var: "MASTER_URL", env_value: "http://<master-host-ip>:80/smokeping/", desc: "Specify the master url to connect to. Used when in slave mode."}
-  - { env_var: "SHARED_SECRET", env_value: "password", desc: "Specify the master shared secret for this host. Used when in slave mode."}
-  - { env_var: "CACHE_DIR", env_value: "/tmp", desc: "Specify the cache directory for this host. Used when in slave mode."}
-
+  - {env_var: "MASTER_URL", env_value: "http://<master-host-ip>:80/smokeping/", desc: "Specify the master url to connect to. Used when in slave mode."}
+  - {env_var: "SHARED_SECRET", env_value: "password", desc: "Specify the master shared secret for this host. Used when in slave mode."}
+  - {env_var: "CACHE_DIR", env_value: "/tmp", desc: "Specify the cache directory for this host. Used when in slave mode."}
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
@@ -37,45 +34,89 @@ app_setup_block: |
   * To restart the container, run `docker restart smokeping`, where `smokeping` is the container ID.
   * Note that the default `Targets` file includes items that may or may not work. These are simply to provide examples of configuration.
   * Slave setup: modify the `Targets`, `Slaves`, and `smokeping_secrets` files on the master host, per [the documentation](https://manpages.ubuntu.com/manpages/trusty/en/man7/smokeping_master_slave.7.html).
-
+# init diagram
+init_diagram: |
+  "smokeping:latest": {
+    docker-mods
+    base {
+      fix-attr +\nlegacy cont-init
+    }
+    docker-mods -> base
+    legacy-services
+    custom services
+    init-services -> legacy-services
+    init-services -> custom services
+    custom services -> legacy-services
+    legacy-services -> ci-service-check
+    init-migrations -> init-adduser
+    init-os-end -> init-config
+    init-config -> init-config-end
+    init-smokeping-config -> init-config-end
+    init-os-end -> init-crontab-config
+    init-mods-end -> init-custom-files
+    base -> init-envfile
+    base -> init-migrations
+    base -> init-mods
+    init-config-end -> init-mods
+    init-mods -> init-mods-end
+    init-mods-package-install -> init-mods-end
+    init-mods -> init-mods-package-install
+    base -> init-os-end
+    init-adduser -> init-os-end
+    init-envfile -> init-os-end
+    init-migrations -> init-os-end
+    init-custom-files -> init-services
+    init-mods-end -> init-services
+    init-config -> init-smokeping-config
+    init-services -> svc-apache
+    svc-apache -> legacy-services
+    init-services -> svc-cron
+    svc-cron -> legacy-services
+    svc-apache -> svc-smokeping
+    svc-smokeping -> legacy-services
+  }
+  Base Images: {
+    "baseimage-alpine:3.20"
+  }
+  "smokeping:latest" <- Base Images
 # changelog
 changelogs:
-  - { date: "27.07.24:", desc: "Add additional dependency packages for InfluxDB."}
-  - { date: "25.06.24:", desc: "Rebase to Alpine 3.20."}
-  - { date: "12.04.24:", desc: "Added perl InfluxDB HTTP module for InfluxDB HTTP support."}
-  - { date: "22.03.24:", desc: "Adding ability to run as a slave."}
-  - { date: "23.12.23:", desc: "Rebase to Alpine 3.19."}
-  - { date: "29.11.23:", desc: "Bump tcpping to 1.8." }
-  - { date: "21.11.23:", desc: "Add support for IRTT Probes." }
-  - { date: "23.07.23:", desc: "Add Authen::TacacsPlus for Tacacs+ support." }
-  - { date: "16.05.23:", desc: "Add perl-authen-radius for Radius support." }
-  - { date: "16.05.23:", desc: "Rebase to Alpine 3.18. Deprecate armhf." }
-  - { date: "11.05.23:", desc: "Add perl-lwp-protocol-https for master/slave support over https." }
-  - { date: "22.01.23:", desc: "Revert to using Apache due to latency issues with nginx and fcgiwrap." }
-  - { date: "12.12.22:", desc: "Rebase to Alpine 3.17, migrate to s6v3, switch to nginx and fcgiwrap." }
-  - { date: "29.03.21:", desc: "Dockerfile: Install curl before we call it" }
-  - { date: "23.01.21:", desc: "Rebasing to alpine 3.13." }
-  - { date: "01.06.20:", desc: "Rebasing to alpine 3.12." }
-  - { date: "19.12.19:", desc: "Rebasing to alpine 3.11." }
-  - { date: "28.06.19:", desc: "Rebasing to alpine 3.10." }
-  - { date: "23.03.19:", desc: "Switching to new Base images, shift to arm32v7 tag." }
-  - { date: "22.02.19:", desc: "Rebasing to alpine 3.9." }
-  - { date: "14.11.18:", desc: "Allow access without /smokeping in URL." }
-  - { date: "28.04.18:", desc: "Rebase to alpine 3.8." }
-  - { date: "09.04.18:", desc: "Add bc package." }
-  - { date: "08.04.18:", desc: "Add tccping script and tcptraceroute package (thanks rcarmo)." }
-  - { date: "13.12.17:", desc: "Expose httpd_conf to /config." }
-  - { date: "13.12.17:", desc: "Rebase to alpine 3.7." }
-  - { date: "24.07.17:", desc: "Add :unraid tag for hosts without ipv6." }
-  - { date: "12.07.17:", desc: "Add inspect commands to README, move to jenkins build and push." }
-  - { date: "28.05.17:", desc: "Rebase to alpine 3.6." }
-  - { date: "07.05.17:", desc: "Expose smokeping.conf in /config/site-confs to allow user customisations" }
-  - { date: "12.04.17:", desc: "Fix cropper.js path, thanks nibbledeez." }
-  - { date: "09.02.17:", desc: "Rebase to alpine 3.5." }
-  - { date: "17.10.16:", desc: "Add ttf-dejavu package as per [LT forum](http://lime-technology.com/forum/index.php?topic=43602.msg507875#msg507875)." }
-  - { date: "10.09.16:", desc: "Add layer badges to README." }
-  - { date: "05.09.16:", desc: "Add curl package." }
-  - { date: "28.08.16:", desc: "Add badges to README." }
-  - { date: "25.07.16:", desc: "Rebase to alpine linux." }
-  - { date: "23.07.16:", desc: "Fix apt script confusion." }
-  - { date: "29.06.15:", desc: "This is the first release, it is mostly stable, but may contain minor defects. (thus a beta tag)" }
+  - {date: "27.07.24:", desc: "Add additional dependency packages for InfluxDB."}
+  - {date: "25.06.24:", desc: "Rebase to Alpine 3.20."}
+  - {date: "12.04.24:", desc: "Added perl InfluxDB HTTP module for InfluxDB HTTP support."}
+  - {date: "22.03.24:", desc: "Adding ability to run as a slave."}
+  - {date: "23.12.23:", desc: "Rebase to Alpine 3.19."}
+  - {date: "29.11.23:", desc: "Bump tcpping to 1.8."}
+  - {date: "21.11.23:", desc: "Add support for IRTT Probes."}
+  - {date: "23.07.23:", desc: "Add Authen::TacacsPlus for Tacacs+ support."}
+  - {date: "16.05.23:", desc: "Add perl-authen-radius for Radius support."}
+  - {date: "16.05.23:", desc: "Rebase to Alpine 3.18. Deprecate armhf."}
+  - {date: "11.05.23:", desc: "Add perl-lwp-protocol-https for master/slave support over https."}
+  - {date: "22.01.23:", desc: "Revert to using Apache due to latency issues with nginx and fcgiwrap."}
+  - {date: "12.12.22:", desc: "Rebase to Alpine 3.17, migrate to s6v3, switch to nginx and fcgiwrap."}
+  - {date: "29.03.21:", desc: "Dockerfile: Install curl before we call it"}
+  - {date: "23.01.21:", desc: "Rebasing to alpine 3.13."}
+  - {date: "01.06.20:", desc: "Rebasing to alpine 3.12."}
+  - {date: "19.12.19:", desc: "Rebasing to alpine 3.11."}
+  - {date: "28.06.19:", desc: "Rebasing to alpine 3.10."}
+  - {date: "23.03.19:", desc: "Switching to new Base images, shift to arm32v7 tag."}
+  - {date: "22.02.19:", desc: "Rebasing to alpine 3.9."}
+  - {date: "14.11.18:", desc: "Allow access without /smokeping in URL."}
+  - {date: "28.04.18:", desc: "Rebase to alpine 3.8."}
+  - {date: "09.04.18:", desc: "Add bc package."}
+  - {date: "08.04.18:", desc: "Add tccping script and tcptraceroute package (thanks rcarmo)."}
+  - {date: "13.12.17:", desc: "Expose httpd_conf to /config."}
+  - {date: "13.12.17:", desc: "Rebase to alpine 3.7."}
+  - {date: "24.07.17:", desc: "Add :unraid tag for hosts without ipv6."}
+  - {date: "12.07.17:", desc: "Add inspect commands to README, move to jenkins build and push."}
+  - {date: "28.05.17:", desc: "Rebase to alpine 3.6."}
+  - {date: "07.05.17:", desc: "Expose smokeping.conf in /config/site-confs to allow user customisations"}
+  - {date: "12.04.17:", desc: "Fix cropper.js path, thanks nibbledeez."}
+  - {date: "09.02.17:", desc: "Rebase to alpine 3.5."}
+  - {date: "17.10.16:", desc: "Add ttf-dejavu package as per [LT forum](http://lime-technology.com/forum/index.php?topic=43602.msg507875#msg507875)."}
+  - {date: "10.09.16:", desc: "Add layer badges to README."}
+  - {date: "05.09.16:", desc: "Add curl package."}
+  - {date: "28.08.16:", desc: "Add badges to README."}
+  - {date: "25.07.16:", desc: "Rebase to alpine linux."}
+  - {date: "23.07.16:", desc: "Fix apt script confusion."}
+  - {date: "29.06.15:", desc: "This is the first release, it is mostly stable, but may contain minor defects. (thus a beta tag)"}
