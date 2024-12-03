@@ -12,8 +12,8 @@ apr                      1.7.5-r0                              apk
 apr-util                 1.6.3-r1                              apk          
 bash                     5.2.26-r0                             apk          
 bc                       1.07.1-r4                             apk          
-bind-libs                9.18.27-r0                            apk          
-bind-tools               9.18.27-r0                            apk          
+bind-libs                9.18.31-r0                            apk          
+bind-tools               9.18.31-r0                            apk          
 brotli-libs              1.1.0-r2                              apk          
 busybox                  1.36.1-r29                            apk          
 busybox-binsh            1.36.1-r29                            apk          
