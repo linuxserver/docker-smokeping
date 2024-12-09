@@ -74,7 +74,7 @@ host = cixp.web.cern.ch
 
 menu = SBB
 title = SBB
-host = www.sbb.ch/en
+host = www.sbb.ch
 
 ++ UK
 
@@ -91,7 +91,7 @@ host = cam.ac.uk
 
 menu = UEA
 title = UEA
-host = www.uea.ac.uk
+host = uea.ac.uk
 
 + USA
 
