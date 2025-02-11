@@ -26,7 +26,7 @@ coreutils                9.5-r2                                apk
 coreutils-env            9.5-r2                                apk          
 coreutils-fmt            9.5-r2                                apk          
 coreutils-sha512sum      9.5-r2                                apk          
-curl                     8.11.1-r0                             apk          
+curl                     8.12.0-r0                             apk          
 encodings                1.0.7-r1                              apk          
 findutils                4.9.0-r5                              apk          
 font-cantarell           0.303.1-r2                            apk          
@@ -59,8 +59,8 @@ libblkid                 2.40.1-r1                             apk
 libbsd                   0.12.2-r0                             apk          
 libbz2                   1.0.8-r6                              apk          
 libcom_err               1.47.0-r5                             apk          
-libcrypto3               3.3.2-r1                              apk          
-libcurl                  8.11.1-r0                             apk          
+libcrypto3               3.3.2-r2                              apk          
+libcurl                  8.12.0-r0                             apk          
 libeconf                 0.6.3-r0                              apk          
 libedit                  20240517.3.1-r0                       apk          
 libexpat                 2.6.4-r0                              apk          
@@ -77,7 +77,7 @@ libpng                   1.6.44-r0                             apk
 libproc2                 4.0.4-r0                              apk          
 libpsl                   0.21.5-r1                             apk          
 librrd                   1.8.0-r6                              apk          
-libssl3                  3.3.2-r1                              apk          
+libssl3                  3.3.2-r2                              apk          
 libunistring             1.2-r0                                apk          
 libuuid                  2.40.1-r1                             apk          
 libuv                    1.48.0-r0                             apk          
