@@ -19,3 +19,11 @@ forks = 10
 offset = random
 pings = 5
 port = 80
+
++ Curl
+binary = /usr/bin/curl
+forks = 5
+offset = 50%
+step = 300
+pings = 5
+urlformat = http://%host%/
