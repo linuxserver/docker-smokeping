@@ -3,8 +3,13 @@
 
 if [ -n "${MASTER_URL}" ] && [ -n "${SHARED_SECRET}" ] && [ -n "${CACHE_DIR}" ]; then
     install -g abc -o abc -m 400 -D <(echo $SHARED_SECRET) /var/smokeping/secret.txt
+    if [ -n "${SLAVE_NAME}" ]; then
+        SLAVE_NAME_OPTION="--slave-name=\"${SLAVE_NAME}\""
+    else
+        SLAVE_NAME_OPTION=""
+    fi
     exec \
-        s6-setuidgid abc /usr/sbin/smokeping --master-url="${MASTER_URL}" --cache-dir="${CACHE_DIR}" --shared-secret="/var/smokeping/secret.txt" --nodaemon
+        s6-setuidgid abc /usr/sbin/smokeping --master-url="${MASTER_URL}" --cache-dir="${CACHE_DIR}" --shared-secret="/var/smokeping/secret.txt" ${SLAVE_NAME_OPTION} --nodaemon
 else
     exec \
         s6-setuidgid abc /usr/sbin/smokeping --config="/etc/smokeping/config" --nodaemon
