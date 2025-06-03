@@ -20,6 +20,9 @@ for i in *; do
     fi
 done
 
+# Fix stupid Alpine packaging decision
+sed -i 's|exec /usr/bin/smokeping_cgi /etc/config|exec /usr/bin/smokeping_cgi /etc/smokeping/config|' /usr/share/webapps/smokeping/smokeping.cgi
+
 cd "${PREV_DIR}" || exit
 
 # make symlinks
