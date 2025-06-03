@@ -1,7 +1,7 @@
 #!/usr/bin/with-contenv bash
 # shellcheck shell=bash
 
-if [ -n "${MASTER_URL}" ] && [ -n "${SHARED_SECRET}" ] && [ -n "${CACHE_DIR}" ]; then
+if [[ -n "${MASTER_URL}" ]] && [[ -n "${SHARED_SECRET}" ]] && [[ -n "${CACHE_DIR}" ]]; then
     install -g abc -o abc -m 400 -D <(echo "${SHARED_SECRET}") /var/smokeping/secret.txt
     exec \
         s6-setuidgid abc /usr/sbin/smokeping --master-url="${MASTER_URL}" --cache-dir="${CACHE_DIR}" --shared-secret="/var/smokeping/secret.txt" --nodaemon
