@@ -296,7 +296,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
-* **03.06.25:** - Rebase to Alpine 3.22.
+* **03.06.25:** - Rebase to Alpine 3.22. Update TCPPing. Add curl probe.
 * **27.07.24:** - Add additional dependency packages for InfluxDB.
 * **25.06.24:** - Rebase to Alpine 3.20.
 * **12.04.24:** - Added perl InfluxDB HTTP module for InfluxDB HTTP support.
