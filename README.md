@@ -296,6 +296,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **05.06.25:** - Update TCPPing to 2.7 to fix traceroute incompatibility.
 * **03.06.25:** - Rebase to Alpine 3.22. Update TCPPing. Add curl probe.
 * **27.07.24:** - Add additional dependency packages for InfluxDB.
 * **25.06.24:** - Rebase to Alpine 3.20.
