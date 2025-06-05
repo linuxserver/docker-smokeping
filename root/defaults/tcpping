@@ -6,7 +6,7 @@
 #
 # uses recent versions of traceroute supporting TCP sessions
 #
-# (c) 2002-2024 Richard van den Berg <richard@vdberg.org>, Orsiris de Jong <ozy@netpower.fr>
+# (c) 2002-2025 Richard van den Berg <richard@vdberg.org>, Orsiris de Jong <ozy@netpower.fr>
 # under the GPL http://www.gnu.org/copyleft/gpl.html
 #
 #
@@ -56,8 +56,9 @@
 #                 Added fallback support for tcptraceroute, courtesy of Damien Mascord <tusker@tusker.org>
 # 2024/10/24 v2.6 Added support for optional /etc/tcpping.conf file
 #                 Various shellcheck fixes
+# 2025/06/05 v2.7 Fix output parsing on some traceroute implementations, Thanks to Luke Hamburg <github.com/luckman212>
 
-ver="v2.6-dev"
+ver="v2.7"
 format="%Y%m%d%H%M%S"
 d="no"
 c="no"
@@ -214,13 +215,9 @@ _testSite() {
 
 	local args=
 	local i=1
-	local traceroute_arg_n=false
 	for givenArgs in "${@}"; do
 		if [ $i -gt 3 ]; then
 			args="$args $givenArgs"
-			if [ "${givenArgs}" = "-n" ]; then
-				traceroute_arg_n=true
-			fi
 		fi
 		i=`expr $i + 1`
 	done
@@ -286,11 +283,7 @@ _testSite() {
 	else
 		rtt=`echo "${traceRoute}" | awk '{print $4}'`
 	fi
-	if [ "${traceroute_arg_n}" = true ]; then
-		rtt=`echo "${traceRoute}" | awk '{print $3}'`
-	else
-		rtt=`echo "${traceRoute}" | awk '{print $4}'`
-	fi
+	rtt=`echo "${traceRoute}" | awk '{print $(NF-1)}'`
 	not=`echo "${rtt}" | tr -d ".0123456789"`
 
 	[ "${d}" = "yes" ] && echo "$nowd"
