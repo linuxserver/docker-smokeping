@@ -21,7 +21,7 @@ busybox-binsh            1.37.0-r18                            apk
 c-ares                   1.34.5-r0                             apk          
 ca-certificates          20241121-r2                           apk          
 ca-certificates-bundle   20241121-r2                           apk          
-cairo                    1.18.2-r1                             apk          
+cairo                    1.18.4-r0                             apk          
 catatonit                0.2.1-r0                              apk          
 coreutils                9.7-r1                                apk          
 coreutils-env            9.7-r1                                apk          
