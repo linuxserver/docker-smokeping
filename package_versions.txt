@@ -5,9 +5,9 @@ alpine-baselayout-data   3.7.0-r0                              apk
 alpine-keys              2.5-r0                                apk          
 alpine-release           3.22.1-r0                             apk          
 apache-mod-fcgid         2.3.9-r6                              apk          
-apache2                  2.4.64-r0                             apk          
-apache2-ctl              2.4.64-r0                             apk          
-apache2-utils            2.4.64-r0                             apk          
+apache2                  2.4.65-r0                             apk          
+apache2-ctl              2.4.65-r0                             apk          
+apache2-utils            2.4.65-r0                             apk          
 apk-tools                2.14.9-r2                             apk          
 apr                      1.7.5-r0                              apk          
 apr-util                 1.6.3-r1                              apk          
@@ -159,7 +159,7 @@ smokeping                2.9.0-r0                              apk
 ssl_client               1.37.0-r18                            apk          
 ssmtp                    2.64-r22                              apk          
 stdlib                   go1.24.3                              go-module    
-sudo                     1.9.17_p1-r0                          apk          
+sudo                     1.9.17_p2-r0                          apk          
 tcptraceroute            1.5_beta7-r4                          apk          
 tzdata                   2025b-r0                              apk          
 userspace-rcu            0.15.2-r0                             apk          
