@@ -102,7 +102,7 @@ openssh-client-default   10.0_p1-r7                            apk
 openssh-keygen           10.0_p1-r7                            apk          
 pango                    1.56.3-r0                             apk          
 pcre2                    10.43-r1                              apk          
-perl                     5.40.2-r0                             apk          
+perl                     5.40.3-r0                             apk          
 perl-authen-radius       0.33-r0                               apk          
 perl-cgi                 4.68-r0                               apk          
 perl-cgi-fast            2.17-r1                               apk          
