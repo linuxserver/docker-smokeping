@@ -8,13 +8,13 @@ apache-mod-fcgid         2.3.9-r6                              apk
 apache2                  2.4.65-r0                             apk          
 apache2-ctl              2.4.65-r0                             apk          
 apache2-utils            2.4.65-r0                             apk          
-apk-tools                2.14.9-r2                             apk          
+apk-tools                2.14.9-r3                             apk          
 apr                      1.7.5-r0                              apk          
 apr-util                 1.6.3-r1                              apk          
 bash                     5.2.37-r0                             apk          
 bc                       1.08.2-r0                             apk          
-bind-libs                9.20.12-r0                            apk          
-bind-tools               9.20.12-r0                            apk          
+bind-libs                9.20.13-r0                            apk          
+bind-tools               9.20.13-r0                            apk          
 brotli-libs              1.1.0-r2                              apk          
 busybox                  1.37.0-r19                            apk          
 busybox-binsh            1.37.0-r19                            apk          
@@ -51,7 +51,7 @@ json-c                   0.18-r1                               apk
 keyutils-libs            1.6.3-r4                              apk          
 krb5-conf                1.0-r2                                apk          
 krb5-libs                1.21.3-r0                             apk          
-libapk2                  2.14.9-r2                             apk          
+libapk2                  2.14.9-r3                             apk          
 libattr                  2.5.2-r2                              apk          
 libblkid                 2.41-r9                               apk          
 libbsd                   0.12.2-r0                             apk          
