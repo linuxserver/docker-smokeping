@@ -30,10 +30,10 @@ RUN \
     irtt \
     openssh-client \
     perl-authen-radius \
+    perl-io-socket-inet6 \
     perl-json-maybexs \
     perl-lwp-protocol-https \
     perl-path-tiny \
-    perl-io-socket-inet6 \
     smokeping==${SMOKEPING_VERSION} \
     ssmtp \
     sudo \
