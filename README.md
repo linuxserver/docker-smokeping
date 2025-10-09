@@ -293,6 +293,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **26.09.25:** - Add IO::Socket::INET6 perl module to improve IPv6 abilities.
 * **05.06.25:** - Update TCPPing to 2.7 to fix traceroute incompatibility.
 * **03.06.25:** - Rebase to Alpine 3.22. Update TCPPing. Add curl probe.
 * **27.07.24:** - Add additional dependency packages for InfluxDB.
