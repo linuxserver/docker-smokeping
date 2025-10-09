@@ -86,7 +86,7 @@ libxcb                   1.17.0-r0                             apk
 libxdmcp                 1.1.5-r1                              apk          
 libxext                  1.3.6-r2                              apk          
 libxft                   2.3.8-r3                              apk          
-libxml2                  2.13.8-r0                             apk          
+libxml2                  2.13.9-r0                             apk          
 libxrender               0.9.12-r0                             apk          
 linux-pam                1.7.0-r4                              apk          
 lynx                     2.9.2-r1                              apk          
@@ -124,6 +124,7 @@ perl-http-date           6.06-r0                               apk
 perl-http-message        7.00-r0                               apk          
 perl-http-negotiate      6.01-r5                               apk          
 perl-io-html             1.004-r1                              apk          
+perl-io-socket-inet6     2.73-r2                               apk          
 perl-io-socket-ssl       2.089-r0                              apk          
 perl-io-tty              1.20-r1                               apk          
 perl-json                4.10-r1                               apk          
@@ -143,6 +144,7 @@ perl-net-telnet          3.05-r1                               apk
 perl-path-tiny           0.146-r0                              apk          
 perl-rrd                 1.9.0-r4                              apk          
 perl-snmp-session        1.16-r2                               apk          
+perl-socket6             0.29-r10                              apk          
 perl-text-soundex        3.05-r10                              apk          
 perl-try-tiny            0.32-r0                               apk          
 perl-uri                 5.28-r0                               apk          
