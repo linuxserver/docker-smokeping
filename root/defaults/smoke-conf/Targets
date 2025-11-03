@@ -104,12 +104,6 @@ menu = MIT
 title = Massachusetts Institute of Technology Webserver
 host = web.mit.edu
 
-++ IU
-
-menu = IU
-title = Indiana University
-host = www.indiana.edu
-
 ++ UCB
 
 menu = U. C. Berkeley
