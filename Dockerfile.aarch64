@@ -37,6 +37,7 @@ RUN \
     smokeping==${SMOKEPING_VERSION} \
     ssmtp \
     sudo \
+    traceroute \
     tcptraceroute && \
   echo "**** Build perl TacacsPlus module ****" && \
   cpanm Authen::TacacsPlus && \
