@@ -83,6 +83,7 @@ init_diagram: |
   "smokeping:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "17.12.25:", desc: "Replace busybox traceroute with APK version."}
   - {date: "26.09.25:", desc: "Add IO::Socket::INET6 perl module to improve IPv6 abilities."}
   - {date: "05.06.25:", desc: "Update TCPPing to 2.7 to fix traceroute incompatibility."}
   - {date: "03.06.25:", desc: "Rebase to Alpine 3.22. Update TCPPing. Add curl probe."}
