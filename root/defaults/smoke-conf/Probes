@@ -2,6 +2,9 @@
 
 + FPing
 binary = /usr/sbin/fping
+
++ FPing4
+binary = /usr/sbin/fping
 protocol = 4
 
 + FPing6
