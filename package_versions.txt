@@ -61,7 +61,7 @@ libcrypto3               3.5.5-r0                              apk
 libcurl                  8.14.1-r2                             apk          
 libeconf                 0.6.3-r0                              apk          
 libedit                  20250104.3.1-r1                       apk          
-libexpat                 2.7.3-r0                              apk          
+libexpat                 2.7.4-r0                              apk          
 libffi                   3.4.8-r0                              apk          
 libfontenc               1.1.8-r0                              apk          
 libidn2                  2.3.7-r0                              apk          
