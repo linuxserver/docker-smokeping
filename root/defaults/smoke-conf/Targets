@@ -32,11 +32,11 @@ menu = Google
 title = google.com
 host = google.com
 
-++ GoogleSearchIpv6
-menu = Google
-probe = FPing6
-title = ipv6.google.com
-host = ipv6.google.com
+#++ GoogleSearchIpv6
+#menu = Google
+#probe = FPing6
+#title = ipv6.google.com
+#host = ipv6.google.com
 
 ++ linuxserverio
 menu = linuxserver.io
