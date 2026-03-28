@@ -2,7 +2,10 @@
 # shellcheck shell=bash
 
 if [[ -f "/config/httpd.conf" ]]; then
-    PORT=$(grep -e "^Listen" /config/httpd.conf | awk -F ' ' '{print $2}')
+    PORT=$(grep -e "^Listen" /config/httpd.conf \
+        | awk '{print $2}' \
+        | awk -F: '{print $NF}' \
+        | head -n1)
 fi
 
 exec \
