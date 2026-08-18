@@ -10,7 +10,7 @@ apache2-ctl              2.4.68-r0                             apk
 apache2-utils            2.4.68-r0                             apk          
 apk-tools                2.14.10-r0                            apk          
 apr                      1.7.5-r0                              apk          
-apr-util                 1.6.3-r1                              apk          
+apr-util                 1.6.4-r0                              apk          
 bash                     5.2.37-r0                             apk          
 bc                       1.08.2-r0                             apk          
 bind-libs                9.20.26-r0                            apk          
