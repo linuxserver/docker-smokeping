@@ -62,8 +62,8 @@ libcurl                  8.14.1-r4                             apk
 libeconf                 0.6.3-r0                              apk          
 libedit                  20250104.3.1-r1                       apk          
 libexpat                 2.10.0-r0                             apk          
-libffi                   3.4.8-r0                              apk          
-libfontenc               1.1.8-r0                              apk          
+libffi                   3.8.1-r0                              apk          
+libfontenc               1.1.10-r0                             apk          
 libidn2                  2.3.7-r0                              apk          
 libintl                  0.24.1-r0                             apk          
 libmd                    1.1.0-r0                              apk          
@@ -109,7 +109,7 @@ perl-cgi-fast            2.17-r1                               apk
 perl-cgi-session         4.48-r5                               apk          
 perl-clone               0.47-r0                               apk          
 perl-config-grammar      1.13-r4                               apk          
-perl-convert-asn1        0.34-r0                               apk          
+perl-convert-asn1        0.37-r0                               apk          
 perl-data-hexdump        0.04-r1                               apk          
 perl-digest-hmac         1.05-r0                               apk          
 perl-digest-md5          2.59-r2                               apk          
